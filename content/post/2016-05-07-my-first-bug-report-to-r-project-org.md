@@ -1,5 +1,5 @@
 ---
-title: my first bug report to r-project.org
+title: My first bug report to r-project.org
 author: Xianying Tan
 date: '2016-05-07'
 slug: my-first-bug-report-to-r-project-org
