@@ -15,17 +15,28 @@ tags:
 
 - R对象在C环境下统一为`SEXP`类型(读音为S,EXP(external pointer)，不是SEX P)；
 - R里面字符串的实施细节用到了字符串池([The CHARSXP cache](https://cran.r-project.org/doc/manuals/r-release/R-ints.html#The-CHARSXP-cache))来提高效率;
-- 对于字符串的排序，`data.table`和base R里面的radix sort巧妙地使用了SEXP一个基本废弃的属性[`truelength`](https://cran.r-project.org/doc/manuals/r-release/R-ints.html#DOCF3)；
+- 对于字符串的排序，`data.table`和base R里面的radix sort巧妙地使用了SEXP一个基本废弃的属性[`truelength`](https://cran.r-project.org/doc/manuals/r-release/R-ints.html#DOCF3)。更具体地说，把`The CHARSXP cache`当做一个哈希表(key -> value)，并将值储存在`truelength属性`中；
 - R字符在C level下，能够保存的Encoding属性只有三种：`Latin-1`, `ASCII` 和 `UTF-8`，参见[此段最后一行](https://cran.r-project.org/doc/manuals/r-release/R-ints.html#Rest-of-header)和[R Internals - Encodings for CHARSXPs](https://cran.r-project.org/doc/manuals/r-release/R-ints.html#Encodings-for-CHARSXPs)；
-- R中使用到`SEXP`时，一定要注意思考垃圾回收有没有可能回收这个变量。垃圾回收导致的bug非常难以查找，[data.table issue#2674](https://github.com/Rdatatable/data.table/issues/2674)前前后后花了差不多6个小时才解决。标准的查虫流程为“发现异常、找到最小可重复的代码、定位问题、解决问题”，然而垃圾回收的触发是不可控的，因此要想复现此类bug非常困难。
+- R中使用到`SEXP`时，一定要注意思考垃圾回收有没有可能回收这个变量。垃圾回收导致的bug非常难以查找，[data.table issue#2674](https://github.com/Rdatatable/data.table/issues/2674)前前后后花了差不多6个小时才解决。标准的查虫流程为“发现异常、找到最小可重复的代码、定位问题、解决问题”，然而垃圾回收的触发是不可控的，因此要想复现此类bug非常困难；
+- 字符串的比较有两种方式，一是直接比较背后的编码(可以用`charToRaw()`查看），二是统一转换为UTF-8编码后再比较；
+- 如何判断一个CHARSXP是不是ASCII, UTF8可参考：
+    - https://github.com/wch/r-source/blob/44d54d6f848468a7353d99cc9be0255105185975/src/main/util.c#L1834
+    - https://github.com/Rdatatable/data.table/blob/bb3ba9a39be1ee8386b86909e045947898cb0935/src/data.table.h#L50
+- 在R的C Routine中将字符转为UTF-8编码：`mkCharCE(translateCharUTF8(s), CE_UTF8)`；
+- Debug往往需要把相关变量值打印出来，然而R的C Routine中支持的`Rprintf()`只能打印本地编码的字符，因此必须先将字符串用`translateChar`转换后才能成功打印，如`Rprintf("%s", translateChar(value))`，否则只会得到空白。  
+
+> [Character-encoding-issues](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Character-encoding-issues): However, if they need to be interpreted as characters or output at C level then it would normally be correct to ensure that they are converted to the encoding of the current locale: this can be done by accessing the data in the CHARSXP by translateChar rather than by CHAR. 
+
 
 ### 其他：
 
 - `enc2utf8()`对于长字符串是需要耗费一定时间的，而且没有特别好的办法来处理；
 - 建议尽量在R的层面把所有`非ASCII字符`转换为`UTF-8`编码后再统一处理；
 
+
 ### 主要可供参考的资料：
 
 - [Writing R Externtions](https://cran.r-project.org/doc/manuals/r-release/R-ints.html)
 - [R Internals](https://cran.r-project.org/doc/manuals/r-release/R-exts.html)
 - [R source code](https://github.com/wch/r-source)
+- [Hadley's R-internals](https://github.com/hadley/r-internals)
