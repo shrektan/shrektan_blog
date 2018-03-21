@@ -32,7 +32,7 @@ tags:
 
 - `enc2utf8()`对于长字符串是需要耗费一定时间的，而且没有特别好的办法来处理；
 - 建议尽量在R的层面把所有`非ASCII字符`转换为`UTF-8`编码后再统一处理；
-- Windows下Encoding的问题让人头疼，一个重要原因是主流平台中只有Windows下的默认字符编码不是UTF-8，而且不同语言下的默认编码都不一样。我遇到的`data.table`编码问题，只有在语言为中文的windows下才能复现（当然其他语言也可以，不过就得把例子换成相应的语言）。这就是为什么我在2016年提交的bug[#1826](https://github.com/Rdatatable/data.table/issues/1826)两年无人理睬，因为要么其他人要么不使用windows，即使使用windows也不是中文环境。理解了这个问题，我就意识到看来这个问题只有靠自己来解决了。这就是我费这么大劲研究这个的原因（实在忍不了又没人帮忙）。
+- Windows下Encoding的问题让人头疼，一个重要原因是主流平台中只有Windows下的默认字符编码不是UTF-8，而且不同语言下的默认编码都不一样。我遇到的`data.table`编码问题，只有在语言为中文的windows下才能复现（当然其他语言也可以，不过就得把例子换成相应的语言）。这就是为什么我在2016年提交的bug[#1826](https://github.com/Rdatatable/data.table/issues/1826)两年无人理睬，因为要么其他人要么不使用windows，即使使用windows也不是中文环境。理解到这一点，我便意识到这个问题只有靠自己了，这就是费这么大劲研究这个的原因（实在忍不了又没人帮忙）。
 - 解决这个问题后，[Mattdowle](https://github.com/mattdowle)邀请我加入了[Rdatatable Team](https://github.com/Rdatatable)，希望自己能帮助`data.table`把对中文（或其他语言）的支持做得更好。
 
 
