@@ -20,8 +20,8 @@ tags:
 - R中使用到`SEXP`时，一定要注意思考垃圾回收有没有可能回收这个变量。垃圾回收导致的bug非常难以查找，[data.table issue#2674](https://github.com/Rdatatable/data.table/issues/2674)前前后后花了差不多6个小时才解决。标准的查虫流程为“发现异常、找到最小可重复的代码、定位问题、解决问题”，然而垃圾回收的触发是不可控的，因此要想复现此类bug非常困难；
 - 字符串的比较有两种方式，一是直接比较背后的编码(可以用`charToRaw()`查看），二是统一转换为UTF-8编码后再比较；
 - 如何判断一个CHARSXP是不是ASCII, UTF8可参考：
-    - https://github.com/wch/r-source/blob/44d54d6f848468a7353d99cc9be0255105185975/src/main/util.c#L1834
-    - https://github.com/Rdatatable/data.table/blob/bb3ba9a39be1ee8386b86909e045947898cb0935/src/data.table.h#L50
+    - [R-source/util.c](https://github.com/wch/r-source/blob/44d54d6f848468a7353d99cc9be0255105185975/src/main/util.c#L1834)
+    - [data.table/data.table.h](https://github.com/Rdatatable/data.table/blob/bb3ba9a39be1ee8386b86909e045947898cb0935/src/data.table.h#L50)
 - 在R的C Routine中将字符转为UTF-8编码：`mkCharCE(translateCharUTF8(s), CE_UTF8)`；
 - Debug往往需要把相关变量值打印出来，然而R的C Routine中支持的`Rprintf()`只能打印本地编码的字符，因此必须先将字符串用`translateChar`转换后才能成功打印，如`Rprintf("%s", translateChar(value))`，否则只会得到空白。  
 
