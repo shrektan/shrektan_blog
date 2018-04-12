@@ -22,6 +22,8 @@ as.character(c(0.1, 1.0))
 # [1] "0.1" "1"  
 sprintf("%0.2f", c(0.1, 1.0))
 # [1] "0.10" "1.00"
+sprintf("%0.2f%%", c(0.001, 0.01) * 100) # even nicer use double `%` to escape 
+# [1] "0.10%" "1.00%"
 ```
 
 ### Case 2: Display an integer as `000000`
