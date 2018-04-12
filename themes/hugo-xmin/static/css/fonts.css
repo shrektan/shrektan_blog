@@ -1,7 +1,56 @@
-body {
-  font-family: Optima, Candara, Calibri, Arial, sans-serif;
+@font-face {
+  font-family: roboto;
+  src: url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300; 
 }
+  
+@font-face {
+  font-family: roboto;
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal; 
+}
+  
+@font-face {
+  font-family: roboto;
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700; 
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Crimson Text Regular'),
+       local('CrimsonText-Regular'),
+       url(../fonts/CrimsonText-Regular.woff2) format('woff2'),
+       url(../fonts/CrimsonText-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Crimson Text Italic'),
+       local('CrimsonText-Italic'),
+       url(../fonts/CrimsonText-Italic.woff2) format('woff2'),
+       url(../fonts/CrimsonText-Italic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Crimson Text Bold'),
+       local('CrimsonText-Bold'),
+       url(../fonts/CrimsonText-Bold.woff2) format('woff2'),
+       url(../fonts/CrimsonText-Bold.ttf) format('truetype');
+}
+
+body {
+  font-family: "Crimson Text", Optima, Candara, Calibri, Arial, source-han-serif-sc, 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif TC', 'Source Han Serif TW', 'Source Han Serif', 'FangSong', 'Microsoft YaHei', sans-serif;
+}
+
 code {
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: roboto, "Lucida Console", Monaco, monospace;
   font-size: 85%;
 }

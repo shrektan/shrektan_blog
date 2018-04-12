@@ -1,5 +1,5 @@
 baseurl = "/"
-languageCode = "en-us"
+languageCode = "zh-cn"
 title = "Xianying's Blog"
 theme = "hugo-xmin"
 googleAnalytics = ""
