@@ -20,4 +20,6 @@ What's happened? Do I do something wrong? I'm asking myself... Until I saw [this
 > `publishDate`  
 if in the future, content will not be rendered unless the `--buildFuture` flag is passed to hugo.
 
-Great :rage: ! 
+So changed my post date from 2018/04/13 to 2018/04/12 and it works.
+
+Great :rage: !
