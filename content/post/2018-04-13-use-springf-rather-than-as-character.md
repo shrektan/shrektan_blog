@@ -1,9 +1,9 @@
 ---
-title: Use springf() rather than as.character()
+title: Use sprintf() rather than as.character()
 subtitle: when you need to convert a number to a string sophisticatedly in R
 author: Xianying Tan
 date: '2018-04-13'
-slug: use-springf-rather-than-as-character
+slug: use-sprintf-rather-than-as-character
 categories:
   - programming
   - note
