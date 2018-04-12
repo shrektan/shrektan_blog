@@ -46,11 +46,11 @@
        url(../fonts/CrimsonText-Bold.ttf) format('truetype');
 }
 
-body {
+body, code {
   font-family: "Crimson Text", Optima, Candara, Calibri, Arial, source-han-serif-sc, 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif TC', 'Source Han Serif TW', 'Source Han Serif', 'FangSong', 'Microsoft YaHei', sans-serif;
 }
 
 code {
-  font-family: roboto, "Lucida Console", Monaco, monospace;
+  font-family: Optima, roboto, "Lucida Console", Monaco, monospace;
   font-size: 85%;
 }
