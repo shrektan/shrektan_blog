@@ -17,7 +17,7 @@ I live in China. I have just finished a post for my blog. The current time (Asia
 
 So I can preview my blog with my new writing article on my computer. However, I can't see it after pushing it to Netlify server.
 
-_What's happened? Do I do something wrong?_ I'm asking myself... Until I saw [this](http://gohugo.io/content-management/front-matter/):
+_What's happened? Do I do something wrong?_ I was asking myself... Until I saw [this](http://gohugo.io/content-management/front-matter/):
 
 > `publishDate`  
 if in the future, content will not be rendered unless the `--buildFuture` flag is passed to hugo.
