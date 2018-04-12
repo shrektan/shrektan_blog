@@ -30,6 +30,10 @@ a:hover, a:focus {
 
 .menu, .article-meta, footer { text-align: center; }
 .title { font-size: 1.0em; }
+.subtitle {  
+  font-size: 0.7em; 
+  border-bottom: 1px dashed;
+}
 footer a { text-decoration: none; }
 hr {
   margin: 25px auto;
