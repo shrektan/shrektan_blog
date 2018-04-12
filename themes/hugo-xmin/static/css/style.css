@@ -74,3 +74,12 @@ table {
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee }
+li {
+  margin: 8px 0;
+}
+br {
+  display: block;
+  margin: 8px 0;
+  line-height: 22px;
+  content: " ";
+}
