@@ -7,6 +7,7 @@ disqusShortname = "shrektanblog"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
+enableEmoji = true
 
 [permalinks]
     post = "/post/:year/:month/:day/:slug/"
@@ -35,3 +36,9 @@ footnotereturnlinkcontents = "↩"
 [params]
     description = "A website built through Hugo and blogdown."
     footer = "&copy; [Xianying Tan](https://blog.shrektan.com) 2017 -- 2018 | [Github](https://github.com/shrektan)"
+
+    # options for highlight.js (version, additional languages, and theme)
+    highlightjsVersion = "9.11.0"
+    highlightjsCDN = "//cdn.bootcss.com"
+    highlightjsLang = ["r", "yaml", "c", "c++"]
+    highlightjsTheme = "github"
