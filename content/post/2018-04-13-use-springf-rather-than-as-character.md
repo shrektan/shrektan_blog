@@ -57,3 +57,4 @@ The letter `s` is used to denote the string type. The reason of `sprintf("%s", 1
 
 `sprintf()` is powerful although it's a bit of confusing to learn. See `help("sprintf")` for more info.
 
+**UPDATE** If you need to print numbers like `1,900.00`, you may find `prettyNum()` or `format()` helpful.
