@@ -33,8 +33,7 @@ I'm tab1.
 I'm tab2.
 ```
 
-![](/post/2018-04-21-non-ascii-tabset-headers-in-rmarkdown_files/屏幕快照 2018-04-21 下午2.51.45.png)
-
+<img src="/post/2018-04-21-non-ascii-tabset-headers-in-rmarkdown_files/not-working.png" alt="non-ascii-tabset-not-working" height="500px"/>
 
 There're two simple solutions to fix it:
 
@@ -43,7 +42,7 @@ There're two simple solutions to fix it:
 
 ### Solution 1
 
-```r
+```md
 ---
 title: 你好世界
 output: html_document
@@ -62,7 +61,7 @@ I'm tab2.
 
 ### Solution 2
 
-```r
+```md
 ---
 title: 你好世界
 output:
@@ -81,7 +80,7 @@ I'm tab1.
 I'm tab2.
 ```
 
-![](/post/2018-04-21-non-ascii-tabset-headers-in-rmarkdown_files/屏幕快照 2018-04-21 下午2.53.57.png)
+<img src="/post/2018-04-21-non-ascii-tabset-headers-in-rmarkdown_files/working.png" alt="non-ascii-tabset-working" height="500px"/>
 
 # Reference
 
