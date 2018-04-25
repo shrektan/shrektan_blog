@@ -1,0 +1,61 @@
+---
+title: '"human round"- Round to nearest, ties away from zero'
+author: Xianying Tan
+date: '2018-04-25'
+slug: human-round-round-to-nearest-ties-away-from-zero
+categories:
+  - programming
+  - note
+tags:
+  - R
+---
+
+Have you ever noticed that both `base::round(2.5)` and `base::round(1.5)` return `r unique(base::round(c(2.5, 1.5), digits = 0L))` in R? It's strange, isn't it? At least I learned only one rounding rule in school that is _“四舍五入”_ in Chinese. It means we should round up if the decimal is five and down if four. 
+
+By reading the [documentation](https://www.rdocumentation.org/packages/base/versions/3.5.0/topics/Round) of `base::round()` we know that there's a standard called _"IEEE 754"_ and the rounding rule that `base::round()` uses is called _"go to the even digit"_.
+
+> Note that for rounding off a 5, the IEC 60559 standard (see also ‘IEEE 754’) is expected to be used, ‘go to the even digit’. 
+
+
+Googling _"IEEE 754"_ leads us to [the Wikipedia page](https://en.wikipedia.org/wiki/IEEE_754#Rounding_rules) where lays five round rules. _"To nearest, ties away from zero"_ is exactly the one that we're familiar with. `base::round()` opts the first rule, unfortunately, which I have no idea at all.
+
+Although I have no idea that `base::round()` opts the first rule, anyway, the only important question left is _how to implement the `human_round()` in R?_ Despite the users won't notice the "strange" rounding rule most of the time, I can imagine it could be very difficult to explain when asked. So we'd better have a solution. I'll share it here.
+
+## The R version (recommend)
+
+The rationality here is that [computers can only represent a fractional number in finite precision](https://en.wikipedia.org/wiki/Double-precision_floating-point_format), meaning it's safe to say two numbers are equal if the difference is smaller than a certain const. Usually, we choose `.Machine$double.eps^0.5` as that const (Why this number? I steal it from [`dplyr::near()`](https://www.rdocumentation.org/packages/dplyr/versions/0.7.3/topics/near) :P).
+
+```{r}
+human_round_r <- function(x, digits = 0) {
+  eps <- .Machine$double.eps^0.5
+  flag_pos <- !is.na(x) & (x > 0)
+  x[flag_pos] <- x[flag_pos] + eps
+  flag_neg <- !is.na(x) & (x < 0)
+  x[flag_neg] <- x[flag_neg] - eps
+  round(x, digits = digits)
+}
+human_round_r(c(2.5, 1.5, -1.5, -2.5, 1.5 - .Machine$double.eps^0.5))
+```
+
+Yes, it may not work as expected in the corner case like `1.5 - .Machine$double.eps^0.5` but the chance to get a number just equals to that in the real world closes to zero. If you really need a perfect one, please use the Rcpp version in the next.
+
+## The Rcpp version
+
+It takes advantage that the `std::round()` in C++ uses [the rounding rule ](http://en.cppreference.com/w/cpp/numeric/math/round) we familiar with.
+
+```{r}
+Rcpp::cppFunction("
+NumericVector human_round_cpp(const NumericVector x, const int digits = 0)
+{
+  const double multiplier = std::pow(10, digits);
+  NumericVector y(x.size());
+  std::transform(x.begin(), x.end(), y.begin(),
+                 [multiplier](const double x) {
+                   if (!R_FINITE(x)) return x;
+                   return std::round(x * multiplier) / multiplier;
+                 });
+  return y;
+}")
+human_round_cpp(c(2.5, 1.5, -1.5, -2.5, 1.5 - .Machine$double.eps^0.5))
+```
+
