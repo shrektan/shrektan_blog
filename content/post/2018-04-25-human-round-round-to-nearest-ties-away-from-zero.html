@@ -21,7 +21,7 @@ tags:
 <p>Although I have no idea that <code>base::round()</code> opts the first rule, anyway, the only important question left is <em>how to implement the <code>human_round()</code> in R?</em> Despite the users won’t notice the “strange” rounding rule most of the time, I can imagine it could be very difficult to explain when asked. So we’d better have a solution. I’ll share it here.</p>
 <div id="the-r-version-recommend" class="section level2">
 <h2>The R version (recommend)</h2>
-<p>The rationality here is that <a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">computers can only represent a fractional number in finite precision</a>, meaning it’s safe to say two numbers are equal if the difference is smaller than a certain const. Usually, we choose <code>.Machine$double.eps^0.5</code> as that const (Why this number? I steal it from <a href="https://www.rdocumentation.org/packages/dplyr/versions/0.7.3/topics/near"><code>dplyr::near()</code></a> :P).</p>
+<p>The rational here is that <a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">computers can only represent a fractional number in finite precision</a>, meaning it’s safe to say two numbers are equal if the difference is smaller than a certain const. Usually, we choose <code>.Machine$double.eps^0.5</code> as that const (Why this number? I steal it from <a href="https://www.rdocumentation.org/packages/dplyr/versions/0.7.3/topics/near"><code>dplyr::near()</code></a> :P).</p>
 <pre class="r"><code>human_round_r &lt;- function(x, digits = 0) {
   eps &lt;- .Machine$double.eps^0.5
   flag_pos &lt;- !is.na(x) &amp; (x &gt; 0)

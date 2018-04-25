@@ -23,7 +23,7 @@ Although I have no idea that `base::round()` opts the first rule, anyway, the on
 
 ## The R version (recommend)
 
-The rationality here is that [computers can only represent a fractional number in finite precision](https://en.wikipedia.org/wiki/Double-precision_floating-point_format), meaning it's safe to say two numbers are equal if the difference is smaller than a certain const. Usually, we choose `.Machine$double.eps^0.5` as that const (Why this number? I steal it from [`dplyr::near()`](https://www.rdocumentation.org/packages/dplyr/versions/0.7.3/topics/near) :P).
+The rational here is that [computers can only represent a fractional number in finite precision](https://en.wikipedia.org/wiki/Double-precision_floating-point_format), meaning it's safe to say two numbers are equal if the difference is smaller than a certain const. Usually, we choose `.Machine$double.eps^0.5` as that const (Why this number? I steal it from [`dplyr::near()`](https://www.rdocumentation.org/packages/dplyr/versions/0.7.3/topics/near) :P).
 
 ```{r}
 human_round_r <- function(x, digits = 0) {
