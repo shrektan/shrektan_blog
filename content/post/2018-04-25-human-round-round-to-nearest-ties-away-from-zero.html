@@ -18,7 +18,55 @@ tags:
 <p>Note that for rounding off a 5, the IEC 60559 standard (see also ‘IEEE 754’) is expected to be used, ‘go to the even digit’.</p>
 </blockquote>
 <p>Googling <em>“IEEE 754”</em> leads us to <a href="https://en.wikipedia.org/wiki/IEEE_754#Rounding_rules">the Wikipedia page</a> where lays five round rules. <em>“To nearest, ties away from zero”</em> is exactly the one that we’re familiar with. Due to unknow reasons, <code>base::round()</code> opts the first rule <em>“to nearest, ties to even”</em>, unfortunately.</p>
-<p>Although I have no idea that <code>base::round()</code> opts the first rule, anyway, the only important question left is <em>how to implement the <code>human_round()</code> in R?</em> Despite the users won’t notice the “strange” rounding rule most of the time, I can imagine it could be very difficult to explain when asked. So we’d better have a solution. I’ll share it here.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Mode / Example Value</th>
+<th align="right">11.5</th>
+<th align="right">12.5</th>
+<th align="right">−11.5</th>
+<th align="right">−12.5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">to nearest, ties to even</td>
+<td align="right">12</td>
+<td align="right">12</td>
+<td align="right">−12.0</td>
+<td align="right">−12.0</td>
+</tr>
+<tr class="even">
+<td align="left">to nearest, ties away from zero</td>
+<td align="right">12</td>
+<td align="right">13</td>
+<td align="right">−12.0</td>
+<td align="right">−13.0</td>
+</tr>
+<tr class="odd">
+<td align="left">toward 0</td>
+<td align="right">11</td>
+<td align="right">12</td>
+<td align="right">−11.0</td>
+<td align="right">−12.0</td>
+</tr>
+<tr class="even">
+<td align="left">toward +∞</td>
+<td align="right">12</td>
+<td align="right">13</td>
+<td align="right">−11.0</td>
+<td align="right">−12.0</td>
+</tr>
+<tr class="odd">
+<td align="left">toward −∞</td>
+<td align="right">11</td>
+<td align="right">12</td>
+<td align="right">−12.0</td>
+<td align="right">−13.0</td>
+</tr>
+</tbody>
+</table>
+<p>Anyway, the only important question left is <em>how to implement the <code>human_round()</code> in R?</em> Despite the users won’t notice the “strange” rounding rule most of the time, I can imagine it could be very difficult to explain when asked. So we’d better have a solution. I’ll share it here.</p>
 <div id="the-r-version-recommend" class="section level2">
 <h2>The R version (recommend)</h2>
 <p>The rational here is that <a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">computers can only represent a fractional number in finite precision</a>, meaning it’s safe to say two numbers are equal if the difference is smaller than a certain const. Usually, we choose <code>.Machine$double.eps^0.5</code> as that const (Why this number? I steal it from <a href="https://www.rdocumentation.org/packages/dplyr/versions/0.7.3/topics/near"><code>dplyr::near()</code></a> :P).</p>
@@ -32,7 +80,7 @@ tags:
 }
 human_round_r(c(2.5, 1.5, -1.5, -2.5, 1.5 - .Machine$double.eps^0.5))</code></pre>
 <pre><code>## [1]  3  2 -2 -3  2</code></pre>
-<p>Yes, it may not work as expected in the corner case like <code>1.5 - .Machine$double.eps^0.5</code> but the chance to get a number just equals to that in the real world closes to zero. If you really need a perfect one, please use the Rcpp version in the next.</p>
+<p>Yes, it may not work as expected for the corner case like <code>1.5 - .Machine$double.eps^0.5</code> but the chance to get a number just equals to that in the real world closes to zero. Moreover, I can argue that <code>1.5 - .Machine$double.eps^0.5</code> and <code>1.5</code> is basically the same because of the precision mentioned above. However, if you insist a “perfect” one, please use the Rcpp version below.</p>
 </div>
 <div id="the-rcpp-version" class="section level2">
 <h2>The Rcpp version</h2>
