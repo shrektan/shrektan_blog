@@ -17,7 +17,7 @@ tags:
 <blockquote>
 <p>Note that for rounding off a 5, the IEC 60559 standard (see also ‘IEEE 754’) is expected to be used, ‘go to the even digit’.</p>
 </blockquote>
-<p>Googling <em>“IEEE 754”</em> leads us to <a href="https://en.wikipedia.org/wiki/IEEE_754#Rounding_rules">the Wikipedia page</a> where lays five round rules. <em>“To nearest, ties away from zero”</em> is exactly the one that we’re familiar with. <code>base::round()</code> opts the first rule, unfortunately, which I have no idea at all.</p>
+<p>Googling <em>“IEEE 754”</em> leads us to <a href="https://en.wikipedia.org/wiki/IEEE_754#Rounding_rules">the Wikipedia page</a> where lays five round rules. <em>“To nearest, ties away from zero”</em> is exactly the one that we’re familiar with. Due to unknow reasons, <code>base::round()</code> opts the first rule <em>“to nearest, ties to even”</em>, unfortunately.</p>
 <p>Although I have no idea that <code>base::round()</code> opts the first rule, anyway, the only important question left is <em>how to implement the <code>human_round()</code> in R?</em> Despite the users won’t notice the “strange” rounding rule most of the time, I can imagine it could be very difficult to explain when asked. So we’d better have a solution. I’ll share it here.</p>
 <div id="the-r-version-recommend" class="section level2">
 <h2>The R version (recommend)</h2>
