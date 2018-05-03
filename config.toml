@@ -8,6 +8,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
 enableEmoji = true
+hasCJKLanguage = true
+
 
 [permalinks]
     post = "/post/:year/:month/:day/:slug/"
@@ -42,3 +44,5 @@ enableEmoji = true
     highlightjsCDN = "//cdn.bootcss.com"
     highlightjsLang = ["r", "yaml"]
     highlightjsTheme = "github"
+    
+    GithubEdit = "https://github.com/shrektan/shrektan_blog/edit/master/content/"
