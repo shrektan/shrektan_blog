@@ -28,9 +28,9 @@ tags:
 
 ### 坑
 
-果然，没多久就发现有些脚本的结果有些奇怪了。排查了半天后，终于发现了问题：_odbc并没有像RODBC或者RJDBC一样，预先把SQL字符编码转换成和数据库一致的字符编码。_ 坑爹的是，我很少会在SQL中用中文，正好那个别的中文虽然转换成了垃圾字符但并不会报错，所以并未报错，而只是返回的结果不一样 :rage:。
+果然，没多久就发现有些脚本的结果有些奇怪了。排查了半天后，终于发现了问题：_odbc并没有像RODBC或者RJDBC一样，预先把SQL字符编码转换成和数据库一致的字符编码。_ 坑爹的是，我很少会在SQL中用中文，正好那个别的中文虽然转换成了垃圾字符但并不会报错，只是返回的结果不一样 :rage:。
 
-早上在Github上提交了报告[r-dbi/odbc#179](https://github.com/r-dbi/odbc/issues/179)，感觉强制将SQL转换成和数据库的字符编码应该可行（`RODBC::odbcQuery()`就是这么做的），考虑到我实在不是数据库专家，还是不提交PR献丑了，留给作者[Jim Hester](https://github.com/jimhester)解决吧…
+早上在Github上提交了报告[r-dbi/odbc#179](https://github.com/r-dbi/odbc/issues/179)，感觉强制将SQL转换成和数据库的字符编码应该可行（`RODBC::odbcQuery()`就是这么做的），但考虑到我实在不是数据库专家，还是不提交PR献丑了，留给作者[Jim Hester](https://github.com/jimhester)解决吧…
 
 ### 浪费时间
 
@@ -65,6 +65,8 @@ tags:
 * 各种数据储存格式对于编码的支持，比如[wesm/feather#335](https://github.com/wesm/feather/issues/335)、[fstpackage/fst#114](https://github.com/fstpackage/fst/issues/144)；
 
 * 各种htmlwidgets对中文的支持 —— 现在这方面问题似乎越来越少了；
+
+* ROracle包必须要把SQL用UTF-8编码才行；
 
 * ……
 
