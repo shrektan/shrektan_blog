@@ -52,9 +52,9 @@ tags:
 
 * `roxygen2`和`devtools`在windows上对中文的支持 —— [klutometis/roxygen#532](https://github.com/klutometis/roxygen/pull/532)、[r-lib/devtools#1378](https://github.com/r-lib/devtools/pull/1378)
 
-* `data.table`在1.9.7版本中引入的八哥 —— 参见我[前一篇日志](/2018/03/18/strings-encodings-in-r/)，来来回回折磨了我快两年；
+* `data.table`在1.9.7版本中引入的八哥 —— 参见我[前一篇日志](/post/2018/03/18/strings-encodings-in-r/)，来来回回折磨了我快两年；
 
-* R版本3.3.0引入的八哥，导致`match()`函数对于不同字符编码结果不一致 —— 我[第一篇日志](post/2016/05/07/my-first-bug-report-to-r-project-org/)写的就是这个；
+* R版本3.3.0引入的八哥，导致`match()`函数对于不同字符编码结果不一致 —— 我[第一篇日志](/post/2016/05/07/my-first-bug-report-to-r-project-org/)写的就是这个；
 
 * R里的数据库链接，有的返回的是UTF-8编码的字符，而有的则返回本地编码字符，总之你只能试了才知道；
 
