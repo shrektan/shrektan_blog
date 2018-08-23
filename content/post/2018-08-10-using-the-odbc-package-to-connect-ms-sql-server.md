@@ -62,7 +62,6 @@ tags:
     ```
     
     - 然后执行下面的语句即可。
-    
     ```bash
     odbcinst -i -d -f /var/tds.driver.template
     ```
