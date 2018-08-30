@@ -28,7 +28,7 @@ tags:
 1. 建立一个使用odbc包的数据库链接`conn`，执行下列语句：
 
     ```r
-    sql_native <- "select * from tbl where field_a = '中文'`"
+    sql_native <- "select * from tbl where field_a = '中文'"
     sql_utf8 <- enc2utf8(sql_native)
     DBI::dbGetQuery(conn, sql_native)
     # 会有数据
@@ -62,7 +62,6 @@ tags:
     ```
     
     - 然后执行下面的语句即可。
-    
     ```bash
     odbcinst -i -d -f /var/tds.driver.template
     ```
