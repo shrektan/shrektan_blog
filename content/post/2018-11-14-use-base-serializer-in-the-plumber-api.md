@@ -18,7 +18,7 @@ Usually, web APIs use [JSON](http://json.org/) to represent data. Unfortunately,
 
 - The user has to set back the attributes explicitly after the JSON results being parsed because there's no way to tell `["2018-11-15"]` is a string or a date in the pure JSON format. Or you have to store all the attributes in a seperate list, which is tedious and error-prone.
 
-- Some issue that is difficult to solve like you can't present a zero-row dataframe in JSON (`jsonlite::toJSON(iris[0,])` returns `[]`). You have to deal with such corner cases by yourself.
+- Some issue is difficult to solve like you can't represent a zero-row dataframe in JSON (`jsonlite::toJSON(iris[0,])` returns `[]`). You have to deal with such corner cases by yourself.
 
 - Parse a large R object to JSON can be quite slow ^[Let's make a large double vector by `v <- rnorm(1e8)`, `system.time(invisible(jsonlite::toJSON(v)))` costs 27 seconds while `system.time(invisible(serialize(v, NULL)))` costs less than 4 seconds on my computer].
 
@@ -66,5 +66,5 @@ out <- httr::POST(
 )
 # you may need to check httr::status_code() == 200L 
 # or if is.raw(httr::content(out)) is TRUE, first
-unserialize(httr::content(out))
+base::unserialize(httr::content(out))
 ```
