@@ -18,7 +18,7 @@ Usually, web APIs use [JSON](http://json.org/) to represent data. Unfortunately,
 
 - The user has to set back the attributes explicitly after the JSON results being parsed because there's no way to tell `["2018-11-15"]` is a string or a date in the pure JSON format. Or you have to store all the attributes in a seperate list, which is tedious and error-prone.
 
-- Some issue that is difficult to solve like you can't present a zero-row dataframe in JSON (`jsonlite::toJSON(iris[0,])` returns `[]`). You have to deal with such corner cases by yourself.
+- Some issue is difficult to solve like you can't represent a zero-row dataframe in JSON (`jsonlite::toJSON(iris[0,])` returns `[]`). You have to deal with such corner cases by yourself.
 
 Luckily, all my "clients" (my colleagues) are R users, so I don't really need a general web API. JSON is only one of the many methods to [serialize](https://en.wikipedia.org/wiki/Serialization) objects and I'm not bound to it. Due to the existence of `base::saveRDS()`, I know there must be a serializing method provided by R itself - whether the method is exported or not is the only thing in doubt. Fortunately, with little effort, `base::serialize()` and `base::unserialize()` are the cures I'm looking for.
 
@@ -64,5 +64,5 @@ out <- httr::POST(
 )
 # you may need to check httr::status_code() == 200L 
 # or if is.raw(httr::content(out)) is TRUE, first
-unserialize(httr::content(out))
+base::unserialize(httr::content(out))
 ```
