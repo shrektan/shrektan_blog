@@ -28,6 +28,10 @@ My solution is provided in the code below. Since the rds file is _almost_ the se
 
 Enjoy!
 
+---
+
+# The sample code
+
 ### Add the customized erializer first
 
 ```r
