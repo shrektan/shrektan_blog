@@ -36,4 +36,4 @@ will always result in an error saying it violates the primary key constraints. T
 
 What's even strange is that MS SQLServer stores them differently. It means if I delete the primary key constraints then insert the two values into the table. I can see the two records are clearly different, one is `-` (the normal minus) and the other is `－`(the great `\uff0d`).
 
-Haven't googled the cause yet... For now just use a workaround and let it go... Really really don't want to waste the precious time on this kind of issues any more... :cry:
+Haven't googled out the cause yet... For now just use a workaround and let it go... Really really don't want to waste the precious time on this kind of issues any more... :cry:
