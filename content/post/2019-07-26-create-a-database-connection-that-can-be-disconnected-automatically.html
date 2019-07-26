@@ -1,0 +1,92 @@
+---
+title: Create a database connection that can be disconnected automatically
+author: Xianying Tan
+date: '2019-07-26'
+slug: create-a-database-connection-that-can-be-disconnected-automatically
+categories:
+  - programming
+  - tech
+tags:
+  - R
+---
+
+
+
+<p>Database connections are resources. Although databases will free idle connections automatically, you’d better release them by yourself. Otherwise, it may affect the performance of the database seriously.</p>
+<p>Explicitly close the connections after the use is ok, but too verbose. Besides, it can’t guarantee the connections being released, imagining your code throws error somewhere before the line to close the connection. In CPP, a good practice is to manage the resource by incorporating the use of resource into an object, so that the resource is released as long as the object is out of scope. This technique is called <a href="http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#r1-manage-resources-automatically-using-resource-handles-and-raii-resource-acquisition-is-initialization">RIIA (Resource Acquisition Is Initialization)</a>.</p>
+<p>I’m not a fan of using objects in R. But the idea of RIIA is simple - executing something at the end of “something”. Well that “something” could be a function, too. <code>on.exit()</code> is the magic to register an expression when the current function exits (actually, it’s called at the time of the calling environment exits, so you can use <code>local({...}))</code> as well). The expression is guaranteed to be executed, even if the function throws errors. So we can improve our code to this:</p>
+<pre class="r"><code>data_a &lt;- local({
+  conn &lt;- DBI::dbConnect(...)
+  on.exit(DBI::dbDisconnect(conn), add = TRUE)
+  DBI::dbGetQuery(...)
+})</code></pre>
+<p>Looks good but imagine you have serveral different databases and use many different tables, you have to write that <code>on.exit()</code> again and again. So the question becomes <em>how to write a wrapper function to build the connection which will automatically disconnect itself at the calling frame ends</em>. It means we are going to register the <code>on.exit()</code> on the <code>parent.frame()</code>. Trust me it’s not a easy task… Thanks to <code>withr::defer()</code>, we don’t need to know the complexity behind. So it can be simplified to:</p>
+<pre class="r"><code>activate_conn &lt;- function(...) {
+  conn &lt;- DBI::dbConnect(...)
+  withr::defer(try(DBI::dbDisconnect(conn)), envir = parent.frame(), priority = &quot;last&quot;)
+  conn
+}
+data_a &lt;- local({
+  DBI::dbGetQuery(activate_conn(...), ...)
+})
+data_b &lt;- local({
+  DBI::dbGetQuery(activate_conn(...), ...)
+})
+data_c &lt;- local({
+  DBI::dbGetQuery(activate_conn(...), ...)
+})</code></pre>
+<p>Already good enough, isn’t it? Except that <code>withr::defer()</code> doesn’t work in the <code>.GlobalEnv</code>, because <code>.GlobalEnv</code> can’t be deleted and only exits with R session ends. But sometimes it’s more convinient to test the codes with a connection that exists in the global environment. I think <code>RODBC</code> and <code>DBI</code> contain the schema to release the connection at the time of garbage collection but I’m not really sure. So let’s register a finalizer function at the time of garbage collection or R session ends, with the help of <code>reg.finalizer()</code> (just happend to find it today on <a href="https://twitter.com/henrikbengtsson/status/1154692874816110592?s=20">Twitter</a>).</p>
+<p>So this is our final connector that will auto-disconnect itself as long as we don’t need it!</p>
+<div id="the-finalizer-register" class="section level4">
+<h4>The finalizer register</h4>
+<pre class="r"><code># use close_fun so that it not only works for DBI but could also be used for RODBC, etc.
+reg_conn_finalizer &lt;- function(conn, close_fun, envir) {
+  is_parent_global &lt;- identical(.GlobalEnv, envir)
+  if (isTRUE(is_parent_global)) {
+    env_finalizer &lt;- new.env(parent = emptyenv())
+    env_finalizer$conn &lt;- conn
+    attr(conn, &#39;env_finalizer&#39;) &lt;- env_finalizer
+    reg.finalizer(env_finalizer, function(e) {
+      print(&#39;global finalizer!&#39;)
+      try(close_fun(e$conn))
+    }, onexit = TRUE)
+  } else {
+    withr::defer({
+      print(&#39;local finalizer!&#39;)
+      try(close_fun(conn))
+    }, envir = envir, priority = &quot;last&quot;)
+  }
+  conn
+}</code></pre>
+</div>
+<div id="the-connector" class="section level4">
+<h4>The connector</h4>
+<pre class="r"><code># build connection that will be automatically destroyed
+activate_conn &lt;- function(...) {
+  conn &lt;- DBI::dbConnect(...)
+  reg_conn_finalizer(conn, DBI::dbDisconnect, parent.frame())
+}</code></pre>
+</div>
+<div id="lets-test" class="section level4">
+<h4>Let’s test</h4>
+<div id="local" class="section level5">
+<h5>Local</h5>
+<pre class="r"><code>local({
+  invisible(activate_conn(RSQLite::SQLite(), &#39;:memory:&#39;))
+})</code></pre>
+<pre><code>## [1] &quot;local finalizer!&quot;</code></pre>
+</div>
+<div id="global---removed" class="section level5">
+<h5>Global - removed</h5>
+<pre class="r"><code>conn &lt;- activate_conn(RSQLite::SQLite(), &#39;:memory:&#39;)
+rm(conn)
+invisible(gc())</code></pre>
+<pre><code>## [1] &quot;global finalizer!&quot;</code></pre>
+</div>
+<div id="global---r-session-ends" class="section level5">
+<h5>Global - R session ends</h5>
+<pre class="r"><code># This chunk will not be evaluated because we don&#39;t want the render engine to exit :P
+invisible(activate_conn(RSQLite::SQLite(), &#39;:memory:&#39;))
+q(save = &#39;no&#39;)</code></pre>
+</div>
+</div>
