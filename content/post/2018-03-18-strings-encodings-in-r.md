@@ -9,7 +9,7 @@ tags:
   - R
 ---
 
-费了不少功夫，不出意外，总算是彻底解决了`data.table`中文支持的问题（[PR#2678](https://github.com/Rdatatable/data.table/pull/2678)，[PR#2566](https://github.com/Rdatatable/data.table/pull/2566))。散乱地写下些学习到的点，供以后参考：
+费了不少功夫，不出意外，总算是彻底解决了`data.table`中文支持的问题（[PR#2678](https://github.com/Rdatatable/data.table/pull/2678)、[PR#2566](https://github.com/Rdatatable/data.table/pull/2566))、 [PR#3451](https://github.com/Rdatatable/data.table/pull/3451)、 [PR#3849](https://github.com/Rdatatable/data.table/pull/3849)、 [PR#3850](https://github.com/Rdatatable/data.table/pull/3850)。散乱地写下些学习到的点，供以后参考：
 
 ### 学习笔记
 
