@@ -68,6 +68,34 @@ tags:
 
 * ROracle包必须要把SQL用UTF-8编码才行；
 
-* ……
+* ...
+
 
 恐怕大家都多多少少被这些问题折磨过，可折腾来折腾去，究竟有多少意义？最悲哀的是，无论之前踩了再多坑，后面却有更多坑等着你 :joy:。
+
+###  (嘚瑟下我提交PR修复的问题)
+
+* [r-lib/roxygen2#532](https://github.com/r-lib/roxygen2/pull/532)：roxygen2会使用DESCRIPTION里的Encoding字段，之前总是使用native encoding，在Windows下带来很多问题
+
+* [rstudio/rmarkdown#841](https://github.com/rstudio/rmarkdown/pull/841)：很早之前yaml对UTF-8支持不太友好，rmarkdown不得不在内部对yaml读取进行一些更改，但是忘记了除了最后的内容外，列表的名称也可能是UTF-8编码的
+
+* [Rdatatable/data.table#2566](https://github.com/Rdatatable/data.table/pull/2566))、 [Rdatatable/data.table#3451](https://github.com/Rdatatable/data.table/pull/3451)、 [Rdatatable/data.table#3849](https://github.com/Rdatatable/data.table/pull/3849)：解决了data.table在处理包含非ASCII字符的排序、查询和崩溃问题——专研了好一会，而且data.table的C代码挺复杂的，能搞定这些我真的挺得意的，哈哈
+
+* [rstudio/plumber#312](https://github.com/rstudio/plumber/pull/312)、[rstudio/plumber#314](https://github.com/rstudio/plumber/pull/314/files)：plumber能够支持读取UTF-8的源文件以及处理包含UTF-8的JSON信息
+
+* [Rblp/Rblpapi#278](https://github.com/Rblp/Rblpapi/pull/278)：Rblpapi会可以调用彭博API，但是对于返回的结果没有进行UTF-8标识，导致乱码
+
+* [r-dbi/RSQLite#276](https://github.com/r-dbi/RSQLite/pull/276)：RSQLite没有对返回的列头标识UTF-8编码，导致显示乱码
+
+* [openanalytics/containerproxy#15](https://github.com/openanalytics/containerproxy/pull/15)：shinyproxy在向influxdb传送用户信息时没有把编码从Java默认的UTF-16装换成UTF-8，导致包含中文字符时，数据库收到的信息是乱码
+
+* [Rdatatable/data.table#3850](https://github.com/Rdatatable/data.table/pull/3850)：`data.table::setnames()`无法正确对中文列头重命名
+
+* [r-dbi/odbc#294](https://github.com/r-dbi/odbc/pull/294)：`odbc`包返回的时区强制为UTC导致用户使用非常困惑和不方便
+
+* [r-dbi/odbc#295](https://github.com/r-dbi/odbc/pull/295)：`odbc`包返回的日期值是数据库存储的日期减1天
+
+* [rstudio/rstudioapi#158](https://github.com/rstudio/rstudioapi/pull/158)：Windows下，rstudioapi在选择了包含中文的文件后，显示为乱码
+
+* [rstudio/htmltools#157](https://github.com/rstudio/htmltools/pull/157)：Windows下rmarkdown在遇到emoji的字符串后，后续的htmlwidgets对象无法显示
+
