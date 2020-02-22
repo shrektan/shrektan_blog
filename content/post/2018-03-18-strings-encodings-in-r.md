@@ -1,5 +1,6 @@
 ---
-title: Strings, Encodings in R
+title: R中的字符编码
+subtitle: Strings、Encodings in R
 author: Xianying Tan
 date: '2018-03-18'
 slug: strings-encodings-in-r
