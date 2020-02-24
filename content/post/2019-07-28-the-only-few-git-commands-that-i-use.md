@@ -29,7 +29,6 @@ Git is great but quite complicated to fully master[^books]. Fortunately, being f
 
 1. `git remote -v`: display all the remote repository
 1. `git remote add/rm {repo-alias} {git-url}`: add or remove a remote repository
-1. `git remote -v`: display all the remote repository
 
 ## Local - Remote
 
@@ -38,10 +37,15 @@ Git is great but quite complicated to fully master[^books]. Fortunately, being f
 1. `git push -u {repo-alias} {branch-name}`: push and set the remote branch as the upstream, which means you don't have to specify the remote repo and branch when using `git pull` and `git push` later
 1. `git pull {repo-alias} {branch-name}`: equals to `git fetch` first then `git merge {repo-alias/branch-name}`
 
+## Commit
+
+1. `git commit -a -m "your message"`: commit all the code changes with a message.
+
 ## Advanced
 
 1. `git reset --hard HEAD~n`: discard the last n commits *hardly*. `--hard` means reverting to the previous status. Often used when you think your last n commits are nonsense.
 1. `git reset --soft HEAD~n`: discard the last n commits *softly*. `--soft` means keeping the changes. Often used when you want to squash the commits or remove the just-unintentionally-included files.
+1. `git merge --abort`: imagine you pull from the upstream and a CONFLICT happens. You can solve the conflict but you may also consider to abort the merge. This command allows to abort the current merge.
 1. `git rebase --onto master B C`: (Well, frankly speaking, I'm writing this article because of this command) Often used when you made a commit, which should have been committed on another branch. So you need to *rebase* the commit.    
    Let's say you are working on the `D` branch, developping a cool new feature. You need to use an existing function but find a bug inside. The *correct* procedure is: `git checkout master`, modify the code, commit, `git checkout D` and `git merge master` to have the fix on `D`. 
    Remember that you are immersed in developping the new feature (good programmers do) so there's a chance you simply commit the fix on `D` and go. After a few more commits on `D`, you realize the previous commit should have been played on the branch `master`.  
