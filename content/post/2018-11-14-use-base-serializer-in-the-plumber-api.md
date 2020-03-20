@@ -28,47 +28,54 @@ My solution is provided in the code below. Since the rds file is _almost_ the se
 
 Enjoy!
 
+## UPDATE @2020/03/21
+
+As the time of writing, the dev version of `plumber` now gains the new native serializer `rds`.
+
 ---
 
-# The sample code
+## The sample code (BOTH POST and RETURN r objects)
 
-### Add the customized erializer first
+- Place all the scripts under one same folder. 
+- Execute `main.R` to launch the API server. 
+- Execute `client.R` to test the API.
 
-```r
-plumber::addSerializer("r_obj_serializer", function() {
-  function(val, req, res, errorHandler) {
-    tryCatch({
-      res$setHeader("Content-Type", "application/octet-stream")
-      res$body <- base::serialize(val, NULL, ascii = FALSE)
-      return(res$toResponse())
-    }, error = function(e) {
-      errorHandler(req, res, e)
-    })
-  }
-})
-```
-
-### Use the customized serializer in the plumber file
+### plumber.R
 
 ```r
 #* @post /api
-#* @serializer r_obj_serializer
-function() {
-  ...
+#* @serializer rds
+function(req) {
+  req$robj
 }
 ```
 
-### Get the API results
+### main.R
+
+(In practice, you probably want to have a condition inside. A good example is this: https://github.com/ozean12/protopretzel/blob/master/R/protobuf_filter.R)
+
+```r
+library(plumber)
+x <- plumb("plumber.R")
+x$filter("robj", function(req) {
+  req$rook.input$rewind()
+  req$robj <- unserialize(req$rook.input$read())
+  plumber::forward()
+})
+x$run(debug = TRUE, port = 9999)
+```
+
+### client.R
 
 ```r
 out <- httr::POST(
-  url,
+  "http://127.0.0.1:9999/api",
   encode = "raw",
-  body = body,
-  httr::content_type("application/octet-stream"),
-  ...
+  body = serialize(iris, NULL),
+  httr::content_type("application/octet-stream")
 )
 # you may need to check httr::status_code() == 200L 
 # or if is.raw(httr::content(out)) is TRUE, first
 base::unserialize(httr::content(out))
 ```
+
