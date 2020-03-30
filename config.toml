@@ -16,23 +16,23 @@ hasCJKLanguage = true
     note = "/note/:year/:month/:day/:slug/"
 
 [[menu.main]]
-    name = "Home"
+    name = "主页/Home"
     url = "/"
     weight = 1
 [[menu.main]]
-    name = "About"
+    name = "关于/About"
     url = "/about/"
     weight = 2
 [[menu.main]]
-    name = "Categories"
+    name = "类别/Categories"
     url = "/categories/"
     weight = 3
 [[menu.main]]
-    name = "Tags"
+    name = "标签/Tags"
     url = "/tags/"
     weight = 4
 [[menu.main]]
-    name = "Subscribe"
+    name = "订阅/Subscribe"
     url = "/index.xml"
 
 [params]
