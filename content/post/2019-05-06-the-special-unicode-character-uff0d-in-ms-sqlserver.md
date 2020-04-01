@@ -11,11 +11,11 @@ tags:
 ---
 
 
-It's currently 01:57 a.m in Beijing. I'm still awake, thanks to the "great" unicode `\uff0d`, whose official name is "FULLWIDTH HYPHEN-MINUS" (the print of the character is `－`, very similiar to `-`).
+It's currently 01:57 a.m in Beijing. I'm still awake, thanks to the "great" unicode `\uff0d`, whose official name is "FULLWIDTH HYPHEN-MINUS" (the print of the character is `－`, very similar to `-`).
 
 Why I'm calling it the "great" "special" unicode?
 
-MS SQLServer (at least for the version I use - 2014) somehow recongizes `\uff0d(－)` as if it was `-` (the normal minus sign).
+MS SQLServer (at least for the version I use - 2014) somehow recognizes `\uff0d(－)` as if it was `-` (the normal minus sign).
 
 What do I mean? Let's say you have a table created like this:
 
@@ -26,7 +26,7 @@ CONSTRAINT pk_test PRIMARY KEY (COL1)
 );
 ```
 
-After you insert the value `a-b` where `-` is the normal minus sign, the suprising thing will happen: 
+After you insert the value `a-b` where `-` is the normal minus sign, the surprising thing will happen: 
 
 ```sql
 insert into table_test values('a－b');
