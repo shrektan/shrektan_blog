@@ -37,3 +37,8 @@ will always result in an error saying it violates the primary key constraints. T
 What's even strange is that MS SQLServer stores them differently. It means if I delete the primary key constraints then insert the two values into the table. I can see the two records are clearly different, one is `-` (the normal minus) and the other is `－`(the great `\uff0d`).
 
 Haven't googled out the cause yet... For now just use a workaround and let it go... Really really don't want to waste the precious time on this kind of issues any more... :cry:
+
+---
+
+**Update (@2020-04-02)**: It's possible that the relationship between the two characters is similar to that of the lower and upper cases, considering the fact that MS SQLServer ignores cases by default when comparing strings. Nevertheless, this is just my guess without verification.
+
