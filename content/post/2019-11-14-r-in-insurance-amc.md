@@ -6,11 +6,10 @@ date: '2019-11-14'
 slug: r-in-insurance-amc
 categories:
   - cn
-  - finance
-  - sharing
-  - note
 tags:
   - finance
+  - sharing
+  - note  
 ---
 
 # 来源

@@ -4,11 +4,12 @@ author: Xianying Tan
 date: '2018-04-21'
 slug: non-ascii-tabset-headers-in-rmarkdown
 categories:
-  - note
-  - programming
-  - tech
+  - en
 tags:
   - R
+  - note
+  - programming
+  - tech  
 ---
 
 Generally, the rmarkdown package supports non-ASCII strings very well, e.g., the link on the table of content works even for pure non-ASCII headers. However, I was bitten when using non-ASCII headers with [the nice tabbed sections feature](https://rmarkdown.rstudio.com/html_document_format.html#tabbed_sections) recently. Luckily, I found the solution [rstudio/rmarkdown#1149](https://github.com/rstudio/rmarkdown/issues/1149) quickly, which I'd like to share to you.

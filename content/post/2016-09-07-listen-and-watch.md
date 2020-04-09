@@ -4,9 +4,10 @@ author: Xianying Tan
 date: '2016-09-07'
 slug: listen-and-watch
 categories:
-  - note
+  - en
 tags:
   - quote
+  - note
 ---
 
 From _"Leading"_ by Alex Ferguson: 

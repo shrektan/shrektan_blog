@@ -4,10 +4,10 @@ author: Xianying Tan
 date: '2019-05-06'
 slug: the-special-unicode-character-uff0d-in-ms-sqlserver
 categories:
-  - complaint
-  - tech
+  - en
 tags:
   - complaint
+  - tech
 ---
 
 

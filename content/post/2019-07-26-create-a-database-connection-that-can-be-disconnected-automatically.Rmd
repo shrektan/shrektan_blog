@@ -4,10 +4,11 @@ author: Xianying Tan
 date: '2019-07-26'
 slug: create-a-database-connection-that-can-be-disconnected-automatically
 categories:
-  - programming
-  - tech
+  - en
 tags:
   - R
+  - programming
+  - tech  
 ---
 
 Database connections are resources. Although databases will free idle connections automatically, you'd better release them by yourself. Otherwise, it may affect the performance of the database seriously.

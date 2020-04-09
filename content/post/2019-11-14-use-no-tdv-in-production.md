@@ -4,11 +4,11 @@ author: 谭显英
 date: '2019-11-14'
 slug: use-no-tdv-in-production
 categories:
-  - programming
   - cn
-  - complaint
 tags:
   - R
+  - complaint  
+  - programming  
 ---
 
 每次系统性地升级R包，我最担心的就是tidyverse相关的代码，因为不时地就会出现各种"break the existing code"的升级，令人非常头疼。果然不出所料，原来合法的代码又一次报错：

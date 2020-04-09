@@ -4,7 +4,7 @@ author: 谭显英
 date: '2018-05-02'
 slug: lack-of-confidence-leads-to-over-complication
 categories:
-  - thinking
+  - cn
 tags:
   - quote
   - thinking

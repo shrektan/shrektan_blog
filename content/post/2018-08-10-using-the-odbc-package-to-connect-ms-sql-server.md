@@ -4,10 +4,7 @@ author: 谭显英
 date: '2018-08-10'
 slug: using-the-odbc-package-to-connect-ms-sql-server
 categories:
-  - programming
-  - tech
-  - note
-  - sharing
+  - cn
 tags:
   - R
   - odbc
@@ -15,6 +12,10 @@ tags:
   - FreeTDS
   - unixODBC
   - MSSQLServer
+  - programming
+  - tech
+  - note
+  - sharing
 ---
 
 在[《忍无可忍的Encoding》](/post/2018/05/07/cant-bear-with-encoding-any-longer/)一文中提到：

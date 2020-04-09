@@ -4,11 +4,12 @@ author: Xianying Tan
 date: '2018-04-12'
 slug: hugo-will-not-publish-the-future-post-by-default
 categories:
-  - programming
-  - tech
+  - en
 tags:
   - web
   - material
+  - programming
+  - tech  
 ---
 
 It's annoying. 

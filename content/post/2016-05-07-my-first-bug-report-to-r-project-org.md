@@ -4,9 +4,10 @@ author: Xianying Tan
 date: '2016-05-07'
 slug: my-first-bug-report-to-r-project-org
 categories:
-  - programming
+  - en
 tags:
   - R
+  - programming
 ---
 
 

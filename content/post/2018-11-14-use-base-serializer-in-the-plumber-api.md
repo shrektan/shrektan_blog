@@ -4,12 +4,13 @@ author: Xianying Tan
 date: '2018-11-14'
 slug: use-base-serializer-in-the-plumber-api
 categories:
-  - programming
-  - sharing
-  - tech
+  - en
 tags:
   - R
   - web
+  - programming
+  - sharing
+  - tech  
 ---
 
 Recently, I need to share an R model on the server to my colleagues who use R. [Plumber](https://www.rplumber.io) comes to my mind immediately. Build a web API using plumber is really easy. I love the roxygen-way to define the API. It's elegant and easy to maintain.

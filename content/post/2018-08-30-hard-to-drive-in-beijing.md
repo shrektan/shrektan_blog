@@ -4,7 +4,7 @@ author: 谭显英
 date: '2018-08-30'
 slug: hard-to-drive-in-beijing
 categories:
-  - complaint
+  - cn
 tags:
   - complaint
   - personal

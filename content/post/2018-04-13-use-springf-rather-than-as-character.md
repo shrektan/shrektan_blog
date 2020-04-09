@@ -5,10 +5,11 @@ author: Xianying Tan
 date: '2018-04-12'
 slug: use-sprintf-rather-than-as-character
 categories:
-  - programming
-  - note
+  - en
 tags:
   - R
+  - programming
+  - note
 ---
 
 Converting a number to a string is easy. In many cases, you don't even need to call the converting functions explicitly. However, when it comes to sophisticatedly control the output, you may find `as.character()` is not enough and `sprintf()` is the cure. I'll give some real world use cases to demostrate.

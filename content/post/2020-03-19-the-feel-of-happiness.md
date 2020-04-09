@@ -4,7 +4,6 @@ author: 谭显英
 date: '2020-03-19'
 slug: the-feel-of-happiness
 categories:
-  - life
   - cn
 tags:
   - life

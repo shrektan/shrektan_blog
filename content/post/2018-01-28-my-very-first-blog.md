@@ -4,8 +4,10 @@ author: Xianying Tan
 date: '2018-01-28'
 slug: my-very-first-blog
 categories:
+  - en
+tags: 
+  - personal
   - note
-tags: [personal]
 ---
 
 Thanks [Yihui](https://yihui.name) for inviting me to help him mantaining the [DT](https://github.com/rstudio/DT) package. Though we've never met in person before ^[In fact, I met him once in 2016 on an R meeting in Beijing but didn't start a conversation because he had talked himself hoarse.], I was thrilled and replied "Yes" immediately. 

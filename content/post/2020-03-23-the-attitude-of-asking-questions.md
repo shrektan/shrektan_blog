@@ -5,8 +5,6 @@ date: '2020-03-23'
 slug: the-attitude-of-asking-questions
 categories:
   - cn
-  - life
-  - thinking
 tags:
   - life
   - thinking

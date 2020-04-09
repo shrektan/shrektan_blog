@@ -4,11 +4,12 @@ author: Xianying Tan
 date: '2018-04-12'
 slug: the-defaults-of-a-function-argument-are-not-binded
 categories:
-  - programming
-  - tech
-  - note
+  - en
 tags:
   - R
+  - programming
+  - tech
+  - note  
 ---
 
 When writing a function in R, it's good to provide commonly appropriate default values for the arguments so that the user could call the function conviniently in most cases. However, if you happen to have some functions sharing the same default values, you may be lured to create a variable (e.g., `opts`) and assign those default values to this variable.

@@ -5,10 +5,13 @@ author: 谭显英
 date: '2018-05-07'
 slug: cant-bear-with-encoding-any-longer
 categories:
-  - note
-  - tech
+  - cn
 tags:
   - complaint
+  - note
+  - tech
+  - R
+  - encoding
 ---
 
 ### RSQLServer包正式退役了

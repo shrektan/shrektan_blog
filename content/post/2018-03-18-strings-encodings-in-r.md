@@ -5,9 +5,12 @@ author: Xianying Tan
 date: '2018-03-18'
 slug: strings-encodings-in-r
 categories:
-  - programming
+  - cn
 tags:
   - R
+  - programming
+  - encoding
+  - data.table
 ---
 
 费了不少功夫，不出意外，总算是彻底解决了`data.table`中文支持的问题（[PR#2678](https://github.com/Rdatatable/data.table/pull/2678)、[PR#2566](https://github.com/Rdatatable/data.table/pull/2566))、 [PR#3451](https://github.com/Rdatatable/data.table/pull/3451)、 [PR#3849](https://github.com/Rdatatable/data.table/pull/3849)、 [PR#3850](https://github.com/Rdatatable/data.table/pull/3850)。散乱地写下些学习到的点，供以后参考：
