@@ -4,10 +4,11 @@ author: Xianying Tan
 date: '2018-04-11'
 slug: emoji-how-to-enable-in-hugo-and-the-cheatsheets
 categories:
-  - programming
+  - en
 tags:
   - web
   - material
+  - programming
 ---
 
 # How to enable `Emoji` in Hugo
