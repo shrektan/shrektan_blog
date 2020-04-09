@@ -5,7 +5,7 @@ author: Xianying Tan
 date: '2018-03-21'
 slug: defining-is-the-hardest-part
 categories:
-  - thinking
+  - cn
 tags:
   - thinking
 ---
