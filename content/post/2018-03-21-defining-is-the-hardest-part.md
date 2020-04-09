@@ -1,5 +1,6 @@
 ---
-title: Defining is the hardest part
+title: 困难的定义
+subtitle: 解决问题的关键
 author: Xianying Tan
 date: '2018-03-21'
 slug: defining-is-the-hardest-part
