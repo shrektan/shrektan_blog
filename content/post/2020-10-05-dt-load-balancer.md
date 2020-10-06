@@ -28,3 +28,13 @@ tags:
 那为什么会有用户声称自己配置了粘滞会话还是不行呢？一种可能的原因是，有时候用户认为自己启用了，但实际上没有。比如，我在鼓捣的时候就发现，在没有使用HTTPS的情况下，使用secured cookie实际上是不行的（@richardtc应该就是犯了这个错误）。系统虽然没有报错，但是浏览器压根就不会在普通HTTP中传输这个cookie，所以，Traefik只能把每一个请求都当做不同的会话来处理了……
 
 所以，以后再有用户抱怨均衡负载和DT（其实shiny的下载功能也类似）不能共存时，我就可以理直气壮地说“请在均衡负载中开启粘滞会话，如果还不行，那么就是你的粘滞会话没有开启成功”。
+
+### 相关资料
+
+- [Effectively Deploying and Scaling Shiny Apps with ShinyProxy, Traefik and Docker Swarm](https://www.databentobox.com/2020/05/31/shinyproxy-with-docker-swarm/#optional-deploying-r-shiny-apps-without-shinyproxy)
+
+- [shrektan/DT-load-balancer](https://github.com/shrektan/DT-load-balancer)
+
+- [Quick Start - Traefik](https://doc.traefik.io/traefik/getting-started/quick-start/)
+
+- [Docker Swarm](https://docs.docker.com/engine/swarm/)
