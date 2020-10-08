@@ -42,6 +42,13 @@ Git is great but quite complicated to fully master[^books]. Fortunately, being f
 
 1. `git commit -a -m "your message"`: commit all the code changes with a message.
 
+## Clean up
+
+```bash
+git branch -d $(git branch --merged=master | grep -v master)
+git fetch --prune
+```
+
 ## Advanced
 
 1. `git reset --hard HEAD~n`: discard the last n commits *hardly*. `--hard` means reverting to the previous status. Often used when you think your last n commits are nonsense.
@@ -60,3 +67,7 @@ Well that's not *literally* all. I may use `git config` (first time set-up on th
 [^books]: Two books I recommend on Git. The Git related chapter of Hadley's [R packages](http://r-pkgs.had.co.nz) is well-written and a great place to get your hands dirty. To get a deeper understanding of Git, [Pro Git book](https://git-scm.com/book) is the best choice.
 
 [^sha]: You can think SHA-1 strings are the unique names of each commit. They're the "non-sense" strings displayed in RStudio's Git Panel (the last column with the name SHA). You can also see them by executing `git log`.
+
+## References
+
+- Florent Destremau, [A simple way to clean up your git project branches](https://medium.com/@FlorentDestrema/a-simple-way-to-clean-up-your-git-project-branches-283b87478fbc)
