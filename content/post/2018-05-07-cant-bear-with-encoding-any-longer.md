@@ -102,3 +102,4 @@ tags:
 
 * [rstudio/htmltools#157](https://github.com/rstudio/htmltools/pull/157)：Windows下rmarkdown在遇到emoji的字符串后，后续的htmlwidgets对象无法显示
 
+* [Rdatatable/data.table#4785](https://github.com/Rdatatable/data.table/pull/4785)：`data.table::fwrite()`可以通过设置encoding来写UTF-8编码的CSV文件
