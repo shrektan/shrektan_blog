@@ -102,9 +102,12 @@ tags:
 
 * [rstudio/htmltools#157](https://github.com/rstudio/htmltools/pull/157)：Windows下rmarkdown在遇到emoji的字符串后，后续的htmlwidgets对象无法显示
 
+* [Rdatatable/data.table#4785](https://github.com/Rdatatable/data.table/pull/4785)：`data.table::fwrite()`可以通过设置encoding来写UTF-8编码的CSV文件
+
 ### 未来
 
 按照Tomas Kalibera这两篇文章的说法，Windows10（2019.11后的版本）开始允许应用使用UTF-8编码和操作系统进行交互了。所以，将R和相关包的编译工具改为(UCRT)[https://devblogs.microsoft.com/cppblog/introducing-the-universal-crt/]后，Windows下Encoding的大部分问题可能就在根源上得以解决。不过，文章中并没有明确R未来的计划安排，但我们至少看到了一丝的希望。
 
 - [Windows/UTF-8 Build of R and CRAN Packages, Tomas Kalibera](https://developer.r-project.org/Blog/public/2020/07/30/windows/utf-8-build-of-r-and-cran-packages/)
+
 - [UTF-8 Support on Windows, Tomas Kalibera](https://developer.r-project.org/Blog/public/2020/05/02/utf-8-support-on-windows/)
