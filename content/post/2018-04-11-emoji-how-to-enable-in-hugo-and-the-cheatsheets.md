@@ -19,3 +19,7 @@ tags:
 
 - https://www.webpagefx.com/tools/emoji-cheat-sheet/
 - https://github.com/guodongxiaren/README/blob/master/emoji.md
+
+# Note
+
+- Only works in plain md files (not Rmd files), haven't checked the reason yet
