@@ -104,6 +104,8 @@ tags:
 
 * [Rdatatable/data.table#4785](https://github.com/Rdatatable/data.table/pull/4785)：`data.table::fwrite()`可以通过设置encoding来写UTF-8编码的CSV文件
 
+* [ycphs/openxlsx#118](https://github.com/ycphs/openxlsx/pull/118): openxlsx是一个可以创建/修改/读取Excel表格的包，强大而且好用。但是，当批注中包含中文或表单名称包含中文时，就会报错。读了一遍它里面R和C++相关的代码，把所有的地方都改成了UTF-8进出（因为xlsx格式本来就是UTF-8编码的）。应该差不多能彻底解决中文支持的问题了吧（不排除还有漏网之鱼）？
+
 ### 未来
 
 按照Tomas Kalibera这两篇文章的说法，Windows10（2019.11后的版本）开始允许应用使用UTF-8编码和操作系统进行交互了。所以，将R和相关包的编译工具改为(UCRT)[https://devblogs.microsoft.com/cppblog/introducing-the-universal-crt/]后，Windows下Encoding的大部分问题可能就在根源上得以解决。不过，文章中并没有明确R未来的计划安排，但我们至少看到了一丝的希望。
