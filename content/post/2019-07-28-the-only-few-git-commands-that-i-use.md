@@ -59,6 +59,7 @@ git fetch --prune
    Remember that you are immersed in developping the new feature (good programmers do) so there's a chance you simply commit the fix on `D` and go. After a few more commits on `D`, you realize the previous commit should have been played on the branch `master`.  
    You have three options now. The first is to `git revert --soft` all the previous commits and re-commit the work except the fix. The good commit history may not be well preserved. Another option is to re-do the fix on the `master` branch but you may find conflicts when branch `D` gets merged. The last option (usually the best) is to `git rebase master B C`, where `B` and `C` stands for the SHA-1 strings[^sha] of last commit *before* the fix and *of* the fix.   
    You may find [`git rebase`'s documentation](https://git-scm.com/docs/git-rebase) useful (I admit I don't really know how to *interactively* play with `git rebase` and the above command is the only one I use).
+1. `git clean -dfx && git checkout .` to discard all local file changes. This is useful when you add / edit lots of local files and want to completely discard all your wasted efforts.
    
 ## Misc
 
