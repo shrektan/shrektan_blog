@@ -113,3 +113,5 @@ tags:
 - [Windows/UTF-8 Build of R and CRAN Packages, Tomas Kalibera](https://developer.r-project.org/Blog/public/2020/07/30/windows/utf-8-build-of-r-and-cran-packages/)
 
 - [UTF-8 Support on Windows, Tomas Kalibera](https://developer.r-project.org/Blog/public/2020/05/02/utf-8-support-on-windows/)
+
+- [R-dev/WindowsBuilds/winutf8](https://svn.r-project.org/R-dev-web/trunk/WindowsBuilds/winutf8/winutf8.html)
