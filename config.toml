@@ -1,10 +1,10 @@
-baseurl = "/"
+baseurl = "https://shrektan.com"
 languageCode = "zh-cn"
 title = "Xianying's Blog"
 theme = "hugo-xmin"
 googleAnalytics = "UA-68366586-1"
 disqusShortname = "shrektanblog"
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
 enableEmoji = true
@@ -46,3 +46,8 @@ hasCJKLanguage = true
     highlightjsTheme = "github"
     
     GithubEdit = "https://github.com/shrektan/shrektan_blog/edit/master/content/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
