@@ -37,7 +37,7 @@ hasCJKLanguage = true
 
 [params]
     description = "A website built through Hugo and blogdown."
-    footer = "&copy; [Xianying Tan](https://blog.shrektan.com) 2017 -- 2020 | [Github](https://github.com/shrektan)"
+    footer = "&copy; [Xianying Tan](https://blog.shrektan.com) 2017 -- 2021 | [Github](https://github.com/shrektan)"
 
     # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "9.11.0"

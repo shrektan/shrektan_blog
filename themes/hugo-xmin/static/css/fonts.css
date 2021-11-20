@@ -41,7 +41,7 @@
     font-weight: 700;
     font-style: normal;
 }
-
+  
 @font-face {
   font-family: roboto;
   src: url("../fonts/Roboto-Light.ttf") format("truetype");
@@ -91,11 +91,11 @@
 }
 
 body {
-  font-family: "Crimson Text", Optima, Candara, Calibri, Arial, source-han-serif-sc, 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif TC', 'Source Han Serif TW', 'Source Han Serif', 'FangSong', 'Microsoft YaHei', sans-serif;
+  font-family: Roboto, Calibri, Arial, 'PingFang SC', 'Microsoft Yahei', 'STHeiTi', 'SimHei', sans-serif;
 }
 
 code {
-  font-family: "Fira Code", Optima, roboto, "Lucida Console", Monaco, monospace;
+  font-family: "Menlo", "Fira Code", "Lucida Console", Monaco, monospace;
   font-size: 75%;
   font-weight: 300;
   font-feature-settings: "calt" 1;  /* Enable ligatures for IE 10+, Edge */
