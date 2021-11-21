@@ -2,7 +2,7 @@
 title: Home
 ---
 
-[<img src="/img/monkey-square.png" style="max-width:15%;min-width:40px;float:right;" alt="Shrektan's Github Repo" />](https://github.com/shrektan)
+[<img src="/img/monkey-circle-120-120.png" style="max-width:15%;min-width:40px;float:right;" alt="Shrektan's Github Repo" />](https://github.com/shrektan)
 
 
 One of my favourite quote from *"Zen Mind, Beginner's Mind"*:
