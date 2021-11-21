@@ -26,3 +26,12 @@ if in the future, content will not be rendered unless the `--buildFuture` flag i
 So changed my post date from 2018/04/13 to 2018/04/12 and it works.
 
 Great :rage: !
+
+---
+
+Update: Adding the below content to `netlify.toml` will enable Hugo to publish all the __future__ content, thus fixes this issue.
+
+```toml
+[context.production]
+command = "hugo --buildFuture"
+```
