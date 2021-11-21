@@ -46,7 +46,6 @@ hr {
 /* code */
 pre {
   border-radius: 5px;  
-  padding: 1em;
   overflow-x: auto;
   background: #FAFAFA;
 }

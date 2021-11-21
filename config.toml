@@ -40,10 +40,10 @@ hasCJKLanguage = true
     footer = "&copy; [Xianying Tan](https://blog.shrektan.com) 2017 -- 2021 | [Github](https://github.com/shrektan)"
 
     # options for highlight.js (version, additional languages, and theme)
-    highlightjsVersion = "9.11.0"
+    highlightjsVersion = "11.3.1"
     highlightjsCDN = "//cdn.bootcss.com"
     highlightjsLang = ["r", "yaml"]
-    highlightjsTheme = "github"
+    highlightjsTheme = "default"
     
     GithubEdit = "https://github.com/shrektan/shrektan_blog/edit/master/content/"
 
