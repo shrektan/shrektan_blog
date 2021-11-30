@@ -26,7 +26,7 @@ tags:
 我猛然想到：
 
 -   公司下发的制度都有对应的word版本
--   officer包可以很方便读取word里面的文字
+-   [officer包](https://davidgohel.github.io/officer/)可以很方便读取word里面的文字
 -   [bookdown的`bs4_book()`主题](https://bookdown.org/yihui/bookdown/html.html#bs4-book)布局非常适合阅读制度，而且它支持全书的文字查找
 -   RStudio Connect可以很方便的进行内容共享，而且还能进行用户权限管理
 
@@ -38,7 +38,7 @@ tags:
 
 这种工作其实是自己给自己找麻烦------因为也没人要求我做。作为一个职场老油条，难道不应该"多一事不如少一事"？但我就是天性如此------喜欢码字，喜欢创造，喜欢看到自己带来的改变能够帮助到别人------这就是我的快乐。
 
----
+------------------------------------------------------------------------
 
 ## 代码
 
@@ -48,10 +48,13 @@ docx2md <- function(docx_path, md_path) {
   content <- officer::docx_summary(x)
   paragraphs <- content[content$content_type == "paragraph",]
   add_head <- \(x) {
-    flag <- x |> stringr::str_trim() |> stringr::str_detect("^第.{1,3}章")
+    flag <- x |> stringr::str_detect("^第.{1,3}章")
     flag[is.na(flag)] <- FALSE
     x[flag] <- sprintf("## %s", x[flag])
     x
+  }
+  bold_item <- \(x) {
+    x |> stringr::str_replace("^(第.{1,4}条)", "**\\1**")
   }
   add_title <- \(x) {
     if (length(x)) {
@@ -61,15 +64,17 @@ docx2md <- function(docx_path, md_path) {
   }
   remove_first_company_name <- \(x) {
     if (length(x)) {
-      x[1L] <- stringr::str_replace_all(x[1L], "My compay name", "")
+      x[1L] <- stringr::str_replace_all(x[1L], "My Company Name", "")
     }
     x
   }
   trim_and_filter <- \(x) {
     x |> stringr::str_trim() |> Filter(f=nchar)
   }
-  paragraphs$text |> trim_and_filter() |> remove_first_company_name() |> trim_and_filter() |>
-    add_title() |> add_head() |> cat(file = md_path, sep = "\n\n", append = TRUE)
+  paragraphs$text |>
+    trim_and_filter() |> remove_first_company_name() |> trim_and_filter() |>
+    add_title() |> add_head() |> bold_item() |>
+    cat(file = md_path, sep = "\n\n", append = TRUE)
 }
 
 find_docxs <- function(folder = rstudioapi::selectDirectory()) {
