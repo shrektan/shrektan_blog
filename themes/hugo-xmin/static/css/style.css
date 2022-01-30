@@ -3,6 +3,7 @@ body {
   margin: auto;
   padding: 1em;
   line-height: 1.5em;
+  background-color: rgb(255, 255, 255);
 }
 
 /* header and footer areas */
@@ -29,15 +30,15 @@ a:hover, a:focus {
 }
 
 .menu, .article-meta, footer { text-align: center; }
-.title { 
-  font-size: 1.0em; 
-  line-height: 1.2em; 
+.title {
+  font-size: 1.0em;
+  line-height: 1.2em;
 }
-.subtitle {  
+.subtitle {
   font-style: italic;
   font-weight: 300;
-  font-size: 0.7em; 
-  line-height: 1.0em; 
+  font-size: 0.7em;
+  line-height: 1.0em;
 }
 footer a { text-decoration: none; }
 hr {
@@ -50,7 +51,7 @@ hr {
 
 /* code */
 pre {
-  border-radius: 5px;  
+  border-radius: 5px;
   overflow-x: auto;
   background: #FAFAFA;
 }
@@ -59,7 +60,7 @@ code {
   border-radius: 3px;
   border: 1px solid #ddd;
 }
-pre code { 
+pre code {
   background: none;
   border: none;
   padding: 0;
