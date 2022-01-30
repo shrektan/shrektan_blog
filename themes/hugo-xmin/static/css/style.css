@@ -54,6 +54,7 @@ pre {
   border-radius: 5px;
   overflow-x: auto;
   background: #FAFAFA;
+  padding: 3px 10px;
 }
 code {
   padding: 0.5px 5px;
