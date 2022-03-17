@@ -15,11 +15,11 @@ Every language contains "hidden knowledge". Without knowing it, you may find it'
 
 ## Texlive installing
 
-Just use Yihui's tinytex. Either installing the classical one with Internet connectivity, or installing the full one when full capacity is required. Do not try to `tlmgr install scheme-full`. It's broken, based on my experience. The error message is not understandable. Do not waste time on it.
+Just use Yihui's [tinytex](https://github.com/yihui/tinytex). Either [installing](https://github.com/yihui/tinytex-releases) the classical one with Internet connectivity, or installing the full one when full capacity is required. Do not try to `tlmgr install scheme-full`. It's broken, based on my experience. The error message is not understandable. Do not waste time on it.
 
 ## `$ctex$`
 
-When working with Chinese letters, do please use [the `$ctex$` package](https://mirror.mwt.me/ctan/language/chinese/ctex/ctex.pdf) and `$XeLaTeX$` engine. The former is a `$LaTeX$` that provides common supports on Chinese styles, fonts, etc, while the latter enables UTF-8 encoding, which is a life-saver, especially for Windows users.
+When working with Chinese letters, do please use [the `$ctex$` package](https://mirror.mwt.me/ctan/language/chinese/ctex/ctex.pdf) and `$XeLaTeX$` engine. The former is a `$LaTeX$` package that provides common supports on Chinese styles, fonts, etc, while the latter enables UTF-8 encoding, which is a life-saver, especially for Windows users.
 
 ### Chinese Font Family
 
