@@ -43,7 +43,7 @@ I find it's often desired to use "sans-serif" (e.g., Arial) English fonts rather
 
 I often find [the `$longtable$` package](https://mirrors.concertpass.com/tex-archive/macros/latex/required/tools/longtable.pdf) useful when making tables, as displaying a table across pages is usually a better choice than floating to the next page, leaving a huge blank area. Moreover, it provides a better default style with many handy commands than the normal tabular tables.
 
-### set the column width
+### Set the column width
 
 Firstly, you need the `$array$` package.
 
@@ -96,27 +96,30 @@ When setting a background color for a row, often you don't want the white paddin
 \usepackage{color}
 \usepackage{tikz}
 \definecolor{light-gray}{gray}{0.95}
-\definecolor{red}{rgb}{0.64,0,0}
+\definecolor{defcolor}{rgb}{0,0.5,0.5}
 \addtolength{\hoffset}{-1in}
 
 \begin{document}
 
-\fangsong
+\heiti
 
 \setlength{\aboverulesep}{0pt}
 \setlength{\belowrulesep}{0pt}
 \setlength{\tabcolsep}{4pt}
+% this add row height
+\renewcommand{\arraystretch}{1.2}
 
-\begin{longtable}[l]{c>{\raggedright\arraybackslash}m{1.1in}c>{\centering\arraybackslash}m{0.6in}cccccc}
+\begin{longtable}[l]{c>{\raggedright\arraybackslash}m{1.1in}c>{\centering\arraybackslash}m{2in}cccccc}
 
-\rowcolor{red} \multicolumn{10}{c}{\textcolor{white}{ \zihao{-5}  \bfseries{债券型} }} \\
-\rowcolor{light-gray} & & & & & \multicolumn{5}{c}{净值增长率} \\
+\rowcolor{defcolor} \multicolumn{10}{c}{\textcolor{white}{ \zihao{1}  \bfseries{横跨所有列的单元格} }} \\
+
+\rowcolor{light-gray} & & & & & \multicolumn{5}{c}{Blabla} \\
 \cmidrule{6-10}
-\rowcolor{light-gray} \multirow{-2}{*}{产品名称} & \multicolumn{1}{c}{\multirow{-2}{*}{产品定位}} & \multirow{-2}{*}{运作起始日} & \multirow{-2}{*}{投资经理} & \multirow{-2}{*}{累计净值} & \multicolumn{1}{c}{上周} & \multicolumn{1}{c}{本月以来} & \multicolumn{1}{c}{本年以来} & \multicolumn{1}{c}{本年年化} & \multicolumn{1}{c}{累计年化} \\
+\rowcolor{light-gray} \multirow{-2}{*}{Wow} & \multicolumn{1}{c}{\multirow{-2}{*}{Curious}} & \multirow{-2}{*}{Date} & \multirow{-2}{*}{纵向单元格} & \multirow{-2}{*}{Other} & \multicolumn{1}{c}{What} & \multicolumn{1}{c}{AAA} & \multicolumn{1}{c}{DDD} & \multicolumn{1}{c}{BBB} & \multicolumn{1}{c}{EEE} \\
 \midrule
 
 \end{longtable}
 \end{document}
 ```
 
-![](images/paste-1AC57C5E.png)
+![](images/paste-6243D2C2.png)
