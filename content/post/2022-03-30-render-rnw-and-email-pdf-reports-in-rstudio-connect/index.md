@@ -7,6 +7,9 @@ categories:
   - en
 tags:
   - tech
+  - rmarkdown
+  - rnw
+  - rstudio-connect
 ---
 
 # Background
