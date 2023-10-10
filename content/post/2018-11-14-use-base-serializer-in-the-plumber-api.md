@@ -55,7 +55,7 @@ function(req) {
 
 ### main.R
 
-(In practice, you probably want to have a condition inside. A good example is this: https://github.com/ozean12/protopretzel/blob/master/R/protobuf_filter.R)
+(In practice, you probably want to have a condition inside. A good example is this: https://github.com/jcpsantiago/protopretzel/blob/master/R/protobuf_filter.R)
 
 ```r
 library(plumber)

@@ -66,7 +66,7 @@ git fetch --prune
 
 Well that's not *literally* all. I may use `git config` (first time set-up on the new computer), `git tag` (tag a version) and `git status` (when I have to [disable the Git function in RStudio for one project, due to the anti-virsus issue](https://github.com/rstudio/rstudio/issues/4368)).
 
-[^books]: Two books I recommend on Git. The Git related chapter of Hadley's [R packages](http://r-pkgs.had.co.nz) is well-written and a great place to get your hands dirty. To get a deeper understanding of Git, [Pro Git book](https://git-scm.com/book) is the best choice.
+[^books]: Two books I recommend on Git. The Git related chapter of Hadley's [R packages](https://r-pkgs.org/) is well-written and a great place to get your hands dirty. To get a deeper understanding of Git, [Pro Git book](https://git-scm.com/book) is the best choice.
 
 [^sha]: You can think SHA-1 strings are the unique names of each commit. They're the "non-sense" strings displayed in RStudio's Git Panel (the last column with the name SHA). You can also see them by executing `git log`.
 
