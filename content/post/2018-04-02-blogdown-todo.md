@@ -13,7 +13,7 @@ tags:
 
 工作原因在Github上的项目越来越多，新的想法或者bug都会在项目下新建Issue。然而，Github并不支持在一个统一的地方去管理查看，我必须得去每个项目下点开了才知道情况。
 
-偶然看到益辉大人直接把待办事项放到[个人网站Github的Issue中](https://github.com/rbind/yihui/issues)，脑洞大开，[跟风试了试](https://github.com/shrektan/shrektan_blog/issues/1)，感觉管理Github上的事务算顺手。用了几天，觉得有这么几个优点：
+偶然看到益辉大人直接把待办事项放到[个人网站Github的Issue中](https://github.com/yihui/yihui.org/issues)，脑洞大开，[跟风试了试](https://github.com/shrektan/shrektan_blog/issues/1)，感觉管理Github上的事务算顺手。用了几天，觉得有这么几个优点：
 
 - 用markdown写作格式漂亮又不分心，链接什么的直接放上去爽歪歪；
 - 待办事项点起来特别有成就感；

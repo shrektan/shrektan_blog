@@ -13,11 +13,11 @@ tags:
 
 # How to enable `Emoji` in Hugo
 
-- https://themes.gohugo.io/theme/minimo/docs/emoji-support/
+- https://minimo.netlify.app/docs/emoji-support/
 
 # Two cheatsheets
 
-- https://www.webpagefx.com/tools/emoji-cheat-sheet/
+- https://www.webfx.com/tools/emoji-cheat-sheet/
 - https://github.com/guodongxiaren/README/blob/master/emoji.md
 
 # Note

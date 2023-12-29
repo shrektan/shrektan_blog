@@ -15,7 +15,7 @@ Every language contains "hidden knowledge". Without knowing it, you may find it'
 
 ## Texlive installing
 
-Just use Yihui's [tinytex](https://github.com/yihui/tinytex). Either [installing](https://github.com/yihui/tinytex-releases) the classical one with Internet connectivity, or installing the full one when full capacity is required. Do not try to `tlmgr install scheme-full`. It's broken, based on my experience. The error message is not understandable. Do not waste time on it.
+Just use Yihui's [tinytex](https://github.com/rstudio/tinytex). Either [installing](https://github.com/rstudio/tinytex-releases) the classical one with Internet connectivity, or installing the full one when full capacity is required. Do not try to `tlmgr install scheme-full`. It's broken, based on my experience. The error message is not understandable. Do not waste time on it.
 
 ## `$ctex$`
 

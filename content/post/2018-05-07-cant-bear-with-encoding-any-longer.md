@@ -16,7 +16,7 @@ tags:
 
 ### RSQLServer包正式退役了
 
-[RSQLServer](https://github.com/imanuelcostigan/RSQLServer)于2018年4月10日[正式退役(Archive)](https://cran.rstudio.com/web/packages/RSQLServer/index.html)，作者建议用[r-dbi/odbc](https://github.com/r-dbi/odbc)代替。
+[RSQLServer](https://github.com/imanuelcostigan/RSQLServer)于2018年4月10日[正式退役(Archive)](https://cran.r-project.org/package=RSQLServer)，作者建议用[r-dbi/odbc](https://github.com/r-dbi/odbc)代替。
 
 > This package is archived as there is now an excellent, much better supported package [odbc](https://github.com/r-dbi/odbc).
 
@@ -53,7 +53,7 @@ tags:
 
 * 我隐约记得base包里的`gsub()`（也可能是其他某个函数）不支持UTF-8编码的输入（好像现在已经修复了）；
 
-* `roxygen2`和`devtools`在windows上对中文的支持 —— [klutometis/roxygen#532](https://github.com/klutometis/roxygen/pull/532)、[r-lib/devtools#1378](https://github.com/r-lib/devtools/pull/1378)
+* `roxygen2`和`devtools`在windows上对中文的支持 —— [r-lib/roxygen2#532](https://github.com/r-lib/roxygen2/pull/532)、[r-lib/devtools#1378](https://github.com/r-lib/devtools/pull/1378)
 
 * `data.table`在1.9.7版本中引入的八哥 —— 参见我[前一篇日志](/post/2018/03/18/strings-encodings-in-r/)，来来回回折磨了我快两年；
 

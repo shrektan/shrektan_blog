@@ -13,7 +13,7 @@ tags:
 
 ## 铺垫
 
-公司采购的[RStudio Connect](https://www.rstudio.com/products/connect/)只支持Rmarkdown，不支持Rnw自动转成PDF。但对于我来讲正好，因为我实在不喜欢辣眼睛的`$LaTeX$`的斜杠，早就想转成纯Rmarkdown的生态，无奈公司很多时候还是会用到PDF文件。制作商业需要的PDF格式，虽然rmarkdown支持，但试了试感觉还是很麻烦，和在Rnw里手写`$LaTeX$`差不多，总之是偏离了使用Rmarkdown的初心------"简洁"。
+公司采购的[RStudio Connect](https://posit.co/products/enterprise/connect/)只支持Rmarkdown，不支持Rnw自动转成PDF。但对于我来讲正好，因为我实在不喜欢辣眼睛的`$LaTeX$`的斜杠，早就想转成纯Rmarkdown的生态，无奈公司很多时候还是会用到PDF文件。制作商业需要的PDF格式，虽然rmarkdown支持，但试了试感觉还是很麻烦，和在Rnw里手写`$LaTeX$`差不多，总之是偏离了使用Rmarkdown的初心------"简洁"。
 
 之前看见益辉兄的[pagedown](http://github.com/rstudio/pagedown)包，很是震撼，想试着搞一个模板后就直接转过去。然而去年实在太忙，鼓捣了两天后就没时间弄了（倒是给自己搞了个很漂亮的简历模板）。于是乎拖到现在。恰好这两天稍微清闲点，顺便一翻看见了pagedown对于longtable支持的[PR](https://github.com/rstudio/pagedown/pull/250)，感觉有戏。
 
@@ -21,7 +21,7 @@ tags:
 
 ## 正文
 
-今晚遛完娃后，翻了翻[paged.js文档](https://www.pagedjs.org/documentation/)后打算睡了。突然，想到了最近公司的一个小事，就是陆陆续续各部门撰写的制度流程越来越多，但是却没有一个统一的地方可以查看。由于我们是个新公司，OA系统文档管理系统神马的还没采购部署，目前只能在共享盘人肉查阅，非常低效，大家苦不堪言。
+今晚遛完娃后，翻了翻[paged.js文档](https://pagedjs.org/documentation/)后打算睡了。突然，想到了最近公司的一个小事，就是陆陆续续各部门撰写的制度流程越来越多，但是却没有一个统一的地方可以查看。由于我们是个新公司，OA系统文档管理系统神马的还没采购部署，目前只能在共享盘人肉查阅，非常低效，大家苦不堪言。
 
 我猛然想到：
 

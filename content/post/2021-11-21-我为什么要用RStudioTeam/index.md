@@ -12,7 +12,7 @@ tags:
 
 昨天，在第十四届中国R会议分享了[《如何使用ShinyProxy部署Shiny Apps》](https://github.com/shrektan/Use-ShinyProxy-To-Deploy-ShinyApps)。讲的比较抽象，对于没有接触过ShinyProxy，或者没有考虑过Shiny App部署的听众来说，应该会比较枯燥。
 
-我之所以想要分享这个题目，是因为今年换了公司后，需要从零搭建所有的系统，总算是可以有机会彻底规避掉之前趟过的一些坑了。这一次，我决定直接采购了[RStudio Team](https://www.rstudio.com/products/team/)软件（包含[RStudio Workbench](https://www.rstudio.com/products/workbench/), [RStudio Connect](https://www.rstudio.com/products/connect/)以及[RStudio Package Manager](https://www.rstudio.com/products/package-manager/)）。因此，估计一段时间内我是不会再用ShinyProxy了。趁着我还有一些记忆，就想着通过这个讲演能把一些经验分享给大家。
+我之所以想要分享这个题目，是因为今年换了公司后，需要从零搭建所有的系统，总算是可以有机会彻底规避掉之前趟过的一些坑了。这一次，我决定直接采购了[RStudio Team](https://posit.co/products/enterprise/team/)软件（包含[RStudio Workbench](https://posit.co/products/enterprise/workbench/), [RStudio Connect](https://posit.co/products/enterprise/connect/)以及[RStudio Package Manager](https://posit.co/products/enterprise/package-manager/)）。因此，估计一段时间内我是不会再用ShinyProxy了。趁着我还有一些记忆，就想着通过这个讲演能把一些经验分享给大家。
 
 在我看来，ShinyProxy是一个非常赞的Shiny App部署工具：
 

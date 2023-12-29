@@ -13,7 +13,7 @@ tags:
 
 昨天，去苹果店把淘汰的iPhone以旧换新，用折扣置换了个新款的iPad和Apple Pencil。回家用Apple Pencil在Good Reader上看了会儿pdf，感觉不错。我是电子书的推崇者，基本不怎么看纸质书了。原因很简单，电子书携带方便，尤其是对于我这种习惯于零散阅读的人（地铁上、中午吃饭、睡觉前……）。但是电子书也有一个明显的缺点，就是不太方便做笔记，或者说做笔记没那种感觉。我这人读书向来想法多，也喜欢在书上写写画画，打上去的字总是觉得差了点意思。用Apple Pencil看pdf，总算是勉强满足了我写写画画的“恶习”。
 
-随手翻到了[Paul Wilmott](https://www.wilmott.com)写的 _"Paul Wilmott Introduces Quantitative Finance"_ ，然后就看到了这句话：
+随手翻到了[Paul Wilmott](https://wilmott.com/)写的 _"Paul Wilmott Introduces Quantitative Finance"_ ，然后就看到了这句话：
 
 > Most academic articles in finance have a 'pure' mathematical theme. The mathematical rigor in these works is occasionally justified, but more often than not it only succeeds in obscuring the content. When a subject is young, as is mathematical finance (youngish), there is a tendency for technical rigor to feature very prominently in research. This is due to lack of confidence in the methods and results. As the subject ages, researchers will become more cavalier in their attitudes and we will see much more rapid progress. 
 

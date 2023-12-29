@@ -50,15 +50,15 @@ tbl2[DATE >= as.Date("2020-10-01") & DATE <= as.Date("2020-11-01")]
 
 经过了一系列的折腾和试验后，终于排查出了问题的根源：
 
-1. Shiny里的`input$sector`是UTF-8编码，而`tbl`里的`SECTOR`列却是native encoding。R里面`%in%`左右两侧的字符编码不一致的时候，尤其是有一列字符特别长的时候，执行速度会非常非常慢，原因应该是R对两列字符都进行了重新编码。我感觉这是R的一个问题，因为不论长的一列是native或UTF-8编码，速度都会特别慢。但按理说，R只需要对短的那一列字符进行重编码即可，没必要对两边都重编码。于是乎，我晚上在[R-bugzilla上提交了个报告](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=17965)。
+1. Shiny里的`input$sector`是UTF-8编码，而`tbl`里的`SECTOR`列却是native encoding。R里面`%in%`左右两侧的字符编码不一致的时候，尤其是有一列字符特别长的时候，执行速度会非常非常慢，原因应该是R对两列字符都进行了重新编码。我感觉这是R的一个问题，因为不论长的一列是native或UTF-8编码，速度都会特别慢。但按理说，R只需要对短的那一列字符进行重编码即可，没必要对两边都重编码。于是乎，我晚上在[R-bugzilla上提交了个报告](https://bugs.r-project.org/show_bug.cgi?id=17965)。
 
 1. 为什么改成了两个语句执行了就变快了呢？原因是data.table对于单独的`%in%`查询语句会进行优化，并没有使用base R里的`%in%`代码。但是，按照我的理解，对于非单独的`%in%`查询语句，data.table理应也进行优化才对，不知何故，没有能够触发优化的逻辑。于是乎，[在data.table上也提交了一份报告](https://github.com/Rdatatable/data.table/issues/4799)。
 
 ## 喜讯
 
-之前我就注意到了Tomas Kalibera写的这两篇文章：[《UTF-8 support on Windows》](https://developer.r-project.org/Blog/public/2020/05/02/utf-8-support-on-windows)和[《UTF-8 build of R and CRAN packages》](https://developer.r-project.org/Blog/public/2020/07/30/windows/utf-8-build-of-r-and-cran-packages/)。但我以为这只是一个小小的试验，离最终R能提供一个“在Windows10下使用UTF-8左右native encoding的版本”，还有好长的路要走。
+之前我就注意到了Tomas Kalibera写的这两篇文章：[《UTF-8 support on Windows》](https://developer.r-project.org/Blog/public/2020/05/02/utf-8-support-on-windows/)和[《UTF-8 build of R and CRAN packages》](https://developer.r-project.org/Blog/public/2020/07/30/windows/utf-8-build-of-r-and-cran-packages/)。但我以为这只是一个小小的试验，离最终R能提供一个“在Windows10下使用UTF-8左右native encoding的版本”，还有好长的路要走。
 
-好消息是，参照Tomas Kalibera在R-bugzilla上给我的[回复](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=17960#c3)，以及我注意到[《UTF-8 build of R and CRAN packages》](https://developer.r-project.org/Blog/public/2020/07/30/windows/utf-8-build-of-r-and-cran-packages/)进行了更新，补充了相关的编译工具链、编译好的R和所有CRAN/BIOC package的文件，我感觉到，**距离Windows下用UTF-8的R的那个日子，已经不太远了**。
+好消息是，参照Tomas Kalibera在R-bugzilla上给我的[回复](https://bugs.r-project.org/show_bug.cgi?id=17960#c3)，以及我注意到[《UTF-8 build of R and CRAN packages》](https://developer.r-project.org/Blog/public/2020/07/30/windows/utf-8-build-of-r-and-cran-packages/)进行了更新，补充了相关的编译工具链、编译好的R和所有CRAN/BIOC package的文件，我感觉到，**距离Windows下用UTF-8的R的那个日子，已经不太远了**。
 
 ## 另，为什么现在才开始准备“在Windows下用UTF-8作为默认编码的R版本”？
 

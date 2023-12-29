@@ -53,7 +53,7 @@ tags:
     apt-get install unixodbc unixodbc-dev tdsodbc
     ```
     
-1. 注册FreeTDS驱动，可参照[《Linux下连接MS Sql server -- 使用ODBC/FreeTDS组合(详细)》](http://www.cnblogs.com/lexus/archive/2012/09/26/2704382.html)或者我的[Docker文件](https://github.com/shrektan/rdocker/blob/master/rdocker4working/Dockerfile#L69)，总之就是让unixODBC知道你的Driver文件libtdsodbc.so在哪里；
+1. 注册FreeTDS驱动，可参照[《Linux下连接MS Sql server -- 使用ODBC/FreeTDS组合(详细)》](http://www.cnblogs.com/lexus/archive/2012/09/26/2704382.html)或者我的[Docker文件](https://github.com/shrektan/rdocker/blob/d232bcc43b14942e569684c4b73f9c8915ea0997/rdocker4working/Dockerfile#L69)，总之就是让unixODBC知道你的Driver文件libtdsodbc.so在哪里；
     
     - 把下面的文本保存在任意地方，比如`/var/tds.driver.template`，注意Driver的地址可能未必和我的一致；
     ```
@@ -84,4 +84,4 @@ tags:
     ```
 
 
-最后，想起益辉大人提到，写文章[“最重要的因素还是胸中是否有一股不吐不快的气”](https://yihui.name/cn/2018/07/fluent-essay/)。这股“不吐不快的气”我自己是时常都能感觉到的（我可是个吐槽大王啊），可惜经常没能及时将这股气幻化为文字，一拖便散了，不想写了。不过最近积攒的能量（:u6709:怨气:stuck_out_tongue_closed_eyes:	）尤为多，且看能吐多少。
+最后，想起益辉大人提到，写文章[“最重要的因素还是胸中是否有一股不吐不快的气”](https://yihui.org/cn/2018/07/fluent-essay/)。这股“不吐不快的气”我自己是时常都能感觉到的（我可是个吐槽大王啊），可惜经常没能及时将这股气幻化为文字，一拖便散了，不想写了。不过最近积攒的能量（:u6709:怨气:stuck_out_tongue_closed_eyes:	）尤为多，且看能吐多少。
