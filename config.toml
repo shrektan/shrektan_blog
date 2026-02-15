@@ -3,7 +3,7 @@ languageCode = "zh-cn"
 title = "Xianying's Blog"
 theme = "hugo-xmin"
 googleAnalytics = "UA-68366586-1"
-disqusShortname = "shrektanblog"
+disqusShortname = ""
 ignoreFiles = ["_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
@@ -46,6 +46,20 @@ hasCJKLanguage = true
     highlightjsTheme = "default"
     
     GithubEdit = "https://github.com/shrektan/shrektan_blog/edit/master/content/"
+
+[params.giscus]
+    repo = ""
+    repoID = ""
+    category = "Announcements"
+    categoryID = ""
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "top"
+    theme = "preferred_color_scheme"
+    lang = "en"
+    loading = "lazy"
 
 [markup]
   [markup.goldmark]
