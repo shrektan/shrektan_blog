@@ -1,0 +1,13 @@
+  <footer>
+    {{ partial "foot_highlightjs.html" . }}
+    {{ partial "foot_custom.html" . }}
+    {{ with .Site.Params.footer }}
+    <hr/>
+    {{ . | markdownify }}
+    {{ end }}
+    {{ if and .File.Path .Site.Params.GithubEdit }}
+      | <a href='{{ .Site.Params.GithubEdit }}{{ .File.Path }}'>Edit this page</a>
+    {{ end }}
+  </footer>
+  </body>
+</html>
