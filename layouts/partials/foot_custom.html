@@ -3,8 +3,8 @@
 
 <script async src="/js/center-img.js"></script>
 
-{{ if .IsPage }}
-  {{ partial "disqus.html" . }}
+{{ if and .IsPage (not .Params.disable_comments) }}
+  {{ partial "giscus.html" . }}
 {{ end }}
 
 {{ template "_internal/google_analytics.html" . }}
