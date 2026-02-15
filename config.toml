@@ -4,7 +4,7 @@ title = "Xianying's Blog"
 theme = "hugo-xmin"
 googleAnalytics = "UA-68366586-1"
 disqusShortname = "shrektanblog"
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
+ignoreFiles = ["_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
 enableEmoji = true
@@ -36,7 +36,7 @@ hasCJKLanguage = true
     url = "/index.xml"
 
 [params]
-    description = "A website built through Hugo and blogdown."
+    description = "A website built through Hugo."
     footer = "&copy; [Xianying Tan](https://blog.shrektan.com) 2017 -- 2021 | [Github](https://github.com/shrektan)"
 
     # options for highlight.js (version, additional languages, and theme)
