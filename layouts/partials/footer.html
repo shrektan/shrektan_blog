@@ -5,8 +5,10 @@
     <hr/>
     {{ . | markdownify }}
     {{ end }}
-    {{ if and .File.Path .Site.Params.GithubEdit }}
-      | <a href='{{ .Site.Params.GithubEdit }}{{ .File.Path }}'>Edit this page</a>
+    {{ with .File }}
+      {{ with $.Site.Params.GithubEdit }}
+        | <a href='{{ . }}{{ $.File.Path }}'>Edit this page</a>
+      {{ end }}
     {{ end }}
   </footer>
   </body>
