@@ -49,7 +49,7 @@ So this is our final connector that will auto-disconnect itself as long as we do
 
 #### The finalizer register
 
-```{r}
+```r
 # use close_fun so that it not only works for DBI but could also be used for RODBC, etc.
 reg_conn_finalizer <- function(conn, close_fun, envir) {
   is_parent_global <- identical(.GlobalEnv, envir)
@@ -73,7 +73,7 @@ reg_conn_finalizer <- function(conn, close_fun, envir) {
 
 #### The connector
 
-```{r}
+```r
 # build connection that will be automatically destroyed
 activate_conn <- function(...) {
   conn <- DBI::dbConnect(...)
@@ -85,23 +85,31 @@ activate_conn <- function(...) {
 
 ##### Local
 
-```{r}
+```r
 local({
   invisible(activate_conn(RSQLite::SQLite(), ':memory:'))
 })
 ```
 
+```text
+[1] "local finalizer!"
+```
+
 ##### Global - removed
 
-```{r}
+```r
 conn <- activate_conn(RSQLite::SQLite(), ':memory:')
 rm(conn)
 invisible(gc())
 ```
 
+```text
+[1] "global finalizer!"
+```
+
 ##### Global - R session ends
 
-```{r eval=FALSE}
+```r
 # This chunk will not be evaluated because we don't want the render engine to exit :P
 invisible(activate_conn(RSQLite::SQLite(), ':memory:'))
 q(save = 'no')
