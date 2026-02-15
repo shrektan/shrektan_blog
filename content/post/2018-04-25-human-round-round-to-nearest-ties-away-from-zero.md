@@ -11,7 +11,7 @@ tags:
   - note  
 ---
 
-Have you ever noticed that both `base::round(2.5)` and `base::round(1.5)` return `r unique(base::round(c(2.5, 1.5), digits = 0L))` in R? It's strange, isn't it? At least I learned only one rounding rule in school that is _“四舍五入”_ in Chinese. It means we should round up if the decimal is five and down if four. 
+Have you ever noticed that both `base::round(2.5)` and `base::round(1.5)` return `2` in R? It's strange, isn't it? At least I learned only one rounding rule in school that is _“四舍五入”_ in Chinese. It means we should round up if the decimal is five and down if four. 
 
 
 By reading the [documentation](https://www.rdocumentation.org/packages/base/versions/3.5.0/topics/Round) of `base::round()` we know that there's a standard called _"IEEE 754"_ and the rounding rule that `base::round()` uses is called _"go to the even digit"_.
@@ -36,7 +36,7 @@ Anyway, the only important question left is _how to implement the `human_round()
 
 The rational here is that [computers can only represent a fractional number in finite precision](https://en.wikipedia.org/wiki/Double-precision_floating-point_format), meaning it's safe to say two numbers are equal if the difference is smaller than a certain const. Usually, we choose `.Machine$double.eps^0.5` as that const (Why this number? I steal it from [`dplyr::near()`](https://www.rdocumentation.org/packages/dplyr/versions/0.7.3/topics/near) :P).
 
-```{r}
+```r
 human_round_r <- function(x, digits = 0) {
   eps <- .Machine$double.eps^0.5
   flag_pos <- !is.na(x) & (x > 0)
@@ -48,13 +48,17 @@ human_round_r <- function(x, digits = 0) {
 human_round_r(c(2.5, 1.5, -1.5, -2.5, 1.5 - .Machine$double.eps^0.5))
 ```
 
+```text
+[1]  3  2 -2 -3  2
+```
+
 Yes, it may not work as expected for the corner case like `1.5 - .Machine$double.eps^0.5` but the chance to get a number just equals to that in the real world closes to zero. Moreover, I can argue that `1.5 - .Machine$double.eps^0.5` and `1.5` is basically the same because of the precision mentioned above. However, if you insist a "perfect" one, please use the Rcpp version below.
 
 ## The Rcpp version
 
 It takes advantage that the `std::round()` in C++ uses [the rounding rule ](http://en.cppreference.com/w/cpp/numeric/math/round) we familiar with.
 
-```{r}
+```r
 Rcpp::cppFunction("
 NumericVector human_round_cpp(const NumericVector x, const int digits = 0)
 {
@@ -70,3 +74,6 @@ NumericVector human_round_cpp(const NumericVector x, const int digits = 0)
 human_round_cpp(c(2.5, 1.5, -1.5, -2.5, 1.5 - .Machine$double.eps^0.5))
 ```
 
+```text
+[1]  3  2 -2 -3  1
+```
