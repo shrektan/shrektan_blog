@@ -284,6 +284,11 @@ def add_comment(token: str, discussion_id: str, body: str, reply_to_id: str | No
     return data["addDiscussionComment"]["comment"]
 
 
+def is_nested_reply_error(exc: Exception) -> bool:
+    msg = str(exc)
+    return "Parent comment is already in a thread, cannot reply to it" in msg
+
+
 def comment_body(post: dict[str, str]) -> str:
     who = post["author_name"]
     if post["author_username"]:
@@ -371,7 +376,16 @@ def main():
                 continue
             parent_id = post["parent_id"] or ""
             reply_to = disqus_to_gh.get(parent_id) if parent_id else None
-            c = add_comment(token, disc["id"], comment_body(post), reply_to)
+            body = comment_body(post)
+            try:
+                c = add_comment(token, disc["id"], body, reply_to)
+            except Exception as e:
+                # GitHub Discussions supports only one reply level.
+                # If parent is already a reply, fallback to top-level comment.
+                if reply_to and is_nested_reply_error(e):
+                    c = add_comment(token, disc["id"], body, None)
+                else:
+                    raise
             disqus_to_gh[pid] = c["id"]
             imported += 1
 
