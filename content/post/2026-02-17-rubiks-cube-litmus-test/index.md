@@ -6,6 +6,10 @@ categories:
 tags:
   - thinking
   - tech
+  - llm
+  - ai
+  - rubiks-cube
+  - reasoning
 slug: rubiks-cube-litmus-test
 ---
 
