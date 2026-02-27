@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+<div class="article-meta">
+<h1><span class="title">{{ .Title }}</span></h1>
+{{ with .Params.subtitle }}<h1><span class="subtitle">{{ . }}</span></h1>{{ end }}
+{{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
+{{ if .Params.date }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
+{{ if and .Params.originalLang (ne .Params.originalLang .Language.Lang) }}
+<p class="translation-notice">
+  {{ if eq .Language.Lang "zh" }}
+    本文原文为英文{{ if .IsTranslated }} · {{ range .Translations }}<a href="{{ .Permalink }}">Read the original</a>{{ end }}{{ end }}
+  {{ else }}
+    Originally written in Chinese{{ if .IsTranslated }} · {{ range .Translations }}<a href="{{ .Permalink }}">阅读中文原文</a>{{ end }}{{ end }}
+  {{ end }}
+</p>
+{{ end }}
+</div>
+
+<main>
+{{ .Content }}
+</main>
+
+{{ partial "footer.html" . }}
