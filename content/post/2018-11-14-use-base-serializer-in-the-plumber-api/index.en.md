@@ -5,6 +5,7 @@ date: '2018-11-14'
 slug: use-base-serializer-in-the-plumber-api
 originalLang: en
 categories:
+  - Tech
 tags:
   - R
   - web

@@ -6,6 +6,7 @@ date: '2020-10-06'
 slug: blog-speed-up
 originalLang: zh
 categories:
+  - 技术
 tags:
   - blogdown
   - personal

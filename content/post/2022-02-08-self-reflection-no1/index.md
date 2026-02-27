@@ -6,6 +6,7 @@ date: '2022-02-08'
 slug: self-reflection-the-man-who-cannot-stop
 originalLang: zh
 categories:
+  - 随想
 tags:
   - reflection
   - personal

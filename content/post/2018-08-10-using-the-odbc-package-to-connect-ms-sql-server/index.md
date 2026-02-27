@@ -5,6 +5,7 @@ date: '2018-08-10'
 slug: using-the-odbc-package-to-connect-ms-sql-server
 originalLang: zh
 categories:
+  - 技术
 tags:
   - R
   - odbc

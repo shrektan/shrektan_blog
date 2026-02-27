@@ -3,7 +3,8 @@ title: "Feedback Is Evolution"
 date: '2026-02-28'
 slug: feedback-is-evolution
 originalLang: zh
-categories: []
+categories:
+  - Musings
 tags:
   - thinking
 ---

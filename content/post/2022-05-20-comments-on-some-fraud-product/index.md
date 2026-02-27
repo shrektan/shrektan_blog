@@ -5,6 +5,7 @@ date: '2022-05-20'
 slug: comments-on-some-fraud-product
 originalLang: zh
 categories:
+  - 随想
 tags:
   - finance
 ---

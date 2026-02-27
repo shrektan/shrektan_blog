@@ -5,6 +5,7 @@ date: '2021-10-21'
 slug: 废寝忘食
 originalLang: zh
 categories:
+  - 随想
 tags:
   - personal
   - life

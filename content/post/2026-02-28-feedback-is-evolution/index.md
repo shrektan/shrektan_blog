@@ -3,7 +3,8 @@ title: "反馈即进化"
 date: '2026-02-28'
 slug: feedback-is-evolution
 originalLang: zh
-categories: []
+categories:
+  - 随想
 tags:
   - thinking
 ---

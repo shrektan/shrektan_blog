@@ -5,6 +5,7 @@ date: '2018-04-11'
 slug: emoji-how-to-enable-in-hugo-and-the-cheatsheets
 originalLang: en
 categories:
+  - Tech
 tags:
   - web
   - material

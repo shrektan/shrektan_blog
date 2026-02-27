@@ -6,6 +6,7 @@ date: '2021-12-11'
 slug: rust-and-r-on-mac-m1
 originalLang: zh
 categories:
+  - 技术
 tags:
   - note
   - programming

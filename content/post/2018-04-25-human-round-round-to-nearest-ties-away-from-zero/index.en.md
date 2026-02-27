@@ -5,6 +5,7 @@ date: '2018-04-25'
 slug: human-round-round-to-nearest-ties-away-from-zero
 originalLang: en
 categories:
+  - Tech
 tags:
   - R
   - programming

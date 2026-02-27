@@ -6,6 +6,7 @@ date: '2020-11-04'
 slug: low-productivity-day
 originalLang: zh
 categories:
+  - 技术
 tags:
   - complaint
   - encoding

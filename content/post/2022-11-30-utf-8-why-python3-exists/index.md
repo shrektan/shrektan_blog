@@ -6,6 +6,7 @@ date: '2022-11-30'
 slug: utf-8-why-python3-exists
 originalLang: zh
 categories:
+  - 技术
 tags:
   - encoding
   - Python

@@ -4,6 +4,12 @@
 {{ with .Params.subtitle }}<h1><span class="subtitle">{{ . }}</span></h1>{{ end }}
 {{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
 {{ if .Params.date }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
+{{ with .Params.categories }}
+<p class="terms">
+  {{ range . }}<a href="{{ (print "/categories/" . | urlize) | relLangURL }}">{{ . }}</a> {{ end }}
+  {{ with $.Params.tags }}/ {{ range . }}<a href="{{ (print "/tags/" . | urlize) | relLangURL }}">#{{ . }}</a> {{ end }}{{ end }}
+</p>
+{{ end }}
 {{ if and .Params.originalLang (ne .Params.originalLang .Language.Lang) }}
 <p class="translation-notice">
   {{ if eq .Language.Lang "zh" }}

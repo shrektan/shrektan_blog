@@ -5,6 +5,7 @@ date: '2021-11-23'
 slug: create-x-value-and-capture-y
 originalLang: zh
 categories:
+  - 随想
 tags:
   - thinking
 ---

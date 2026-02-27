@@ -2,6 +2,7 @@
 title: 魔方试纸
 date: 2026-02-17
 categories:
+  - 技术
 tags:
   - thinking
   - tech

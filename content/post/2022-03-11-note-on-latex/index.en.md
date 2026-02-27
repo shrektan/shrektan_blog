@@ -5,6 +5,7 @@ date: '2022-03-11'
 slug: note-on-latex
 originalLang: en
 categories:
+  - Tech
 tags:
   - tech
   - note

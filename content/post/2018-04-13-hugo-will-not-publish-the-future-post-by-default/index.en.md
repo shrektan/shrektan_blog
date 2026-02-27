@@ -5,6 +5,7 @@ date: '2018-04-12'
 slug: hugo-will-not-publish-the-future-post-by-default
 originalLang: en
 categories:
+  - Tech
 tags:
   - web
   - material

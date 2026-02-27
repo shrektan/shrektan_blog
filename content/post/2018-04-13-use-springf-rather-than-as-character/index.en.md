@@ -6,6 +6,7 @@ date: '2018-04-12'
 slug: use-sprintf-rather-than-as-character
 originalLang: en
 categories:
+  - Tech
 tags:
   - R
   - programming

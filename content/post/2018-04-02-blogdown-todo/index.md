@@ -5,6 +5,7 @@ date: '2018-04-02'
 slug: blogdown-todo
 originalLang: zh
 categories:
+  - 技术
 tags:
   - personal
   - thinking

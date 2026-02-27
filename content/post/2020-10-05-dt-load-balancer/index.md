@@ -5,6 +5,7 @@ date: '2020-10-05'
 slug: use-dt-behind-a-load-balancer
 originalLang: zh
 categories:
+  - 技术
 tags:
   - tech
   - programming

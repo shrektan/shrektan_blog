@@ -6,6 +6,7 @@ date: '2021-11-21'
 slug: why-do-I-choose-RStudio-Team
 originalLang: zh
 categories:
+  - 技术
 tags:
   - thinking
 ---

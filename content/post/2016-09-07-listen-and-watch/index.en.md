@@ -5,6 +5,7 @@ date: '2016-09-07'
 slug: listen-and-watch
 originalLang: en
 categories:
+  - Musings
 tags:
   - quote
   - note

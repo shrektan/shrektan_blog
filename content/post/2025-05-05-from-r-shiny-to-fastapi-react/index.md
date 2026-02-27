@@ -6,6 +6,7 @@ date: '2025-05-05'
 slug: from-r-shiny-to-fastapi-react
 originalLang: zh
 categories:
+  - 技术
 tags:
   - Python
   - R

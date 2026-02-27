@@ -5,6 +5,7 @@ date: '2018-04-21'
 slug: non-ascii-tabset-headers-in-rmarkdown
 originalLang: en
 categories:
+  - Tech
 tags:
   - R
   - note

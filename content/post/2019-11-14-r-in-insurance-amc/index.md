@@ -6,6 +6,7 @@ date: '2019-11-14'
 slug: r-in-insurance-amc
 originalLang: zh
 categories:
+  - 技术
 tags:
   - finance
   - sharing

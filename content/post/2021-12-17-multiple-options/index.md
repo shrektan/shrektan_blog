@@ -5,6 +5,7 @@ date: '2021-12-17'
 slug: multiple-options
 originalLang: zh
 categories:
+  - 随想
 tags:
   - thinking
 ---

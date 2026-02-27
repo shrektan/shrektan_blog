@@ -5,6 +5,7 @@ date: '2019-05-06'
 slug: the-special-unicode-character-uff0d-in-ms-sqlserver
 originalLang: en
 categories:
+  - Tech
 tags:
   - complaint
   - tech

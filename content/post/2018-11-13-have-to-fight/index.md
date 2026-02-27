@@ -5,6 +5,7 @@ date: '2018-11-13'
 slug: have-to-fight
 originalLang: zh
 categories:
+  - 随想
 tags:
   - complaint
   - personal

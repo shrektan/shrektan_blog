@@ -5,6 +5,7 @@ date: '2024-07-07'
 slug: ice-water-mixture-temperature
 originalLang: zh
 categories:
+  - 生活
 tags:
   - personal
 ---

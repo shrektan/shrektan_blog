@@ -6,6 +6,7 @@ date: '2022-01-08'
 slug: github-calendar
 originalLang: zh
 categories:
+  - 随想
 tags:
   - reflection
 ---

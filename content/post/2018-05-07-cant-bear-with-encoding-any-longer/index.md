@@ -6,6 +6,7 @@ date: '2018-05-07'
 slug: cant-bear-with-encoding-any-longer
 originalLang: zh
 categories:
+  - 技术
 tags:
   - complaint
   - note

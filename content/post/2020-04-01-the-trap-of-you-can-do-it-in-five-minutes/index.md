@@ -6,6 +6,7 @@ date: '2020-04-01'
 slug: the-trap-of-you-can-do-it-in-five-minutes
 originalLang: zh
 categories:
+  - 随想
 tags:
   - life
   - personal

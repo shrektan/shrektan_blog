@@ -5,6 +5,7 @@ date: '2019-07-28'
 slug: the-only-few-git-commands-that-i-use
 originalLang: en
 categories:
+  - Tech
 tags:
   - git
   - programming

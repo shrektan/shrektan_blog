@@ -5,6 +5,7 @@ date: '2022-05-04'
 slug: 7788
 originalLang: zh
 categories:
+  - 生活
 tags:
   - personal
 ---

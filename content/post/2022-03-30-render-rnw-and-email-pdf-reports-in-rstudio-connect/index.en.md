@@ -5,6 +5,7 @@ date: '2022-03-30'
 slug: render-rnw-and-email-pdf-reports-in-rstudio-connect
 originalLang: en
 categories:
+  - Tech
 tags:
   - tech
   - rmarkdown

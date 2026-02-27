@@ -6,6 +6,7 @@ date: '2018-09-19'
 slug: solve-problems-by-respecting-the-habbits
 originalLang: zh
 categories:
+  - 随想
 tags:
   - thinking
 ---

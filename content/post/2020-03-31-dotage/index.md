@@ -5,6 +5,7 @@ date: '2020-03-31'
 slug: dotage
 originalLang: zh
 categories:
+  - 生活
 tags:
   - life
   - personal
