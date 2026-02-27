@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
+    {{ partial "head_custom.html" . }}
+    {{ if .IsTranslated }}
+    {{ range .Translations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+    {{ end }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+    {{ end }}
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+      {{ end }}
+      <li class="lang-switch">
+        {{ if .IsTranslated }}
+          {{ range .Translations }}
+          <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+          {{ end }}
+        {{ else }}
+          {{ range $.Site.Languages }}
+            {{ if ne .Lang $.Site.Language.Lang }}
+            <a href="{{ (printf "/%s/" .Lang) | absURL }}">{{ .LanguageName }}</a>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      </li>
+    </ul>
+    <hr/>
+    </nav>
