@@ -4,8 +4,8 @@ subtitle: 一些回忆
 author: 谭显英
 date: '2022-01-08'
 slug: github-calendar
+originalLang: zh
 categories:
-  - cn
 tags:
   - reflection
 ---

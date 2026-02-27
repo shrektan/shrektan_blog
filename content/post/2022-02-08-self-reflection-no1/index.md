@@ -4,8 +4,8 @@ subtitle: 一个停不下来的人
 author: 谭显英
 date: '2022-02-08'
 slug: self-reflection-the-man-who-cannot-stop
+originalLang: zh
 categories:
-  - cn
 tags:
   - reflection
   - personal

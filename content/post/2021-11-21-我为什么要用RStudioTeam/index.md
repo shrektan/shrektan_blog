@@ -4,8 +4,8 @@ subtitle: 人的时间才是最宝贵的
 author: 谭显英
 date: '2021-11-21'
 slug: why-do-I-choose-RStudio-Team
+originalLang: zh
 categories:
-  - cn
 tags:
   - thinking
 ---

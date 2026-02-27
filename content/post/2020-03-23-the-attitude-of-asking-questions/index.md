@@ -3,8 +3,8 @@ title: 提问的态度
 author: 谭显英
 date: '2020-03-23'
 slug: the-attitude-of-asking-questions
+originalLang: zh
 categories:
-  - cn
 tags:
   - life
   - thinking

@@ -3,8 +3,8 @@ title: 使用UTF8作为默认编码的Window R快来了
 author: 谭显英
 date: '2021-12-11'
 slug: utf8-r-windows-is-coming
+originalLang: zh
 categories:
-  - cn
 tags:
   - encoding
   - complaint

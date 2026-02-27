@@ -3,8 +3,8 @@ title: 忘了常识
 author: 谭显英
 date: '2021-10-07'
 slug: 忘了常识
+originalLang: zh
 categories:
-  - cn
 tags:
   - complaint
 ---

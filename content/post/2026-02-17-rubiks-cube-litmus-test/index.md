@@ -2,7 +2,6 @@
 title: 魔方试纸
 date: 2026-02-17
 categories:
-  - cn
 tags:
   - thinking
   - tech
@@ -11,6 +10,7 @@ tags:
   - rubiks-cube
   - reasoning
 slug: rubiks-cube-litmus-test
+originalLang: zh
 ---
 
 最近在跟小朋友一起学三阶魔方。

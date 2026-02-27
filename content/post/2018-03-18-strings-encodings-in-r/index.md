@@ -4,8 +4,8 @@ subtitle: Strings、Encodings in R
 author: Xianying Tan
 date: '2018-03-18'
 slug: strings-encodings-in-r
+originalLang: zh
 categories:
-  - cn
 tags:
   - R
   - programming

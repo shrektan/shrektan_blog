@@ -3,8 +3,8 @@ title: 一起长大
 author: 谭显英
 date: '2025-05-05'
 slug: grow-together
+originalLang: zh
 categories:
-  - cn
 tags:
   - life
 ---

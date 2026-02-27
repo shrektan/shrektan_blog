@@ -4,8 +4,8 @@ subtitle: “自我”和“当下”
 author: 谭显英
 date: '2022-02-22'
 slug: self-and-now
+originalLang: zh
 categories:
-  - cn
 tags:
   - reflection
   - personal

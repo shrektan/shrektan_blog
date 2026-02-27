@@ -3,8 +3,8 @@ title: 不争就输了
 author: 谭显英
 date: '2018-11-13'
 slug: have-to-fight
+originalLang: zh
 categories:
-  - cn
 tags:
   - complaint
   - personal

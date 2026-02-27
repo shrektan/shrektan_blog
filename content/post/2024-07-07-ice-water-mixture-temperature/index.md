@@ -3,8 +3,8 @@ title: 冰水混合物的温度为什么是零
 author: 谭显英
 date: '2024-07-07'
 slug: ice-water-mixture-temperature
+originalLang: zh
 categories:
-  - cn
 tags:
   - personal
 ---

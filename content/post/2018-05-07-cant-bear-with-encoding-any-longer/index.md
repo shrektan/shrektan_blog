@@ -4,8 +4,8 @@ subtitle: 浪费了多少宝贵的时间？！
 author: 谭显英
 date: '2018-05-07'
 slug: cant-bear-with-encoding-any-longer
+originalLang: zh
 categories:
-  - cn
 tags:
   - complaint
   - note

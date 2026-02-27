@@ -3,8 +3,8 @@ title: 七七八八
 author: 谭显英
 date: '2022-05-04'
 slug: 7788
+originalLang: zh
 categories:
-  - cn
 tags:
   - personal
 ---

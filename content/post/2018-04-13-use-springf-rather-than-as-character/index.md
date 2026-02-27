@@ -4,8 +4,8 @@ subtitle: when you need to convert a number to a string sophisticatedly in R
 author: Xianying Tan
 date: '2018-04-12'
 slug: use-sprintf-rather-than-as-character
+originalLang: en
 categories:
-  - en
 tags:
   - R
   - programming

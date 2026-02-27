@@ -4,8 +4,8 @@ subtitle: 从Human Coding到Vibe Coding
 author: 谭显英
 date: '2025-05-05'
 slug: from-r-shiny-to-fastapi-react
+originalLang: zh
 categories:
-  - cn
 tags:
   - Python
   - R

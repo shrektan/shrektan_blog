@@ -3,8 +3,8 @@ title: 美帝某金融产品欺诈案杂评
 author: 谭显英
 date: '2022-05-20'
 slug: comments-on-some-fraud-product
+originalLang: zh
 categories:
-  - cn
 tags:
   - finance
 ---

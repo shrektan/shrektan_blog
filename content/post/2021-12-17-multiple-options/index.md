@@ -3,8 +3,8 @@ title: 多重选择
 author: 谭显英
 date: '2021-12-17'
 slug: multiple-options
+originalLang: zh
 categories:
-  - cn
 tags:
   - thinking
 ---

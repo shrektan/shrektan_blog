@@ -4,8 +4,8 @@ subtitle: 关于R、C++、Rust的流水账一篇
 author: 谭显英
 date: '2021-12-11'
 slug: rust-and-r-on-mac-m1
+originalLang: zh
 categories:
-  - cn
 tags:
   - note
   - programming

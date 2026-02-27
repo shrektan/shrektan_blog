@@ -3,8 +3,8 @@ title: The only few Git commands that I use
 author: Xianying Tan
 date: '2019-07-28'
 slug: the-only-few-git-commands-that-i-use
+originalLang: en
 categories:
-  - en
 tags:
   - git
   - programming

@@ -4,8 +4,8 @@ subtitle: 解决问题的关键
 author: Xianying Tan
 date: '2018-03-21'
 slug: defining-is-the-hardest-part
+originalLang: zh
 categories:
-  - cn
 tags:
   - thinking
 ---

@@ -3,8 +3,8 @@ title: 用blogdown来管理工作事项
 author: 谭显英
 date: '2018-04-02'
 slug: blogdown-todo
+originalLang: zh
 categories:
-  - cn
 tags:
   - personal
   - thinking

@@ -4,8 +4,8 @@ subtitle: “杀毒软件”和“字符编码”的折腾
 author: 谭显英
 date: '2020-11-04'
 slug: low-productivity-day
+originalLang: zh
 categories:
-  - cn
 tags:
   - complaint
   - encoding

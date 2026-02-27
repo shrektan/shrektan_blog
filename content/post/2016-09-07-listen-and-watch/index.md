@@ -3,8 +3,8 @@ title: Listen and Watch
 author: Xianying Tan
 date: '2016-09-07'
 slug: listen-and-watch
+originalLang: en
 categories:
-  - en
 tags:
   - quote
   - note

@@ -3,8 +3,8 @@ title: 创造X的价值，捕获Y的比例
 author: 谭显英
 date: '2021-11-23'
 slug: create-x-value-and-capture-y
+originalLang: zh
 categories:
-  - cn
 tags:
   - thinking
 ---

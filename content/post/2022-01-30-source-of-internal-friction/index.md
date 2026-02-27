@@ -4,8 +4,8 @@ subtitle: 价值感
 author: 谭显英
 date: '2022-01-30'
 slug: source-of-internal-friction
+originalLang: zh
 categories:
-  - cn
 tags:
   - complaint
 ---

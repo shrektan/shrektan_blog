@@ -3,8 +3,8 @@ title: Render Rnw and Email PDF reports in RStudio Connect
 author: Xianying Tan
 date: '2022-03-30'
 slug: render-rnw-and-email-pdf-reports-in-rstudio-connect
+originalLang: en
 categories:
-  - en
 tags:
   - tech
   - rmarkdown

@@ -4,8 +4,8 @@ subtitle: 参加“保险公司经济资本研讨会”的发言稿
 author: 谭显英
 date: '2019-11-14'
 slug: r-in-insurance-amc
+originalLang: zh
 categories:
-  - cn
 tags:
   - finance
   - sharing

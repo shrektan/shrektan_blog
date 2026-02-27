@@ -3,8 +3,8 @@ title: 自我陶醉
 author: 谭显英
 date: '2020-03-27'
 slug: self-enjoyment
+originalLang: zh
 categories:
-  - cn
 tags:
   - life
 ---

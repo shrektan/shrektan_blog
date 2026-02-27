@@ -4,8 +4,8 @@ subtitle: 尊重习惯才能解决问题
 author: 谭显英
 date: '2018-09-19'
 slug: solve-problems-by-respecting-the-habbits
+originalLang: zh
 categories:
-  - cn
 tags:
   - thinking
 ---

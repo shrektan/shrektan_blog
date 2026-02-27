@@ -3,8 +3,8 @@ title: 在负载均衡下使用DT
 author: 谭显英
 date: '2020-10-05'
 slug: use-dt-behind-a-load-balancer
+originalLang: zh
 categories:
-  - cn
 tags:
   - tech
   - programming

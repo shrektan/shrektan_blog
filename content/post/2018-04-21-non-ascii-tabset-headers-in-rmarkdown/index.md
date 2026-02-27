@@ -3,8 +3,8 @@ title: non-ASCII {.tabset} headers in Rmarkdown
 author: Xianying Tan
 date: '2018-04-21'
 slug: non-ascii-tabset-headers-in-rmarkdown
+originalLang: en
 categories:
-  - en
 tags:
   - R
   - note

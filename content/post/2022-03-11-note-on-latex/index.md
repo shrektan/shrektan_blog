@@ -3,8 +3,8 @@ title: Some Notes on LaTeX
 author: Xianying Tan
 date: '2022-03-11'
 slug: note-on-latex
+originalLang: en
 categories:
-  - en
 tags:
   - tech
   - note

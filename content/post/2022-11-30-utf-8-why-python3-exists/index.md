@@ -4,8 +4,8 @@ subtitle: 读《Why Python3 Exists》有感
 author: 谭显英
 date: '2022-11-30'
 slug: utf-8-why-python3-exists
+originalLang: zh
 categories:
-  - cn
 tags:
   - encoding
   - Python

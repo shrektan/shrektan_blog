@@ -3,8 +3,8 @@ title: Hugo will not publish the "future" post by default
 author: Xianying Tan
 date: '2018-04-12'
 slug: hugo-will-not-publish-the-future-post-by-default
+originalLang: en
 categories:
-  - en
 tags:
   - web
   - material

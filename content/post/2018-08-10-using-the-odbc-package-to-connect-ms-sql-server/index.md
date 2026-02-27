@@ -3,8 +3,8 @@ title: 在Linux下使用odbc包连接MSSQL Server
 author: 谭显英
 date: '2018-08-10'
 slug: using-the-odbc-package-to-connect-ms-sql-server
+originalLang: zh
 categories:
-  - cn
 tags:
   - R
   - odbc

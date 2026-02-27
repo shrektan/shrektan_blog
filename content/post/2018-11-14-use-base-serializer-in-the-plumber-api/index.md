@@ -3,8 +3,8 @@ title: use `base::serializer()` in the plumber API
 author: Xianying Tan
 date: '2018-11-14'
 slug: use-base-serializer-in-the-plumber-api
+originalLang: en
 categories:
-  - en
 tags:
   - R
   - web

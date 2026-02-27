@@ -4,8 +4,8 @@ subtitle: 拿来主义
 author: 谭显英
 date: '2020-10-06'
 slug: blog-speed-up
+originalLang: zh
 categories:
-  - cn
 tags:
   - blogdown
   - personal

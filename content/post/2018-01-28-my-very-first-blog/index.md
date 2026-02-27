@@ -3,8 +3,8 @@ title: My very first blog
 author: Xianying Tan
 date: '2018-01-28'
 slug: my-very-first-blog
+originalLang: en
 categories:
-  - en
 tags:
   - personal
   - note

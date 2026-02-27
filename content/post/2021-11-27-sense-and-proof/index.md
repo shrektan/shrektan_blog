@@ -4,8 +4,8 @@ subtitle: 记录下我自己的一些小故事
 author: 谭显英
 date: '2021-11-27'
 slug: sense-and-proof
+originalLang: zh
 categories:
-  - cn
 tags:
   - thinking
 ---

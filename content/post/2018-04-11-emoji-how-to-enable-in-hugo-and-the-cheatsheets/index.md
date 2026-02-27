@@ -3,8 +3,8 @@ title: Emoji  (how to enable in Hugo and the cheatsheets)
 author: Xianying Tan
 date: '2018-04-11'
 slug: emoji-how-to-enable-in-hugo-and-the-cheatsheets
+originalLang: en
 categories:
-  - en
 tags:
   - web
   - material

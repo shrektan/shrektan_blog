@@ -4,8 +4,8 @@ subtitle: 说不的能力
 author: 谭显英
 date: '2020-04-01'
 slug: the-trap-of-you-can-do-it-in-five-minutes
+originalLang: zh
 categories:
-  - cn
 tags:
   - life
   - personal

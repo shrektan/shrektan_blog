@@ -3,8 +3,8 @@ title: 废寝忘食
 author: 谭显英
 date: '2021-10-21'
 slug: 废寝忘食
+originalLang: zh
 categories:
-  - cn
 tags:
   - personal
   - life

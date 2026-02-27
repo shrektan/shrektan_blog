@@ -4,8 +4,8 @@ subtitle: 内部制度汇总查阅的临时解决方案
 author: 谭显英
 date: '2021-12-01'
 slug: a-use-case-of-bookdown
+originalLang: zh
 categories:
-  - cn
 tags:
   - bookdown
   - programming
