@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
 """Fix quotation marks in Markdown files.
 
-Rules:
-- Chinese articles (or text near CJK characters): use \u201c\u201d (curly double quotes)
-- English articles: use " (U+0022, straight double quotes)
-
-Language detection:
-- *.en.md files → English
-- Otherwise, detect from CJK character count in body
+Core rule — decide per quote pair based on content:
+- If everything inside the quotes is ASCII / digits → straight quotes ""
+- If any CJK character appears inside the quotes → curly Chinese quotes ""
 
 Preserves:
 - YAML frontmatter (quotes there are YAML syntax)
@@ -38,7 +34,7 @@ CODE_RE = re.compile(r"(```[^\n]*\n.*?```|`[^`\n]+`)", re.DOTALL)
 
 
 def is_cjk(ch: str) -> bool:
-    """Check if a character is CJK."""
+    """Check if a character is CJK (including CJK punctuation / fullwidth forms)."""
     cp = ord(ch)
     return (
         (0x4E00 <= cp <= 0x9FFF)  # CJK Unified Ideographs
@@ -50,60 +46,66 @@ def is_cjk(ch: str) -> bool:
     )
 
 
+def has_cjk(text: str) -> bool:
+    """Check if *text* contains any CJK character."""
+    return any(is_cjk(c) for c in text)
+
+
 def detect_lang(filepath: str, body: str) -> str:
-    """Detect article language from filename or body content."""
+    """Detect article language from filename or body content (for logging only)."""
     if ".en." in Path(filepath).name:
         return "en"
     cjk_count = sum(1 for c in body if is_cjk(c))
     return "zh" if cjk_count > 20 else "en"
 
 
-def fix_dq_chinese(text: str, opening: bool) -> tuple[str, bool]:
-    """Convert all double quotes to Chinese curly style \u201c\u201d.
+def fix_quotes_in_text(text: str) -> str:
+    """Fix quotes in a plain-text segment (no code blocks).
 
-    Tracks opening/closing state across calls so quotes spanning
-    across code blocks are handled correctly.
-    Returns (fixed_text, new_opening_state).
+    Pairs adjacent quote characters (any of " " ") and decides per pair:
+      - content has CJK  → \u201c\u2026\u201d
+      - content is ASCII  → "..."
+
+    An unpaired trailing quote is left unchanged.
     """
-    result = []
-    for ch in text:
-        if ch in ALL_DQ:
-            result.append(LEFT_DQ if opening else RIGHT_DQ)
-            opening = not opening
+    # Locate every quote position
+    quote_positions = [i for i, ch in enumerate(text) if ch in ALL_DQ]
+
+    if len(quote_positions) < 2:
+        return text  # nothing to pair
+
+    result = list(text)
+
+    # Walk pairs: 0-1, 2-3, 4-5, ...
+    for pair_idx in range(0, len(quote_positions) - 1, 2):
+        open_pos = quote_positions[pair_idx]
+        close_pos = quote_positions[pair_idx + 1]
+        content = text[open_pos + 1 : close_pos]
+
+        if has_cjk(content):
+            result[open_pos] = LEFT_DQ
+            result[close_pos] = RIGHT_DQ
         else:
-            result.append(ch)
-    return "".join(result), opening
+            result[open_pos] = STRAIGHT_DQ
+            result[close_pos] = STRAIGHT_DQ
+
+    return "".join(result)
 
 
-def fix_dq_english(text: str) -> str:
-    """Convert all curly double quotes to straight "."""
-    return text.replace(LEFT_DQ, STRAIGHT_DQ).replace(RIGHT_DQ, STRAIGHT_DQ)
-
-
-def process_body(body: str, lang: str) -> str:
+def process_body(body: str) -> str:
     """Fix quotes in markdown body, preserving code blocks."""
-    parts = []
+    parts: list[str] = []
     last = 0
-    opening = True  # track open/close state across text segments
 
     for m in CODE_RE.finditer(body):
         # Process text before this code segment
         text = body[last : m.start()]
-        if lang == "zh":
-            text, opening = fix_dq_chinese(text, opening)
-        else:
-            text = fix_dq_english(text)
-        parts.append(text)
+        parts.append(fix_quotes_in_text(text))
         parts.append(m.group())  # keep code as-is
         last = m.end()
 
     # Process remaining text after last code segment
-    text = body[last:]
-    if lang == "zh":
-        text, opening = fix_dq_chinese(text, opening)
-    else:
-        text = fix_dq_english(text)
-    parts.append(text)
+    parts.append(fix_quotes_in_text(body[last:]))
 
     return "".join(parts)
 
@@ -121,7 +123,7 @@ def process_file(filepath: str, dry_run: bool = False) -> bool:
         body = content[fm_match.end() :]
 
     lang = detect_lang(filepath, body)
-    fixed_body = process_body(body, lang)
+    fixed_body = process_body(body)
     fixed = fm + fixed_body
 
     changed = fixed != content

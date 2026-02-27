@@ -25,7 +25,8 @@ Both files live in the same post directory (e.g., `content/post/2025-05-05-grow-
 2. **Translate front matter** (see rules below)
 3. **Translate body** (see quality guidelines below)
 4. **Write the target file**
-5. **Build and verify**: Run `hugo` to confirm no errors
+5. **Fix quotes**: Run `uv run scripts/fix_quotes.py` on **both** the source file and the translated file. This normalizes quotation marks per content: English/ASCII content inside quotes → straight `""`, Chinese content inside quotes → curly `""`
+6. **Build and verify**: Run `hugo` to confirm no errors
 
 ## Front Matter Rules
 
