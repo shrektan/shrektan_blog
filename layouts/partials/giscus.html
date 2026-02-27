@@ -4,6 +4,12 @@
   {{ $category := .category | default "Announcements" }}
   {{ $categoryID := .categoryID | default "" }}
   {{ if and $repo $repoID $categoryID }}
+  {{/* Strip language prefix from path so giscus matches pre-multilingual discussions */}}
+  {{ $path := $.RelPermalink }}
+  {{ $langPrefix := printf "/%s/" $.Site.Language.Lang }}
+  {{ if hasPrefix $path $langPrefix }}
+    {{ $path = printf "/%s" (strings.TrimPrefix $langPrefix $path) }}
+  {{ end }}
 <section class="comments">
   <script
     src="https://giscus.app/client.js"
@@ -11,7 +17,8 @@
     data-repo-id="{{ $repoID }}"
     data-category="{{ $category }}"
     data-category-id="{{ $categoryID }}"
-    data-mapping="{{ .mapping | default "pathname" }}"
+    data-mapping="specific"
+    data-term="{{ $path }}"
     data-strict="{{ .strict | default "0" }}"
     data-reactions-enabled="{{ .reactionsEnabled | default "1" }}"
     data-emit-metadata="{{ .emitMetadata | default "0" }}"
