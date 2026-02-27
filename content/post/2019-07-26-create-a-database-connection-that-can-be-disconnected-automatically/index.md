@@ -16,7 +16,7 @@ tags:
 
 在使用完毕后显式关闭连接是可以的，但太过冗长。而且，这种方式无法保证连接一定会被释放——想象一下，你的代码在关闭连接那行之前就抛出了错误。在 CPP 中，一个好的做法是通过将资源的使用封装到对象中来管理资源，这样只要对象离开作用域，资源就会被释放。这种技术叫做 [RAII（Resource Acquisition Is Initialization，资源获取即初始化）](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#r1-manage-resources-automatically-using-resource-handles-and-raii-resource-acquisition-is-initialization)。
 
-我并不热衷于在 R 中使用对象。但 RAII 的思想很简单——在"某个东西"结束时执行一些操作。而那个"某个东西"也可以是一个函数。`on.exit()` 就是那个在当前函数退出时注册表达式的魔法（实际上，它是在调用环境退出时被调用的，所以你也可以使用 `local({...})`）。即使函数抛出错误，该表达式也保证会被执行。因此我们可以把代码改进成这样：
+我并不热衷于在 R 中使用对象。但 RAII 的思想很简单——在“某个东西”结束时执行一些操作。而那个“某个东西”也可以是一个函数。`on.exit()` 就是那个在当前函数退出时注册表达式的魔法（实际上，它是在调用环境退出时被调用的，所以你也可以使用 `local({...})`）。即使函数抛出错误，该表达式也保证会被执行。因此我们可以把代码改进成这样：
 
 ```r
 data_a <- local({

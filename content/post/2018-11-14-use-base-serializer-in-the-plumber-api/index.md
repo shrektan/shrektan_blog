@@ -24,7 +24,7 @@ tags:
 
 - 将大型 R 对象解析为 JSON 可能非常慢[^1]。
 
-幸运的是，我所有的"客户端"（我的同事们）都是 R 用户，所以我并不真正需要一个通用的 Web API。JSON 只是众多[序列化](https://en.wikipedia.org/wiki/Serialization)对象的方法之一，我并不受它的约束。由于 `base::saveRDS()` 的存在，我知道 R 本身一定提供了一种序列化方法——唯一不确定的是这个方法是否被导出了。幸运的是，稍加搜索便找到了 `base::serialize()` 和 `base::unserialize()`，正是我需要的。
+幸运的是，我所有的“客户端”（我的同事们）都是 R 用户，所以我并不真正需要一个通用的 Web API。JSON 只是众多[序列化](https://en.wikipedia.org/wiki/Serialization)对象的方法之一，我并不受它的约束。由于 `base::saveRDS()` 的存在，我知道 R 本身一定提供了一种序列化方法——唯一不确定的是这个方法是否被导出了。幸运的是，稍加搜索便找到了 `base::serialize()` 和 `base::unserialize()`，正是我需要的。
 
 我的解决方案在下面的代码中给出。由于 rds 文件几乎是 R 对象的无损表示（外部指针是例外），使用 `base::serialize()` 作为 plumber API 的自定义序列化器，可以最大限度地减少为 R 用户建立稳定 plumber API 所需的工作量。
 
