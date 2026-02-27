@@ -1,0 +1,6 @@
+/post/*          /zh/post/:splat     301
+/note/*          /zh/note/:splat     301
+/about/          /zh/about/          301
+/categories/*    /zh/categories/:splat 301
+/tags/*          /zh/tags/:splat     301
+/index.xml       /zh/index.xml       301
