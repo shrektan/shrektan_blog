@@ -1,6 +1,5 @@
 ---
 title: "Feedback Is Evolution"
-author: Xianying Tan
 date: '2026-02-28'
 slug: feedback-is-evolution
 originalLang: zh
