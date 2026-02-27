@@ -7,7 +7,13 @@ body {
 }
 
 /* header and footer areas */
-.menu { padding: 0; }
+.nav-bar {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px 0;
+}
+.menu { padding: 0; margin: 0; width: max-content; }
 .menu li { display: inline-block; }
 .article-meta, .menu a{
   text-decoration: none;
@@ -115,7 +121,8 @@ br {
 
 /* language switcher */
 .lang-switch {
-  float: right;
+  margin-left: auto;
+  white-space: nowrap;
 }
 .lang-switch a,
 .lang-switch .lang-current {
