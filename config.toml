@@ -1,50 +1,82 @@
 baseurl = "https://shrektan.com"
-languageCode = "zh-cn"
 title = "Xianying's Blog"
 theme = "hugo-xmin"
 googleAnalytics = "UA-68366586-1"
 disqusShortname = ""
 ignoreFiles = ["_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
-preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
 enableEmoji = true
 hasCJKLanguage = true
 
+defaultContentLanguage = "zh"
+defaultContentLanguageInSubdir = true
 
 [permalinks]
     post = "/post/:year/:month/:day/:slug/"
     note = "/note/:year/:month/:day/:slug/"
 
-[[menu.main]]
-    name = "主页/Home"
-    url = "/"
+[languages]
+  [languages.zh]
+    languageName = "中文"
+    languageCode = "zh-cn"
     weight = 1
-[[menu.main]]
-    name = "关于/About"
-    url = "/about/"
+    [languages.zh.params]
+      description = "谭显英的个人博客"
+      footer = "&copy; [谭显英](https://shrektan.com) 2017 -- 2025 | [Github](https://github.com/shrektan)"
+    [[languages.zh.menu.main]]
+      name = "主页"
+      url = "/"
+      weight = 1
+    [[languages.zh.menu.main]]
+      name = "关于"
+      url = "/about/"
+      weight = 2
+    [[languages.zh.menu.main]]
+      name = "类别"
+      url = "/categories/"
+      weight = 3
+    [[languages.zh.menu.main]]
+      name = "标签"
+      url = "/tags/"
+      weight = 4
+    [[languages.zh.menu.main]]
+      name = "订阅"
+      url = "/index.xml"
+      weight = 5
+
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
     weight = 2
-[[menu.main]]
-    name = "类别/Categories"
-    url = "/categories/"
-    weight = 3
-[[menu.main]]
-    name = "标签/Tags"
-    url = "/tags/"
-    weight = 4
-[[menu.main]]
-    name = "订阅/Subscribe"
-    url = "/index.xml"
+    [languages.en.params]
+      description = "Xianying Tan's personal blog"
+      footer = "&copy; [Xianying Tan](https://shrektan.com) 2017 -- 2025 | [Github](https://github.com/shrektan)"
+    [[languages.en.menu.main]]
+      name = "Home"
+      url = "/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "About"
+      url = "/about/"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "Categories"
+      url = "/categories/"
+      weight = 3
+    [[languages.en.menu.main]]
+      name = "Tags"
+      url = "/tags/"
+      weight = 4
+    [[languages.en.menu.main]]
+      name = "Subscribe"
+      url = "/index.xml"
+      weight = 5
 
 [params]
-    description = "A website built through Hugo."
-    footer = "&copy; [Xianying Tan](https://blog.shrektan.com) 2017 -- 2021 | [Github](https://github.com/shrektan)"
-
-    # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "11.3.1"
     highlightjsCDN = "//cdn.bootcss.com"
     highlightjsLang = ["r", "yaml"]
     highlightjsTheme = "default"
-    
     GithubEdit = "https://github.com/shrektan/shrektan_blog/edit/master/content/"
 
 [params.giscus]
@@ -58,7 +90,6 @@ hasCJKLanguage = true
     emitMetadata = "0"
     inputPosition = "top"
     theme = "preferred_color_scheme"
-    lang = "zh-CN"
     loading = "lazy"
 
 [markup]
