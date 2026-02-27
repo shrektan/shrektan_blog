@@ -29,7 +29,8 @@ a:hover, a:focus {
   border-radius: 3px;
 }
 
-.menu, .article-meta, footer { text-align: center; }
+.menu { text-align: left; }
+.article-meta, footer { text-align: center; }
 .title {
   font-size: 1.0em;
   line-height: 1.2em;
@@ -98,8 +99,15 @@ br {
 .lang-switch {
   float: right;
 }
-.lang-switch a {
+.lang-switch a,
+.lang-switch .lang-current {
   font-weight: bold;
+}
+.lang-switch .lang-current {
+  color: #333;
+  border: 1px solid #333;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 /* translation notice */

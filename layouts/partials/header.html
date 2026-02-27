@@ -22,16 +22,24 @@
       <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
       {{ end }}
       <li class="lang-switch">
-        {{ if .IsTranslated }}
-          {{ range .Translations }}
-          <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-          {{ end }}
-        {{ else }}
-          {{ range $.Site.Languages }}
-            {{ if ne .Lang $.Site.Language.Lang }}
-            <a href="{{ (printf "/%s/" .Lang) | absURL }}">{{ .LanguageName }}</a>
-            {{ end }}
-          {{ end }}
+        {{ range $.Site.Languages }}
+          {{- $isCurrent := eq .Lang $.Site.Language.Lang -}}
+          {{- $langLabel := .LanguageName -}}
+          {{- if $isCurrent -}}
+            <span class="lang-current">{{ $langLabel }}</span>
+          {{- else -}}
+            {{- /* Link to the translated page if it exists, otherwise to the language homepage */ -}}
+            {{- $lang := .Lang -}}
+            {{- $targetURL := (printf "/%s/" $lang) | absURL -}}
+            {{- if $.IsTranslated -}}
+              {{- range $.Translations -}}
+                {{- if eq .Language.Lang $lang -}}
+                  {{- $targetURL = .Permalink -}}
+                {{- end -}}
+              {{- end -}}
+            {{- end -}}
+            <a href="{{ $targetURL }}">{{ $langLabel }}</a>
+          {{- end -}}
         {{ end }}
       </li>
     </ul>
