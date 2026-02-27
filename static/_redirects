@@ -1,3 +1,8 @@
+# Browser language detection for root path (Netlify processes these before static files)
+/                /en/                302!  Language=en
+/                /zh/                302!
+
+# Old URL redirects (before /zh/ prefix was added)
 /post/*          /zh/post/:splat     301
 /note/*          /zh/note/:splat     301
 /about/          /zh/about/          301

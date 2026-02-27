@@ -19,7 +19,7 @@
     <nav>
     <ul class="menu">
       {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+      <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
       {{ end }}
       <li class="lang-switch">
         {{ if .IsTranslated }}
