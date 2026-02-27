@@ -24,7 +24,7 @@
     data-emit-metadata="{{ .emitMetadata | default "0" }}"
     data-input-position="{{ .inputPosition | default "top" }}"
     data-theme="{{ .theme | default "preferred_color_scheme" }}"
-    data-lang="{{ $.Site.Language.Lang }}"
+    data-lang="{{ cond (eq $.Site.Language.Lang "zh") "zh-CN" $.Site.Language.Lang }}"
     data-loading="{{ .loading | default "lazy" }}"
     crossorigin="anonymous"
     async>
