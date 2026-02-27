@@ -17,7 +17,7 @@
     data-emit-metadata="{{ .emitMetadata | default "0" }}"
     data-input-position="{{ .inputPosition | default "top" }}"
     data-theme="{{ .theme | default "preferred_color_scheme" }}"
-    data-lang="{{ .lang | default "en" }}"
+    data-lang="{{ $.Site.Language.Lang }}"
     data-loading="{{ .loading | default "lazy" }}"
     crossorigin="anonymous"
     async>
