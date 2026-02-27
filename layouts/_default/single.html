@@ -7,9 +7,9 @@
 {{ if and .Params.originalLang (ne .Params.originalLang .Language.Lang) }}
 <p class="translation-notice">
   {{ if eq .Language.Lang "zh" }}
-    本文原文为英文{{ if .IsTranslated }} · {{ range .Translations }}<a href="{{ .Permalink }}">Read the original</a>{{ end }}{{ end }}
+    本文由 AI 辅助翻译，原文为英文{{ if .IsTranslated }} · {{ range .Translations }}<a href="{{ .Permalink }}">Read the original</a>{{ end }}{{ end }}
   {{ else }}
-    Originally written in Chinese{{ if .IsTranslated }} · {{ range .Translations }}<a href="{{ .Permalink }}">阅读中文原文</a>{{ end }}{{ end }}
+    Translated with AI assistance, originally written in Chinese{{ if .IsTranslated }} · {{ range .Translations }}<a href="{{ .Permalink }}">阅读中文原文</a>{{ end }}{{ end }}
   {{ end }}
 </p>
 {{ end }}
