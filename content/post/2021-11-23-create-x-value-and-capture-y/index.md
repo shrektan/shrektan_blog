@@ -1,5 +1,6 @@
 ---
 title: 创造X的价值，捕获Y的比例
+description: '从Peter Thiel的讲座出发，思考价值创造与价值捕获是两个独立变量，个人价值不能简单地用金钱来衡量。'
 author: 谭显英
 date: '2021-11-23'
 slug: create-x-value-and-capture-y

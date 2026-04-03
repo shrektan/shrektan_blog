@@ -1,6 +1,7 @@
 ---
 title: Rust and R on Mac M1的一个注意事项
 subtitle: 关于R、C++、Rust的流水账一篇
+description: '在Mac M1上用rextendr连接Rust与R时遭遇架构不匹配的报错，根因是R仍为x86_64版本，重装ARM64版R即可解决。'
 author: 谭显英
 date: '2021-12-11'
 slug: rust-and-r-on-mac-m1

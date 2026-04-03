@@ -1,5 +1,6 @@
 ---
 title: MS SQLServer 中特殊的 Unicode 字符 \uff0d
+description: 'MS SQLServer 会将全角连字符 \uff0d（－）等同于普通减号 - 来处理主键约束，记录这一诡异行为及临时规避方案。'
 author: 谭显英
 date: '2019-05-06'
 slug: the-special-unicode-character-uff0d-in-ms-sqlserver

@@ -1,6 +1,7 @@
 ---
 title: "Can't Bear with Encoding Any Longer"
 subtitle: How much precious time has been wasted?!
+description: 'A battle-hardened R developer vents about years lost to encoding hell, with a list of open-source bugs fixed along the way.'
 author: Xianying Tan
 date: '2018-05-07'
 slug: cant-bear-with-encoding-any-longer

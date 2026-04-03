@@ -1,5 +1,6 @@
 ---
 title: Using DT Behind a Load Balancer
+description: 'Why the R DT package fails behind a load balancer and how sticky sessions fix it, verified with a reproducible Docker Swarm and Traefik example.'
 author: Xianying Tan
 date: '2020-10-05'
 slug: use-dt-behind-a-load-balancer

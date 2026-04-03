@@ -1,6 +1,7 @@
 ---
 title: Sense and Proof
 subtitle: A few small stories of my own
+description: 'Why textbooks that prioritize proofs over intuition fail learners — and personal stories about calculus, exams, and why real understanding cannot be rushed.'
 author: Xianying Tan
 date: '2021-11-27'
 slug: sense-and-proof

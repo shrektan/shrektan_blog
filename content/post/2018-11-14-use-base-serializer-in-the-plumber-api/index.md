@@ -1,5 +1,6 @@
 ---
 title: 在 plumber API 中使用 `base::serialize()`
+description: '为什么 JSON 不适合 R 用户之间的 API 通信？用 base::serialize() 替换默认序列化器，实现无损 R 对象传输。'
 author: 谭显英
 date: '2018-11-14'
 slug: use-base-serializer-in-the-plumber-api

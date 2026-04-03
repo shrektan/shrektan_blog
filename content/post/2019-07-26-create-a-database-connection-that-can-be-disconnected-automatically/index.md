@@ -1,5 +1,6 @@
 ---
 title: 创建一个能自动断开的数据库连接
+description: '借助 on.exit()、withr::defer() 和 reg.finalizer()，在 R 中实现 RAII 风格的数据库连接自动释放，附完整示例代码。'
 author: 谭显英
 date: '2019-07-26'
 slug: create-a-database-connection-that-can-be-disconnected-automatically

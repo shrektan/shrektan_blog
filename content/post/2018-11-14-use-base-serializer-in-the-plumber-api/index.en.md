@@ -1,5 +1,6 @@
 ---
 title: use `base::serializer()` in the plumber API
+description: 'JSON loses R attributes and is slow for large objects. Use base::serialize() as a custom plumber serializer for lossless, fast R-to-R API communication.'
 author: Xianying Tan
 date: '2018-11-14'
 slug: use-base-serializer-in-the-plumber-api

@@ -1,6 +1,7 @@
 ---
 title: 道理与证明
 subtitle: 记录下我自己的一些小故事
+description: '教科书重证明轻道理的弊病引发共鸣：只有真正理解了"为什么"，知识才能活学活用，也借此分享了自己的应试和学习心得。'
 author: 谭显英
 date: '2021-11-27'
 slug: sense-and-proof

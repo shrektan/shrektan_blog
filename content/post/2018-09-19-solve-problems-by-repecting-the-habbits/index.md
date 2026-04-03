@@ -1,6 +1,7 @@
 ---
 title: 恒顺众生
 subtitle: 尊重习惯才能解决问题
+description: '从佛家"恒顺众生"出发，探讨尊重他人习惯与人类直觉才是解决问题、推动改变的根本之道。'
 author: 谭显英
 date: '2018-09-19'
 slug: solve-problems-by-respecting-the-habbits

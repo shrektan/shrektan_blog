@@ -1,5 +1,6 @@
 ---
 title: 在Linux下使用odbc包连接MSSQL Server
+description: '在 Linux 下用 odbc 包连 MSSQL Server 踩了 FreeTDS 编码坑，找到了 clientcharset 参数解法，附完整配置步骤。'
 author: 谭显英
 date: '2018-08-10'
 slug: using-the-odbc-package-to-connect-ms-sql-server

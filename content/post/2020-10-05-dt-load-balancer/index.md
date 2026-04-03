@@ -1,5 +1,6 @@
 ---
 title: 在负载均衡下使用DT
+description: '探讨R包DT在负载均衡环境下报错的根因，验证粘滞会话（sticky session）是正确解法，并分享基于Docker Swarm和Traefik的可重复化示例。'
 author: 谭显英
 date: '2020-10-05'
 slug: use-dt-behind-a-load-balancer

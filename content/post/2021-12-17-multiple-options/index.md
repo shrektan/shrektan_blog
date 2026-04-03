@@ -1,5 +1,6 @@
 ---
 title: 多重选择
+description: '费德勒眼中梅西最与众不同之处——始终保持传、带、射三种选择——同样适用于开车和工作中的决策思维。'
 author: 谭显英
 date: '2021-12-17'
 slug: multiple-options

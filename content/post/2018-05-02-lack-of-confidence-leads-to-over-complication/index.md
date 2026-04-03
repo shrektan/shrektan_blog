@@ -1,5 +1,6 @@
 ---
 title: 不自信的复杂
+description: '数理金融论文充斥着繁琐的数学，Paul Wilmott 认为这是对方法论缺乏自信的体现，真正的入门应从感性认知开始。'
 author: 谭显英
 date: '2018-05-02'
 slug: lack-of-confidence-leads-to-over-complication

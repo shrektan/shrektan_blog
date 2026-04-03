@@ -1,5 +1,6 @@
 ---
 title: Using the odbc Package to Connect to MSSQL Server on Linux
+description: 'Debugging a FreeTDS encoding mismatch when connecting R to MSSQL Server on Linux, with a complete odbc setup guide and the clientcharset fix.'
 author: Xianying Tan
 date: '2018-08-10'
 slug: using-the-odbc-package-to-connect-ms-sql-server

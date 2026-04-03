@@ -1,6 +1,7 @@
 ---
 title: 我为什么要用RStudio Team
 subtitle: 人的时间才是最宝贵的
+description: '从企业合规、跨平台环境、包管理和运维审计四个维度，解释为何放弃免费的ShinyProxy而选择采购RStudio Team商业套件。'
 author: 谭显英
 date: '2021-11-21'
 slug: why-do-I-choose-RStudio-Team

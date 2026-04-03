@@ -1,5 +1,6 @@
 ---
 title: 不争就输了
+description: '一味退让只会让工作越来越难，直截了当地说出自己的想法，反而能让事情顺利起来。'
 author: 谭显英
 date: '2018-11-13'
 slug: have-to-fight

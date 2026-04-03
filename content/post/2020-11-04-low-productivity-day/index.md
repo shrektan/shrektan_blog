@@ -1,6 +1,7 @@
 ---
 title: 低效的一天
-subtitle: “杀毒软件”和“字符编码”的折腾
+subtitle: “杀毒软件”和”字符编码”的折腾
+description: '记录被杀毒软件误删R可执行文件和Windows字符编码不一致导致data.table查询极慢这两件糟心事的排查过程。'
 author: 谭显英
 date: '2020-11-04'
 slug: low-productivity-day

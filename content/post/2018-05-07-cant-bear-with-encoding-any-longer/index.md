@@ -1,6 +1,7 @@
 ---
 title: 忍无可忍的Encoding
 subtitle: 浪费了多少宝贵的时间？！
+description: '字符编码问题有多坑？一份来自 R 开发者的深刻吐槽，附带亲手修复的十余个开源项目 Encoding Bug 清单。'
 author: 谭显英
 date: '2018-05-07'
 slug: cant-bear-with-encoding-any-longer

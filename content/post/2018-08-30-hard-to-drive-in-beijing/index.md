@@ -1,5 +1,6 @@
 ---
 title: 在北京开个车真难
+description: '北京汽车指标摇号中签率近乎为零，新能源排队七年，买卖无官方途径，折腾与不公平背后是制度设计的硬伤。'
 author: 谭显英
 date: '2018-08-30'
 slug: hard-to-drive-in-beijing

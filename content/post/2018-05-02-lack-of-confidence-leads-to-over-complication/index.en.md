@@ -1,5 +1,6 @@
 ---
 title: Complexity Born of Insecurity
+description: 'Why do finance papers drown in dense math? Paul Wilmott argues it reflects insecurity. True learning should start with intuition, not formulas.'
 author: Xianying Tan
 date: '2018-05-02'
 slug: lack-of-confidence-leads-to-over-complication

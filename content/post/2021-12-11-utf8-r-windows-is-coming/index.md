@@ -1,5 +1,6 @@
 ---
 title: 使用UTF8作为默认编码的Window R快来了
+description: 'R 4.2将在Windows上正式以UTF-8作为native编码，终结十年字符编码噩梦——记录这一里程碑时刻及官方邮件全文。'
 author: 谭显英
 date: '2021-12-11'
 slug: utf8-r-windows-is-coming

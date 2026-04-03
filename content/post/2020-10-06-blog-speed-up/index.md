@@ -1,6 +1,7 @@
 ---
 title: 博客提速小记
 subtitle: 拿来主义
+description: '记录两处拖慢博客在国内访问速度的罪魁祸首：益辉兄站点的JS资源和Disqus，以及对应的修复方案。'
 author: 谭显英
 date: '2020-10-06'
 slug: blog-speed-up

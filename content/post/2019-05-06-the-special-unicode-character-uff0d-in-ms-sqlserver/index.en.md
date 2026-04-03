@@ -1,5 +1,6 @@
 ---
 title: The special unicode character \uff0d in MS SQLServer
+description: 'MS SQLServer treats the fullwidth hyphen \uff0d as a plain minus sign for primary key constraints — a bizarre gotcha documented with a workaround.'
 author: Xianying Tan
 date: '2019-05-06'
 slug: the-special-unicode-character-uff0d-in-ms-sqlserver

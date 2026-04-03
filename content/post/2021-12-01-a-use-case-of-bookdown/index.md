@@ -1,6 +1,7 @@
 ---
 title: Bookdown的妙用一则
 subtitle: 内部制度汇总查阅的临时解决方案
+description: '用officer读取Word制度文档、bookdown渲染并通过RStudio Connect共享，快速搭建公司内部制度全文检索平台的思路与代码。'
 author: 谭显英
 date: '2021-12-01'
 slug: a-use-case-of-bookdown
