@@ -1,5 +1,6 @@
 ---
 title: Create a database connection that can be disconnected automatically
+description: 'Apply RAII to R database connections using on.exit(), withr::defer(), and reg.finalizer() so connections close automatically in any scope.'
 author: Xianying Tan
 date: '2019-07-26'
 slug: create-a-database-connection-that-can-be-disconnected-automatically
