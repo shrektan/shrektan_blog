@@ -11,6 +11,8 @@ tags:
   - tech
 ---
 
+![data.table 的方括号语法](cover.jpg)
+
 dplyr、Pandas、Polars——这些年主流的 DataFrame 工具我都认真用过。兜兜转转，我现在觉得 data.table 还是综合最好用的数据分析工具，没有之一。
 
 R 有 R 的好，Python 有 Python 的好，这个不用争。但就 DataFrame 操作本身——筛选、变换、分组、合并——这才是数据分析的日常。我这里只聊这件事。
