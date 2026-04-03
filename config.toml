@@ -1,7 +1,7 @@
 baseurl = "https://shrektan.com"
 title = "Xianying's Blog"
 theme = "hugo-xmin"
-googleAnalytics = ""
+googleAnalytics = "G-800H8RR281"
 disqusShortname = ""
 ignoreFiles = ["_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 footnotereturnlinkcontents = "↩"
