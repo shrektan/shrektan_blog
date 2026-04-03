@@ -1,5 +1,6 @@
 ---
 title: My first bug report to r-project.org
+description: 'Filing my first bug report to r-project.org about inconsistent behavior with non-ASCII characters in R 3.3.0''s match() function.'
 author: Xianying Tan
 date: '2016-05-07'
 slug: my-first-bug-report-to-r-project-org

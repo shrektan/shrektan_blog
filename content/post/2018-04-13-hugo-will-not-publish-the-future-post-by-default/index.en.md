@@ -1,5 +1,6 @@
 ---
 title: Hugo will not publish the "future" post by default
+description: 'Hugo silently skips posts with future dates — here''s why it happens across timezones and how to fix it with --buildFuture in netlify.toml.'
 author: Xianying Tan
 date: '2018-04-12'
 slug: hugo-will-not-publish-the-future-post-by-default

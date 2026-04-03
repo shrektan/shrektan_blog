@@ -1,5 +1,6 @@
 ---
 title: 用blogdown来管理工作事项
+description: '用 blogdown 管理个人待办事项的实践分享：相比 GitHub Issues，本地 Markdown 更灵活，实时预览更顺手。'
 author: 谭显英
 date: '2018-04-02'
 slug: blogdown-todo

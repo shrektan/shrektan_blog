@@ -1,5 +1,6 @@
 ---
 title: The defaults of a function argument are not binded
+description: 'Why using a variable as a function default in R can bite you — especially with match.arg() — and how to write safe default argument patterns.'
 author: Xianying Tan
 date: '2018-04-12'
 slug: the-defaults-of-a-function-argument-are-not-binded

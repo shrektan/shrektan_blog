@@ -1,5 +1,6 @@
 ---
 title: '"human round"- Round to nearest, ties away from zero'
+description: 'Why R''s round(2.5) returns 2, how IEEE 754 banker''s rounding works, and two implementations of familiar "ties away from zero" rounding in R and Rcpp.'
 author: Xianying Tan
 date: '2018-04-25'
 slug: human-round-round-to-nearest-ties-away-from-zero

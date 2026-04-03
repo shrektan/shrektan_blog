@@ -1,6 +1,7 @@
 ---
 title: 用 sprintf() 而不是 as.character()
 subtitle: 在 R 中需要精细控制数字转字符串时
+description: '在 R 中需要精细控制数字格式时，sprintf() 远比 as.character() 强大——固定小数位、补零、避免科学计数法，一文讲清。'
 author: 谭显英
 date: '2018-04-12'
 slug: use-sprintf-rather-than-as-character

@@ -1,6 +1,7 @@
 ---
 title: 困难的定义
 subtitle: 解决问题的关键
+description: '清晰地定义问题往往是解决问题最难的一步——当你能精确描述一个问题时，答案往往已经呼之欲出。'
 author: Xianying Tan
 date: '2018-03-21'
 slug: defining-is-the-hardest-part

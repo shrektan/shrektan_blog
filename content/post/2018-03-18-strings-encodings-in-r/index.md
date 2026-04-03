@@ -1,6 +1,7 @@
 ---
 title: R中的字符编码
 subtitle: Strings、Encodings in R
+description: '深入解析 R 中字符编码的实现细节，包括 CHARSXP 缓存、UTF-8 转换及修复 data.table 中文支持问题的经验总结。'
 author: Xianying Tan
 date: '2018-03-18'
 slug: strings-encodings-in-r

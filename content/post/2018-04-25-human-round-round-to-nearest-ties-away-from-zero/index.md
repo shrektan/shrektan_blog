@@ -1,5 +1,6 @@
 ---
 title: '"人类的四舍五入"——最近偶数舍入 vs 四舍五入'
+description: '为什么 R 的 round(2.5) 返回 2？详解 IEEE 754 银行家舍入法，并提供 R 和 Rcpp 两种实现四舍五入的方案。'
 author: 谭显英
 date: '2018-04-25'
 slug: human-round-round-to-nearest-ties-away-from-zero

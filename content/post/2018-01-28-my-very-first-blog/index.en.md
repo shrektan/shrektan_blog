@@ -1,5 +1,6 @@
 ---
 title: My very first blog
+description: 'How contributing to the DT package and fixing a two-year-old Chinese encoding bug in data.table inspired me to reopen my blog.'
 author: Xianying Tan
 date: '2018-01-28'
 slug: my-very-first-blog

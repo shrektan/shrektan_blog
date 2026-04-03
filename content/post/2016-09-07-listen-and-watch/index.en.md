@@ -1,5 +1,6 @@
 ---
 title: Listen and Watch
+description: 'A memorable quote from Alex Ferguson''s book "Leading" on the value of listening and observing over talking.'
 author: Xianying Tan
 date: '2016-09-07'
 slug: listen-and-watch

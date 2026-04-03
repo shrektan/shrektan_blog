@@ -1,6 +1,7 @@
 ---
 title: String Encodings in R
 subtitle: Strings、Encodings in R
+description: 'A deep dive into R string encoding internals — CHARSXP cache, UTF-8 conversion, and lessons learned fixing Chinese support in data.table.'
 author: Xianying Tan
 date: '2018-03-18'
 slug: strings-encodings-in-r

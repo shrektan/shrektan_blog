@@ -1,5 +1,6 @@
 ---
 title: non-ASCII {.tabset} headers in Rmarkdown
+description: 'Fix for broken tabbed sections in R Markdown when headers contain non-ASCII characters — add ASCII IDs or disable the ascii_identifiers extension.'
 author: Xianying Tan
 date: '2018-04-21'
 slug: non-ascii-tabset-headers-in-rmarkdown
