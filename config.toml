@@ -22,7 +22,7 @@ defaultContentLanguageInSubdir = true
     weight = 1
     [languages.zh.params]
       description = "谭显英的个人博客"
-      footer = "&copy; [谭显英](https://shrektan.com) 2017 -- 2025 | [Github](https://github.com/shrektan)"
+      footer = "&copy; [谭显英](https://shrektan.com) 2017 -- 2026 | [Github](https://github.com/shrektan)"
     [[languages.zh.menu.main]]
       name = "主页"
       url = "/"
@@ -50,7 +50,7 @@ defaultContentLanguageInSubdir = true
     weight = 2
     [languages.en.params]
       description = "Xianying Tan's personal blog"
-      footer = "&copy; [Xianying Tan](https://shrektan.com) 2017 -- 2025 | [Github](https://github.com/shrektan)"
+      footer = "&copy; [Xianying Tan](https://shrektan.com) 2017 -- 2026 | [Github](https://github.com/shrektan)"
     [[languages.en.menu.main]]
       name = "Home"
       url = "/"
