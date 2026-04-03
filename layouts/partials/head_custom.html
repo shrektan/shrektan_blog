@@ -1,0 +1,75 @@
+{{/* Highlight.js CSS (from theme) */}}
+{{ if and (not .Params.disable_highlight) (in (string .Content) "</pre>") }}
+{{ $highTheme := .Site.Params.highlightjsTheme }}
+{{ with .Site.Params.highlightjsVersion }}
+<link href='{{ $.Site.Params.highlightjsCDN | default "//cdn.bootcss.com" }}/highlight.js/{{ . }}/styles/{{ $highTheme }}.min.css' rel='stylesheet' type='text/css' />
+{{ end }}
+{{ end }}
+
+{{/* --- SEO Meta Tags --- */}}
+
+{{/* Description: front matter > summary > site description */}}
+{{ $description := "" }}
+{{ if .Description }}
+  {{ $description = .Description }}
+{{ else if .IsPage }}
+  {{ $description = .Summary | plainify | truncate 160 }}
+{{ else }}
+  {{ $description = .Site.Params.description }}
+{{ end }}
+{{ with $description }}
+<meta name="description" content="{{ . }}">
+{{ end }}
+
+{{/* Canonical URL */}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* Open Graph */}}
+<meta property="og:title" content="{{ .Title }}">
+{{ with $description }}<meta property="og:description" content="{{ . }}">{{ end }}
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+{{ if .IsPage }}
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{ with .Lastmod }}<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+{{ with .Params.author }}<meta property="article:author" content="{{ . }}">{{ end }}
+{{ range .Params.tags }}<meta property="article:tag" content="{{ . }}">{{ end }}
+{{ else }}
+<meta property="og:type" content="website">
+{{ end }}
+<meta property="og:locale" content="{{ .Site.Language.Lang }}">
+
+{{/* Open Graph Image */}}
+{{ $ogImage := "" }}
+{{ with .Params.image }}
+  {{ $ogImage = . }}
+{{ else }}
+  {{ $cover := .Resources.GetMatch "cover.*" }}
+  {{ with $cover }}
+    {{ $ogImage = .Permalink }}
+  {{ end }}
+{{ end }}
+{{ with $ogImage }}
+<meta property="og:image" content="{{ . }}">
+<meta name="twitter:image" content="{{ . }}">
+{{ end }}
+
+{{/* Twitter Card */}}
+<meta name="twitter:card" content="{{ if $ogImage }}summary_large_image{{ else }}summary{{ end }}">
+<meta name="twitter:title" content="{{ .Title }}">
+{{ with $description }}<meta name="twitter:description" content="{{ . }}">{{ end }}
+
+{{/* JSON-LD Structured Data */}}
+{{ if .IsHome }}
+{{ $ld := dict "@context" "https://schema.org" "@type" "WebSite" "name" .Site.Title "url" .Site.BaseURL "description" .Site.Params.description "inLanguage" .Site.Language.Lang }}
+{{ printf `<script type="application/ld+json">%s</script>` ($ld | jsonify) | safeHTML }}
+{{ else if .IsPage }}
+{{ $author := dict "@type" "Person" "name" (.Params.author | default "Xianying Tan") "url" .Site.BaseURL }}
+{{ $mainEntity := dict "@type" "WebPage" "@id" .Permalink }}
+{{ $ld := dict "@context" "https://schema.org" "@type" "BlogPosting" "headline" .Title "url" .Permalink "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00") "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00") "inLanguage" .Language.Lang "author" $author "publisher" $author "mainEntityOfPage" $mainEntity }}
+{{ with $description }}{{ $ld = merge $ld (dict "description" .) }}{{ end }}
+{{ with $ogImage }}{{ $ld = merge $ld (dict "image" .) }}{{ end }}
+{{ with $.Params.tags }}{{ $ld = merge $ld (dict "keywords" .) }}{{ end }}
+{{ printf `<script type="application/ld+json">%s</script>` ($ld | jsonify) | safeHTML }}
+{{ end }}
