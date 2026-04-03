@@ -1,6 +1,6 @@
 ---
 title: Knowledge Is a Network
-description: 'Knowledge isn\'t isolated dots to memorize — it\'s an interconnected network. Understanding means building connections, and the denser the network, the faster you learn.'
+description: 'Knowledge isn''t isolated dots to memorize — it''s an interconnected network. Understanding means building connections, and the denser the network, the faster you learn.'
 author: Xianying Tan
 date: '2026-02-28'
 slug: knowledge-is-a-network

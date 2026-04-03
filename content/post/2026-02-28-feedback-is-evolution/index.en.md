@@ -1,6 +1,6 @@
 ---
 title: "Feedback Is Evolution"
-description: 'Feedback isn\'t a workplace technique — it\'s the selection mechanism that makes evolution possible, from AI training to scientific knowledge.'
+description: 'Feedback isn''t a workplace technique — it''s the selection mechanism that makes evolution possible, from AI training to scientific knowledge.'
 date: '2026-02-28'
 slug: feedback-is-evolution
 originalLang: zh
