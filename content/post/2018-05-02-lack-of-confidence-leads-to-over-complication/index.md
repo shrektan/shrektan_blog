@@ -5,6 +5,7 @@ date: '2018-05-02'
 slug: lack-of-confidence-leads-to-over-complication
 originalLang: zh
 categories:
+  - 随想
 tags:
   - quote
   - thinking

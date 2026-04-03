@@ -5,6 +5,7 @@ date: '2018-04-12'
 slug: the-defaults-of-a-function-argument-are-not-binded
 originalLang: en
 categories:
+  - Tech
 tags:
   - R
   - programming

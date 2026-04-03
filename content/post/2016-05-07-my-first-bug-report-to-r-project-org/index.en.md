@@ -5,6 +5,7 @@ date: '2016-05-07'
 slug: my-first-bug-report-to-r-project-org
 originalLang: en
 categories:
+  - Tech
 tags:
   - R
   - programming

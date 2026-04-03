@@ -6,6 +6,7 @@ date: '2021-11-27'
 slug: sense-and-proof
 originalLang: zh
 categories:
+  - 随想
 tags:
   - thinking
 ---

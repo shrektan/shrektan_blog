@@ -5,6 +5,7 @@ date: '2018-08-30'
 slug: hard-to-drive-in-beijing
 originalLang: zh
 categories:
+  - 生活
 tags:
   - complaint
   - personal

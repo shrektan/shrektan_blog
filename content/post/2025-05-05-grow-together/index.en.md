@@ -5,6 +5,7 @@ date: '2025-05-05'
 slug: grow-together
 originalLang: zh
 categories:
+  - Life
 tags:
   - life
   - parenting

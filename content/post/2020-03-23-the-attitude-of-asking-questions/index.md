@@ -5,6 +5,7 @@ date: '2020-03-23'
 slug: the-attitude-of-asking-questions
 originalLang: zh
 categories:
+  - 随想
 tags:
   - life
   - thinking

@@ -6,6 +6,7 @@ date: '2018-03-21'
 slug: defining-is-the-hardest-part
 originalLang: zh
 categories:
+  - 随想
 tags:
   - thinking
 ---

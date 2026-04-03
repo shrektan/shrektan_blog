@@ -5,6 +5,7 @@ date: '2018-01-28'
 slug: my-very-first-blog
 originalLang: en
 categories:
+  - Life
 tags:
   - personal
   - note

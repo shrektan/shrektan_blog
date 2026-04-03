@@ -6,6 +6,7 @@ date: '2018-03-18'
 slug: strings-encodings-in-r
 originalLang: zh
 categories:
+  - 技术
 tags:
   - R
   - programming

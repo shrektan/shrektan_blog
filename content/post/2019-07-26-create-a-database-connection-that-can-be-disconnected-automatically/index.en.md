@@ -5,6 +5,7 @@ date: '2019-07-26'
 slug: create-a-database-connection-that-can-be-disconnected-automatically
 originalLang: en
 categories:
+  - Tech
 tags:
   - R
   - programming

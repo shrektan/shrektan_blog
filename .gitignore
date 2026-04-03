@@ -8,3 +8,6 @@
 Thumbs.db
 /public/
 /hidden/
+.hugo_build.lock
+.playwright-mcp/
+__pycache__/

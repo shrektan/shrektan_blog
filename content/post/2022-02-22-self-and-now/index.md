@@ -6,6 +6,7 @@ date: '2022-02-22'
 slug: self-and-now
 originalLang: zh
 categories:
+  - 随想
 tags:
   - reflection
   - personal

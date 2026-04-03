@@ -6,6 +6,7 @@ date: '2021-12-01'
 slug: a-use-case-of-bookdown
 originalLang: zh
 categories:
+  - 技术
 tags:
   - bookdown
   - programming

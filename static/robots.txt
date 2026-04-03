@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shrektan.com/zh/sitemap.xml
+Sitemap: https://shrektan.com/en/sitemap.xml

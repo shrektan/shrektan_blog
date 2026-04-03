@@ -5,6 +5,7 @@ date: '2021-12-11'
 slug: utf8-r-windows-is-coming
 originalLang: zh
 categories:
+  - 技术
 tags:
   - encoding
   - complaint

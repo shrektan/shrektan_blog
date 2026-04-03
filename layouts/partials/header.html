@@ -17,11 +17,13 @@
 
   <body>
     <nav>
-    <ul class="menu">
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
-      {{ end }}
-      <li class="lang-switch">
+    <div class="nav-bar">
+      <ul class="menu">
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+      <div class="lang-switch">
         {{ range $.Site.Languages }}
           {{- $isCurrent := eq .Lang $.Site.Language.Lang -}}
           {{- $langLabel := .LanguageName -}}
@@ -41,7 +43,7 @@
             <a href="{{ $targetURL }}">{{ $langLabel }}</a>
           {{- end -}}
         {{ end }}
-      </li>
-    </ul>
+      </div>
+    </div>
     <hr/>
     </nav>

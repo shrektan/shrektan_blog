@@ -5,6 +5,7 @@ date: '2021-10-07'
 slug: 忘了常识
 originalLang: zh
 categories:
+  - 随想
 tags:
   - complaint
 ---

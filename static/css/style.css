@@ -7,7 +7,13 @@ body {
 }
 
 /* header and footer areas */
-.menu { padding: 0; }
+.nav-bar {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px 0;
+}
+.menu { padding: 0; margin: 0; width: max-content; }
 .menu li { display: inline-block; }
 .article-meta, .menu a{
   text-decoration: none;
@@ -95,9 +101,28 @@ br {
   content: " ";
 }
 
+/* taxonomy (categories & tags) */
+.terms {
+  font-size: 0.85em;
+  color: #666;
+}
+.terms a {
+  color: #666;
+  border: none;
+  padding: 2px 6px;
+  background: #f0f0f0;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+.terms a:hover {
+  background: rgba(255, 215, 0, 0.37);
+  color: #000;
+}
+
 /* language switcher */
 .lang-switch {
-  float: right;
+  margin-left: auto;
+  white-space: nowrap;
 }
 .lang-switch a,
 .lang-switch .lang-current {

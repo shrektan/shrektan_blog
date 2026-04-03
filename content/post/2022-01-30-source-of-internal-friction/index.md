@@ -6,6 +6,7 @@ date: '2022-01-30'
 slug: source-of-internal-friction
 originalLang: zh
 categories:
+  - 随想
 tags:
   - complaint
 ---
