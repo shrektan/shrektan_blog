@@ -1,5 +1,6 @@
 ---
 title: GitHub Calendar
+description: 'A retrospective through GitHub contribution calendars from 2015–2021, tracing a coding journey from R and Shiny to C++ and open source.'
 subtitle: Some Memories
 author: Xianying Tan
 date: '2022-01-08'

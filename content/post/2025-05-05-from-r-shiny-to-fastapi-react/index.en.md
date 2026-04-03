@@ -1,6 +1,7 @@
 ---
 title: From R Shiny to FastAPI + React
 subtitle: From Human Coding to Vibe Coding
+description: 'Why FastAPI + React beats R Shiny for production data apps in the AI era — analyzing static analysis gaps and coupled architecture costs.'
 author: Xianying Tan
 date: '2025-05-05'
 slug: from-r-shiny-to-fastapi-react

@@ -1,5 +1,6 @@
 ---
 title: Render Rnw and Email PDF reports in RStudio Connect
+description: 'How to render Rnw/LaTeX files to PDF and send scheduled email reports in RStudio Connect using a workaround RMarkdown wrapper.'
 author: Xianying Tan
 date: '2022-03-30'
 slug: render-rnw-and-email-pdf-reports-in-rstudio-connect

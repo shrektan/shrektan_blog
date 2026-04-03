@@ -1,5 +1,6 @@
 ---
 title: 兜兜转转，还是 data.table
+description: '用过 dplyr、Pandas、Polars，最终还是回到 data.table。深度解析 DT[i,j,by] 语法为何在表达力上无可匹敌。'
 author: 谭显英
 date: '2026-04-03'
 slug: data-table-is-the-best

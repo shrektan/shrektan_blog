@@ -1,5 +1,6 @@
 ---
 title: 知识是一张网
+description: '知识不是孤立的点，而是相互连接的网络。理解就是建立连接，积累越多，新知识就越容易找到挂钩生根。'
 author: 谭显英
 date: '2026-02-28'
 slug: knowledge-is-a-network

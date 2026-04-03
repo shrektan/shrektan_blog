@@ -1,6 +1,7 @@
 ---
 title: 从 R Shiny 到 FastAPI + React
 subtitle: 从Human Coding到Vibe Coding
+description: '深入分析 R Shiny 在 AI 时代的局限，探讨为何 FastAPI + React 成为更适合生产环境的数据可视化技术栈。'
 author: 谭显英
 date: '2025-05-05'
 slug: from-r-shiny-to-fastapi-react

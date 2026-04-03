@@ -1,5 +1,6 @@
 ---
 title: Bits and Pieces
+description: 'Scattered reflections on mindset, Buddhist philosophy, sleep science, talent, deep focus, and management lessons from a busy May.'
 author: Xianying Tan
 date: '2022-05-04'
 slug: 7788

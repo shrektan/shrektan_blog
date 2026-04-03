@@ -1,5 +1,6 @@
 ---
 title: Growing Together
+description: 'My daughter turned five. Teaching her magic tricks and public speaking, I realized parenting is a journey of growing up together.'
 author: Xianying Tan
 date: '2025-05-05'
 slug: grow-together

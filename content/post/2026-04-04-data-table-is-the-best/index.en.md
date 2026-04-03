@@ -1,5 +1,6 @@
 ---
 title: After All These Years, Still data.table
+description: 'After years with dplyr, Pandas, and Polars, data.table still wins. A deep dive into why DT[i,j,by] delivers unmatched expressiveness for data analysis.'
 author: Xianying Tan
 date: '2026-04-03'
 slug: data-table-is-the-best

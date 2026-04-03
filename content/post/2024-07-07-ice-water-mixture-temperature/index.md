@@ -1,5 +1,6 @@
 ---
 title: 冰水混合物的温度为什么是零
+description: '从一个中学物理疑惑出发，重新理解"冰水混合物温度是零度"的真正含义，以及什么才算是真正的理解。'
 author: 谭显英
 date: '2024-07-07'
 slug: ice-water-mixture-temperature

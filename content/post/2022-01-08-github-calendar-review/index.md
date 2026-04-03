@@ -1,5 +1,6 @@
 ---
 title: GitHub日历
+description: '通过 GitHub 贡献日历，回顾 2015 至 2021 年的编程历程——从 R、Shiny、C++ 到开源贡献，记录职业成长与内心挣扎。'
 subtitle: 一些回忆
 author: 谭显英
 date: '2022-01-08'

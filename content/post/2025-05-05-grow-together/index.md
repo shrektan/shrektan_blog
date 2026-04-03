@@ -1,5 +1,6 @@
 ---
 title: 一起长大
+description: '女儿五岁了。陪她学说话、练魔术、克服羞怯，才发现养育孩子是一场双向的成长之旅。'
 author: 谭显英
 date: '2025-05-05'
 slug: grow-together

@@ -1,5 +1,6 @@
 ---
 title: LaTeX 使用笔记
+description: '记录 LaTeX 实用技巧，涵盖 TinyTeX 安装、ctex 中文支持、longtable 多页表格及行列样式设置。'
 author: 谭显英
 date: '2022-03-11'
 slug: note-on-latex

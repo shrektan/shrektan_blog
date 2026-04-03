@@ -1,5 +1,6 @@
 ---
 title: UTF-8万岁
+description: '读《Why Python3 Exists》有感：字符编码混乱是 Python 2 到 3 不兼容的核心原因，UTF-8 统一编码意义重大。'
 subtitle: 读《Why Python3 Exists》有感
 author: 谭显英
 date: '2022-11-30'

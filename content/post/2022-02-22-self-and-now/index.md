@@ -1,6 +1,7 @@
 ---
 title: 小彻小悟（二）
-subtitle: “自我”和“当下”
+description: '彻底接纳自我与当下：放下对他人评价的依赖，活在当下，才能真正走出内耗与焦虑。'
+subtitle: “自我”和”当下”
 author: 谭显英
 date: '2022-02-22'
 slug: self-and-now

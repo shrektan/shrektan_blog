@@ -1,5 +1,6 @@
 ---
 title: Some Notes on LaTeX
+description: 'Practical LaTeX tips covering TinyTeX installation, ctex for Chinese documents, longtable multi-page tables, and row/column styling.'
 author: Xianying Tan
 date: '2022-03-11'
 slug: note-on-latex

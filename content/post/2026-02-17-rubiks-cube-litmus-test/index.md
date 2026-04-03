@@ -1,5 +1,6 @@
 ---
 title: 魔方试纸
+description: '让大模型梳理魔方 OLL/PLL 教程，它始终差一点。这件小事揭示了大模型作为统计生成系统的根本局限。'
 date: 2026-02-17
 categories:
   - 技术

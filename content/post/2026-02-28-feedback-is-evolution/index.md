@@ -1,5 +1,6 @@
 ---
 title: "反馈即进化"
+description: '从 AI 训练到波普尔认识论，反馈不只是工作技巧，而是进化发生的必要条件——变异、选择、复制缺一不可。'
 date: '2026-02-28'
 slug: feedback-is-evolution
 originalLang: zh

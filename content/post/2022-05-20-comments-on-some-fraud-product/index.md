@@ -1,5 +1,6 @@
 ---
 title: 美帝某金融产品欺诈案杂评
+description: '评析某国际集团在美金融产品欺诈案，对比国内"雪球"产品，剖析尾部风险被低估的共同逻辑。'
 author: 谭显英
 date: '2022-05-20'
 slug: comments-on-some-fraud-product

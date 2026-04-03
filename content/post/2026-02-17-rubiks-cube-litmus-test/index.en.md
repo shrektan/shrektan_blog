@@ -1,5 +1,6 @@
 ---
 title: The Rubik's Cube Litmus Test
+description: 'Asking an LLM to teach Rubik\'s Cube OLL/PLL algorithms exposed a fundamental limit: it describes solutions but cannot execute them.'
 date: 2026-02-17
 categories:
   - 技术

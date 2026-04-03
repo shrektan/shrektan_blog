@@ -1,5 +1,6 @@
 ---
 title: Why Is the Temperature of an Ice-Water Mixture Zero Degrees?
+description: 'Revisiting a middle-school physics puzzle to uncover what "zero degrees" really means — and what it means to truly understand something.'
 author: Xianying Tan
 date: '2024-07-07'
 slug: ice-water-mixture-temperature
