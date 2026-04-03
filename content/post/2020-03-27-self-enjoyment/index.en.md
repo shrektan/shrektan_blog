@@ -1,5 +1,6 @@
 ---
 title: Self-Indulgence
+description: 'Regulatory filings expose the limits of manual Excel work — and the quiet satisfaction of being the one who automated it all away.'
 author: Xianying Tan
 date: '2020-03-27'
 slug: self-enjoyment

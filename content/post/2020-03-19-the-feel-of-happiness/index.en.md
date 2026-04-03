@@ -1,5 +1,6 @@
 ---
 title: The Feel of Happiness
+description: 'A personal reckoning with fading happiness — the burnout of a jack-of-all-trades who built too much and was recognized too little.'
 author: Xianying Tan
 date: '2020-03-19'
 slug: the-feel-of-happiness

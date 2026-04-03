@@ -1,6 +1,7 @@
 ---
 title: “五分钟”的陷阱
 subtitle: 说不的能力
+description: '”五分钟”从不只是五分钟：拒绝琐碎请求、守护深度工作时间，才能解决真正重要的问题。'
 author: 谭显英
 date: '2020-04-01'
 slug: the-trap-of-you-can-do-it-in-five-minutes

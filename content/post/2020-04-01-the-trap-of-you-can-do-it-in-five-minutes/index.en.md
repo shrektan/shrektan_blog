@@ -1,6 +1,7 @@
 ---
 title: The Trap of "Five Minutes"
 subtitle: The ability to say no
+description: '"Five minutes" is never just five minutes — why saying no protects deep work and lets you solve problems that actually matter.'
 author: Xianying Tan
 date: '2020-04-01'
 slug: the-trap-of-you-can-do-it-in-five-minutes

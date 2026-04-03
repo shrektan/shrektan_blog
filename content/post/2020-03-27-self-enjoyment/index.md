@@ -1,5 +1,6 @@
 ---
 title: 自我陶醉
+description: '偿二代二期测试的填报痛苦揭示了手工Excel的局限，用可重复化报告一键出表才是正道。'
 author: 谭显英
 date: '2020-03-27'
 slug: self-enjoyment

@@ -1,5 +1,6 @@
 ---
 title: 别在生产环境中用净土
+description: '经历了无数次破坏性升级后，强烈建议不要在生产环境使用tidyverse，转而选择稳定的data.table。'
 author: 谭显英
 date: '2019-11-14'
 slug: use-no-tdv-in-production

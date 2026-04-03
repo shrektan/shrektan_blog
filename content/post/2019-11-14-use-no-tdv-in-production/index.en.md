@@ -1,5 +1,6 @@
 ---
 title: Don't Use Tidyverse in Production
+description: 'Why frequent breaking changes in tidyverse make it unsuitable for production code, and why data.table is the stable alternative.'
 author: Xianying Tan
 date: '2019-11-14'
 slug: use-no-tdv-in-production

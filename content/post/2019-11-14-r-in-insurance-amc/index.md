@@ -1,6 +1,7 @@
 ---
 title: R语言在保险资产管理中的应用实践分享
-subtitle: 参加“保险公司经济资本研讨会”的发言稿
+subtitle: 参加”保险公司经济资本研讨会”的发言稿
+description: '分享R语言在保险资产管理中的实战应用：数据处理、模型开发、自动化报告与Shiny交互系统的完整实践。'
 author: 谭显英
 date: '2019-11-14'
 slug: r-in-insurance-amc

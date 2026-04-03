@@ -1,5 +1,6 @@
 ---
 title: Indulgence
+description: 'The vicious cycle of over-empathy at work: the faster you solve problems for others, the more problems land on your desk.'
 author: Xianying Tan
 date: '2020-03-31'
 slug: dotage

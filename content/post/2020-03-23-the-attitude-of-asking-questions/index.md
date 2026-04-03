@@ -1,5 +1,6 @@
 ---
 title: 提问的态度
+description: '好的提问需要事先做功课：不肯努力的提问者，再多的解释也只是浪费双方时间。'
 author: 谭显英
 date: '2020-03-23'
 slug: the-attitude-of-asking-questions

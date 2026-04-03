@@ -1,5 +1,6 @@
 ---
 title: 溺爱
+description: '过度共情与滥好人心态的代价：越帮越多、越快越忙，最终耗尽自己，感慨"溺爱"之害。'
 author: 谭显英
 date: '2020-03-31'
 slug: dotage

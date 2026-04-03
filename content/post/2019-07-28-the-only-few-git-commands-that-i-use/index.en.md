@@ -1,5 +1,6 @@
 ---
 title: The only few Git commands that I use
+description: 'A practical cheatsheet of the essential Git commands for daily use, including branching, rebasing, and cleanup workflows.'
 author: Xianying Tan
 date: '2019-07-28'
 slug: the-only-few-git-commands-that-i-use

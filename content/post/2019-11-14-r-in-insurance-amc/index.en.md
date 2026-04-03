@@ -1,6 +1,7 @@
 ---
 title: Practical Applications of R in Insurance Asset Management
 subtitle: Talk at the "Insurance Company Economic Capital Seminar"
+description: 'A talk on how R powers data pipelines, portfolio analytics, automated reports, and Shiny dashboards in insurance asset management.'
 author: Xianying Tan
 date: '2019-11-14'
 slug: r-in-insurance-amc
