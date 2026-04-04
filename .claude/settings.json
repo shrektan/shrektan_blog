@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_response.filePath // .tool_input.file_path' | { read -r f; echo \"$f\" | grep -qE '^(\\./)?content/post/.*\\.md$' && uv run scripts/fix_quotes.py \"$f\" || true; }",
+            "timeout": 15,
+            "statusMessage": "Fixing quotes..."
+          }
+        ]
+      }
+    ]
+  }
+}
