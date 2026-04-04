@@ -6,10 +6,8 @@ categories:
   - 技术
 tags:
   - thinking
-  - tech
   - llm
   - ai
-  - rubiks-cube
   - reasoning
 slug: rubiks-cube-litmus-test
 originalLang: zh

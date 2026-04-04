@@ -316,6 +316,7 @@ Simple line drawing on pure white background, black ink lines, minimal detail,
 ```yaml
 ---
 title: "文章标题"
+description: '一句话 SEO 描述，概括核心观点，80 字以内'
 date: 'YYYY-MM-DD'
 slug: english-slug-for-url
 originalLang: zh
@@ -325,11 +326,34 @@ tags:
 ---
 ```
 
+**description 必须写**。一句话概括文章核心观点，用于 SEO 和社交分享预览。80 字以内，用单引号包裹。不要写成摘要，要写成能引起点击欲的概括。
+
+**Tag 选择指南：**
+
+从以下 tag 体系中选择 2-4 个最相关的。优先选具体的，避免只用 `thinking` 或 `tech` 这种万金油 tag。
+
+| 领域 | Tag | 使用场景 |
+|:-----|:----|:---------|
+| AI | `ai` | AI 相关的广泛讨论 |
+| AI | `ai-workflow` | AI 工具、Skill、Agent、工作流、效率提升 |
+| AI | `ai-coding` | AI 辅助编程、Vibe Coding、代码生成 |
+| AI | `llm` | 大模型能力、推理、评测、局限性 |
+| 编程语言 | `R`, `Python`, `Rust` | 语言相关技术内容 |
+| 具体技术 | `data.table`, `encoding`, `web`, `blogdown` | 特定工具/库/技术 |
+| 思考 | `thinking` | 观点、认知、思维方式（但不要单独使用，至少搭配一个具体 tag） |
+| 个人 | `personal`, `life` | 个人经历、生活观察 |
+| 其他 | `complaint`, `note`, `sharing`, `finance`, `reasoning` | 吐槽、技术笔记、分享、金融、推理 |
+
+**Tag 规则：**
+- 全部用英文小写（多词用连字符：`ai-coding`）
+- 一篇文章 2-4 个 tag，不要超过 5 个
+- AI 相关内容必须用具体的 AI tag（`ai-workflow`/`ai-coding`/`llm`），不要用 `tech` 代替
+- `thinking` 不能作为唯一 tag——它太泛了，必须搭配一个表明主题领域的 tag
+
 正文规范：
 - 标题层级不超过三层（`#` `##` `###`）
 - 脚注使用 `[^1]` 语法
 - 引用外部内容以超链接标注来源
-- 常用 tags：thinking、tech、personal、R、complaint、quote
 
 ## 写作风格参考
 

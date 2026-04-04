@@ -11,7 +11,7 @@ categories:
 tags:
   - finance
   - sharing
-  - note  
+  - note
 ---
 
 # 来源

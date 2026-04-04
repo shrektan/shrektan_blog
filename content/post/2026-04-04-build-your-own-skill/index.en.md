@@ -1,5 +1,6 @@
 ---
 title: "Build Your Own Skill"
+description: 'Skills aren''t about feeding knowledge to AI — they''re about making your way of working explicit. Borrow from others, but build your own.'
 author: Xianying Tan
 date: '2026-04-04'
 slug: build-your-own-skill
@@ -8,7 +9,8 @@ categories:
   - Thoughts
 tags:
   - thinking
-  - tech
+  - ai-workflow
+  - ai-coding
 ---
 
 Garry Tan's [gstack](https://github.com/garrytan/gstack) has been everywhere lately — nearly 20,000 stars on GitHub, trending #1 on Product Hunt, discussed all over the place. Using this set of Skills, he averaged 10,000 lines of code and 100 pull requests per week over a 50-day stretch.

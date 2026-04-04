@@ -8,6 +8,7 @@ categories:
   - Musings
 tags:
   - thinking
+  - ai
 ---
 
 I've always sensed that feedback matters, but I never really understood *why*.

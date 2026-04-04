@@ -1,5 +1,6 @@
 ---
 title: "打造你自己的 Skill"
+description: 'Skill 不是给 AI 补知识，而是把你做事的思路显式化。别人的 Skill 可以借鉴，但最终你应该打造自己的。'
 date: '2026-04-04'
 slug: build-your-own-skill
 originalLang: zh
@@ -7,7 +8,8 @@ categories:
   - 随想
 tags:
   - thinking
-  - tech
+  - ai-workflow
+  - ai-coding
 ---
 
 Garry Tan 的 [gstack](https://github.com/garrytan/gstack) 最近很火——GitHub 近两万 star，Product Hunt 上趋势第一，到处都在讨论。他用这套 Skills 在 50 天里平均每周写 10,000 行代码、合并 100 个 PR。

@@ -8,6 +8,7 @@ categories:
   - 随想
 tags:
   - thinking
+  - ai
 ---
 
 我以前一直觉得反馈挺重要的，但从来没想清楚它到底为什么重要。

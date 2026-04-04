@@ -12,7 +12,7 @@ tags:
   - Python
   - R
   - Shiny
-  - tech
+  - ai-coding
 ---
 
 ![](images/image1.png)
