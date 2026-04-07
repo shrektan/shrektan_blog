@@ -2,7 +2,29 @@
 /                /en/                302!  Language=en
 /                /zh/                302!
 
+# Ghost page redirects: EN-only posts rendered under /zh/ by Hugo → redirect to /en/
+/zh/post/2016/05/07/my-first-bug-report-to-r-project-org/*  /en/post/2016/05/07/my-first-bug-report-to-r-project-org/:splat  301!
+/zh/post/2016/09/07/listen-and-watch/*                      /en/post/2016/09/07/listen-and-watch/:splat                      301!
+/zh/post/2018/01/28/my-very-first-blog/*                    /en/post/2018/01/28/my-very-first-blog/:splat                    301!
+/zh/post/2018/04/11/emoji-how-to-enable-in-hugo-and-the-cheatsheets/*  /en/post/2018/04/11/emoji-how-to-enable-in-hugo-and-the-cheatsheets/:splat  301!
+/zh/post/2018/04/12/the-defaults-of-a-function-argument-are-not-binded/*  /en/post/2018/04/12/the-defaults-of-a-function-argument-are-not-binded/:splat  301!
+/zh/post/2018/04/12/hugo-will-not-publish-the-future-post-by-default/*  /en/post/2018/04/12/hugo-will-not-publish-the-future-post-by-default/:splat  301!
+/zh/post/2018/04/21/non-ascii-tabset-headers-in-rmarkdown/* /en/post/2018/04/21/non-ascii-tabset-headers-in-rmarkdown/:splat  301!
+/zh/post/2019/07/28/the-only-few-git-commands-that-i-use/*  /en/post/2019/07/28/the-only-few-git-commands-that-i-use/:splat   301!
+/zh/post/2022/03/30/render-rnw-and-email-pdf-reports-in-rstudio-connect/*  /en/post/2022/03/30/render-rnw-and-email-pdf-reports-in-rstudio-connect/:splat  301!
+
 # Old URL redirects (before /zh/ prefix was added)
+# EN-only posts must redirect to /en/ (before the catch-all /zh/ redirect)
+/post/2016/05/07/my-first-bug-report-to-r-project-org/*    /en/post/2016/05/07/my-first-bug-report-to-r-project-org/:splat  301
+/post/2016/09/07/listen-and-watch/*                         /en/post/2016/09/07/listen-and-watch/:splat                      301
+/post/2018/01/28/my-very-first-blog/*                       /en/post/2018/01/28/my-very-first-blog/:splat                    301
+/post/2018/04/11/emoji-how-to-enable-in-hugo-and-the-cheatsheets/*  /en/post/2018/04/11/emoji-how-to-enable-in-hugo-and-the-cheatsheets/:splat  301
+/post/2018/04/12/the-defaults-of-a-function-argument-are-not-binded/*  /en/post/2018/04/12/the-defaults-of-a-function-argument-are-not-binded/:splat  301
+/post/2018/04/12/hugo-will-not-publish-the-future-post-by-default/*  /en/post/2018/04/12/hugo-will-not-publish-the-future-post-by-default/:splat  301
+/post/2018/04/21/non-ascii-tabset-headers-in-rmarkdown/*    /en/post/2018/04/21/non-ascii-tabset-headers-in-rmarkdown/:splat  301
+/post/2019/07/28/the-only-few-git-commands-that-i-use/*     /en/post/2019/07/28/the-only-few-git-commands-that-i-use/:splat   301
+/post/2022/03/30/render-rnw-and-email-pdf-reports-in-rstudio-connect/*  /en/post/2022/03/30/render-rnw-and-email-pdf-reports-in-rstudio-connect/:splat  301
+# Catch-all: remaining old posts go to /zh/ (they're Chinese-only)
 /post/*          /zh/post/:splat     301
 /note/*          /zh/note/:splat     301
 /about/          /zh/about/          301
