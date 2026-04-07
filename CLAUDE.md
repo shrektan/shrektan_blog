@@ -21,3 +21,15 @@
 ## Build
 - `hugo --gc` to build (output in public/)
 - No build script or CI config — deployed directly via Cloudflare Pages git integration
+
+## Content conventions
+- Posts live in `content/post/YYYY-MM-DD-slug/` with `index.md` (zh) and/or `index.en.md` (en)
+- Required frontmatter: `title`, `date`, `slug`, `categories`, `tags`, `description` (for SEO)
+- `originalLang: zh|en` — tracks which language was written first (used by translation workflow)
+- About page: `content/about.md` (zh) + `content/about.en.md` (en)
+
+## Key layout overrides (over hugo-xmin theme)
+- `layouts/partials/head_custom.html` — all SEO meta tags (canonical, OG, JSON-LD, description)
+- `layouts/partials/header.html` — nav bar with language switcher + hreflang tags
+- `layouts/partials/giscus.html` — comments integration
+- `layouts/_default/single.html` / `list.html` — page templates
