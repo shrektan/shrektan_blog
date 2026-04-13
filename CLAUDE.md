@@ -33,3 +33,6 @@
 - `layouts/partials/header.html` — nav bar with language switcher + hreflang tags
 - `layouts/partials/giscus.html` — comments integration
 - `layouts/_default/single.html` / `list.html` — page templates
+
+## Session Learnings
+- [2026-04-14] Session learnings stored in `memories/` — read these at session start for project context.
