@@ -12,6 +12,16 @@
 /post/2018/04/21/non-ascii-tabset-headers-in-rmarkdown/*    /en/post/2018/04/21/non-ascii-tabset-headers-in-rmarkdown/:splat  301
 /post/2019/07/28/the-only-few-git-commands-that-i-use/*     /en/post/2019/07/28/the-only-few-git-commands-that-i-use/:splat   301
 /post/2022/03/30/render-rnw-and-email-pdf-reports-in-rstudio-connect/*  /en/post/2022/03/30/render-rnw-and-email-pdf-reports-in-rstudio-connect/:splat  301
+# Removed taxonomy terms — must come BEFORE the catch-all so they don't 301 into a 404
+# Old cn/en categories (removed in d54c7dd when migrating to originalLang) → language home
+/categories/cn/*  /zh/  301
+/categories/en/*  /en/  301
+# Tags that exist only in EN (e.g. git — only the-only-few-git-commands-that-i-use uses it)
+# Both slash variants — Cloudflare doesn't always auto-append trailing slashes through redirect matching
+/tags/git         /en/tags/git/  301
+/tags/git/        /en/tags/git/  301
+/tags/git/*       /en/tags/git/  301
+
 # Catch-all: remaining old posts are Chinese-only → /zh/
 /post/*          /zh/post/:splat     301
 /note/*          /zh/note/:splat     301

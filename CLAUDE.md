@@ -5,18 +5,18 @@
 - Theme: hugo-xmin (custom partials in layouts/ override theme)
 - Hosting: **Cloudflare Pages** (NOT Netlify)
 - Bilingual: zh (default) + en, `defaultContentLanguageInSubdir = true`
+- Live alternate hostname: `blog.shrektan.com` serves the same content. Canonical tags point to `shrektan.com` so SEO is anchored there, but Google still tracks both URL spaces.
 
 ## Cloudflare Pages gotchas
 - Static files take priority over `_redirects` — cannot redirect away from existing HTML files
-- Use `_headers` file for HTTP header overrides on static pages (X-Robots-Tag, Link canonical)
 - No `!` force flag, no `Language=` conditions — these are Netlify-only syntax
 - `_redirects` only fires when no static file matches the path
+- Catch-all redirects must come AFTER specific rules. The `/categories/* → /zh/categories/:splat` and `/tags/* → /zh/tags/:splat` catch-alls assume every term exists in ZH — terms that were removed (old `cn`/`en` categories) or that only live in EN (e.g. `git` tag) need explicit overrides above the catch-all, otherwise they 301 into a 404. See `static/_redirects`.
 
-## Hugo 0.78.2 known issue
-- EN-only posts (only `index.en.md`, no `index.md`) generate ghost pages under `/zh/` path
-- Ghost pages use the THEME's templates (missing canonical, description, hreflang)
-- Managed via `static/_headers` (X-Robots-Tag: noindex + Link canonical)
-- When adding new EN-only posts, add corresponding entry to `_headers` and `_redirects`
+## Taxonomy / SEO notes
+- Hugo 0.78.2 with the current config does NOT generate ghost `/zh/` pages for EN-only posts on a clean build. The Cloudflare deploy is always clean, so no `_headers` workaround is needed. (Earlier CLAUDE.md notes about ghost pages were based on dirty local builds.)
+- When adding a tag/category that only lives in one language, add a matching `_redirects` override so the cross-language URL doesn't 404.
+- EN posts currently use fragmented category names (`Tech`/`技术`, `Life`/`生活`, `Musings`/`随想`/`Thoughts`/`Random Thoughts`) — known content debt, creates thin duplicate taxonomy pages.
 
 ## Build
 - `hugo --gc` to build (output in public/)
