@@ -40,14 +40,19 @@
 {{ end }}
 <meta property="og:locale" content="{{ .Site.Language.Lang }}">
 
-{{/* Open Graph Image */}}
+{{/* Open Graph Image — prefer first inline image (img-01.*), fall back to legacy cover.* */}}
 {{ $ogImage := "" }}
 {{ with .Params.image }}
   {{ $ogImage = . }}
 {{ else }}
-  {{ $cover := .Resources.GetMatch "cover.*" }}
-  {{ with $cover }}
-    {{ $ogImage = .Permalink }}
+  {{ $first := .Resources.GetMatch "img-01.*" }}
+  {{ if $first }}
+    {{ $ogImage = $first.Permalink }}
+  {{ else }}
+    {{ $cover := .Resources.GetMatch "cover.*" }}
+    {{ with $cover }}
+      {{ $ogImage = .Permalink }}
+    {{ end }}
   {{ end }}
 {{ end }}
 {{ with $ogImage }}

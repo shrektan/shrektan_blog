@@ -27,6 +27,8 @@
 - Required frontmatter: `title`, `date`, `slug`, `categories`, `tags`, `description` (for SEO)
 - `originalLang: zh|en` — tracks which language was written first (used by translation workflow)
 - About page: `content/about.md` (zh) + `content/about.en.md` (en)
+- **Inline images**: `img-01.jpg`, `img-02.jpg` ... in post directory, referenced via `![alt](img-NN.jpg)` in markdown. Count scales with word count (see `blog-coauthoring` Skill Step 3.5). `img-01.*` doubles as OG image automatically (see `head_custom.html`).
+- **Legacy `cover.jpg`**: Convention deprecated for new posts. Old posts keep their `cover.jpg` as OG fallback — `head_custom.html` checks `img-01.*` first, then `cover.*`. Don't delete old covers.
 
 ## Key layout overrides (over hugo-xmin theme)
 - `layouts/partials/head_custom.html` — all SEO meta tags (canonical, OG, JSON-LD, description)
