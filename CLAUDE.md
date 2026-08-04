@@ -1,7 +1,8 @@
 # shrektan.com Blog
 
 ## Stack
-- Hugo v0.78.2 (extended) — very old, do NOT assume modern Hugo features
+- Hugo (extended) — local toolchain is v0.159.1 as of 2026-08-05 (Homebrew). The old "v0.78.2, assume nothing modern" note is stale; local builds are clean on current Hugo, with one deprecation warning for `.Site.Languages` (removed in a future release — will need fixing eventually).
+- **No Hugo version is pinned in this repo** — no `HUGO_VERSION` file, no `netlify.toml`, no `minVersion` in `config.toml`. The version Cloudflare Pages builds with lives in the Pages dashboard env vars and cannot be read from here. If a deploy ever breaks on a feature that works locally, that gap is the first place to look.
 - Theme: hugo-xmin (custom partials in layouts/ override theme)
 - Hosting: **Cloudflare Pages** (NOT Netlify)
 - Bilingual: zh (default) + en, `defaultContentLanguageInSubdir = true`
@@ -21,7 +22,7 @@
 - 历次在这个项目上的"修复"：`7981408`（真 404，正确修）、`2134e70`（真 404，正确修）、`2026-04-20` session（误判「备用网页」为错误，决定 301 消灭 blog.shrektan.com 来彻底从报告里消掉）。
 
 ## Taxonomy / SEO notes
-- Hugo 0.78.2 with the current config does NOT generate ghost `/zh/` pages for EN-only posts on a clean build. The Cloudflare deploy is always clean, so no `_headers` workaround is needed. (Earlier CLAUDE.md notes about ghost pages were based on dirty local builds.)
+- The current config does NOT generate ghost `/zh/` pages for EN-only posts on a clean build (re-verified 2026-08-05 on Hugo 0.159.1). The Cloudflare deploy is always clean, so no `_headers` workaround is needed. (Earlier CLAUDE.md notes about ghost pages were based on dirty local builds.)
 - When adding a tag/category that only lives in one language, add a matching `_redirects` override so the cross-language URL doesn't 404.
 - EN posts currently use fragmented category names (`Tech`/`技术`, `Life`/`生活`, `Musings`/`随想`/`Thoughts`/`Random Thoughts`) — known content debt, creates thin duplicate taxonomy pages.
 
