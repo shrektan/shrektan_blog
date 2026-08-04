@@ -33,6 +33,7 @@
 ## Content conventions
 - Posts live in `content/post/YYYY-MM-DD-slug/` with `index.md` (zh) and/or `index.en.md` (en)
 - Required frontmatter: `title`, `date`, `slug`, `categories`, `tags`, `description` (for SEO)
+- **`date` must carry a time + offset when publishing same-day** (e.g. `'2026-08-05T01:00:00+08:00'`). `config.toml` sets no `timeZone`, so a bare `date: 'YYYY-MM-DD'` is parsed as UTC midnight. Writing after local midnight in +08:00 means that instant is still up to 8 hours in the future by UTC, and Hugo silently drops the page — no error, no warning, it just isn't in `public/`. Bit us on `2026-08-05-the-other-half-of-intuition`. **Always confirm the new post actually appears under `public/{zh,en}/post/...` after building**; the page-count table alone won't tell you.
 - `originalLang: zh|en` — tracks which language was written first (used by translation workflow)
 - About page: `content/about.md` (zh) + `content/about.en.md` (en)
 - **Inline images**: `img-01.jpg`, `img-02.jpg` ... in post directory, referenced via `![alt](img-NN.jpg)` in markdown. Count scales with word count (see `blog-coauthoring` Skill Step 3.5). `img-01.*` doubles as OG image automatically (see `head_custom.html`).

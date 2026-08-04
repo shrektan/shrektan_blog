@@ -2,7 +2,7 @@
 title: "直觉的另一半"
 description: '直觉是几十亿年进化攒下来的经验，它救过我们的命。但它是在旧世界里攒的——世界变了，它没来得及变。'
 author: 谭显英
-date: '2026-08-05'
+date: '2026-08-05T01:00:00+08:00'
 slug: the-other-half-of-intuition
 originalLang: zh
 categories:
