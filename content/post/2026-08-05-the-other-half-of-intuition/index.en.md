@@ -42,8 +42,8 @@ That is wrong.
 
 That said, intuition matters and deserves respect. It tells us what to do. But when a situation is one you can see clearly, reason tends to be the more reliable of the two.
 
-We should respect intuition, and we should also know when it stops working.
+So we should respect intuition, and we should also know when it stops working.
 
-Steve Jobs said a famous line at Stanford: have the courage to follow your heart and intuition.[^1] What that line leaves unsaid is the other half.
+Steve Jobs said a famous line at Stanford: have the courage to follow your heart and intuition.[^1] Knowing when it stops working is the half that line leaves unsaid.
 
 [^1]: "Have the courage to follow your heart and intuition." — Steve Jobs, Stanford Commencement Address, 2005.
